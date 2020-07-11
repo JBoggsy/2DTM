@@ -13,7 +13,7 @@ public class GameMaster : MonoBehaviour {
     public int NumberOfTuringMachines;
     public bool RandomBoardGeneration;
 
-    private Tilemap_Controller tmap_controller;
+    private Tilemap_Controller TilemapController;
     private Camera_Controller mcam_controller;
     private GameObject[] tm_heads;
     private TuringMachineHeadController[] tm_head_controllers;
@@ -38,7 +38,7 @@ public class GameMaster : MonoBehaviour {
             turing_machines[i] = new TuringMachine(10);
         }
 
-        tmap_controller = GridTilemap.GetComponent<Tilemap_Controller>();
+        TilemapController = GridTilemap.GetComponent<Tilemap_Controller>();
         mcam_controller = MainCamera.GetComponent<Camera_Controller>();
         foreach (TuringMachine tm in turing_machines) {
             tm.InitWithRandomTransitions();
@@ -54,9 +54,9 @@ public class GameMaster : MonoBehaviour {
     void Update() {
         if (mcam_controller.moved) {
             if (RandomBoardGeneration) {
-                tmap_controller.RandomPopulateGridAtView(mcam_controller.world_view_rect);
+                TilemapController.RandomPopulateGridAtView(mcam_controller.world_view_rect);
             } else {
-                tmap_controller.PopulateGridAtView(mcam_controller.world_view_rect);
+                TilemapController.PopulateGridAtView(mcam_controller.world_view_rect);
             }
             mcam_controller.moved = false;
         }
@@ -64,7 +64,7 @@ public class GameMaster : MonoBehaviour {
         if (Input.GetMouseButtonUp((int)MouseButton.LeftMouse)) {
             Vector3 mouse_click_pos = Input.mousePosition;
             Vector3 world_pos = MainCamera.ScreenToWorldPoint(mouse_click_pos);
-            tmap_controller.FlipTileAtWorldPos(world_pos);
+            TilemapController.FlipTileAtWorldPos(world_pos);
         }
     }
 
@@ -78,7 +78,7 @@ public class GameMaster : MonoBehaviour {
         for (int tm_id=0; tm_id < NumberOfTuringMachines; tm_id++) {
             Vector3 tm_world_loc = tm_heads[tm_id].transform.position;
             Vector3Int tm_tile_loc = GridTilemap.WorldToCell(tm_world_loc);
-            TM_Symbol tm_input_symbol = tmap_controller.GetTileSymbol(tm_tile_loc);
+            TM_Symbol tm_input_symbol = TilemapController.GetTileSymbol(tm_tile_loc);
 
             tm_output_list[tm_id] = turing_machines[tm_id].HandleInput(tm_input_symbol);
             print("TM " + tm_id.ToString() + " state " + turing_machines[tm_id].CurrentState.ToString() + " output " + tm_output_list[tm_id].ToString());
@@ -96,7 +96,7 @@ public class GameMaster : MonoBehaviour {
             TM_Symbol write_symbol = tm_output.Item2;
             TM_Direction move_direction = tm_output.Item1;
 
-            tmap_controller.SetTileSymbol(current_head_grid_loc, write_symbol);
+            TilemapController.SetTileSymbol(current_head_grid_loc, write_symbol);
             tm_head_controller.MoveHeadInDirection(move_direction);
             turing_machine.UpdateState();
         }
