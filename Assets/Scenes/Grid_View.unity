@@ -427,7 +427,7 @@ MonoBehaviour:
   MainCamera: {fileID: 519420031}
   TuringMachineHeadPrefab: {fileID: 3263943437388287181, guid: 0cba471aff2d1fb4f906b0deca01de9e,
     type: 3}
-  NumberOfTuringMachines: 1
+  NumberOfTuringMachines: 50
   RandomBoardGeneration: 0
 --- !u!4 &1055542393
 Transform:

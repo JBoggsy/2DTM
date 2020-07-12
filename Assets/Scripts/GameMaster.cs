@@ -35,7 +35,7 @@ public class GameMaster : MonoBehaviour {
         for (int i = 0; i < NumberOfTuringMachines; i++) {
             TuringMachineHeads[i] = Instantiate(TuringMachineHeadPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             TuringMachineHeadControllers[i] = TuringMachineHeads[i].GetComponent<TuringMachineHeadController>();
-            TuringMachines[i] = new TuringMachine(10);
+            TuringMachines[i] = new TuringMachine(100);
         }
 
         TilemapController = GridTilemap.GetComponent<Tilemap_Controller>();
@@ -46,7 +46,7 @@ public class GameMaster : MonoBehaviour {
         }
 
         RunSimulation = true;
-        IEnumerator simulationUpdater = TuringMachineUpdateClock(1.0f);
+        IEnumerator simulationUpdater = TuringMachineUpdateClock(0.1f);
         StartCoroutine(simulationUpdater);
     }
 
