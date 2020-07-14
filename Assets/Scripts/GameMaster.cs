@@ -11,19 +11,21 @@ public class GameMaster : MonoBehaviour {
     public Tilemap GridTilemap;
     public Camera MainCamera;
     public GameObject TuringMachineHeadPrefab;
-    public Slider SimulationSpeedSlider;
-    public int NumberOfTuringMachines;
-    public int NumberStatesPerMachine;
+    public GameObject SeedLabelObject;
 
-    public int RandomSeed;
-    public bool UseCustomSeed;
+    private int NumberOfTuringMachines = 25;
+    private int NumberStatesPerMachine = 3;
 
-    //public bool RandomBoardGeneration;
-    public bool RandomStartingTransitions;
+    private int RandomSeed = 0;
+    private bool UseCustomSeed = false;
 
-    public float SimulationSpeedSetting;
-    private float SimulationSpeed;
+    private bool RandomBoardGeneration = false;
+    private bool RandomStartingTransitions = true;
 
+    private float SimulationSpeedSetting = 1.0f;
+    private float SimulationSpeed = 0.25f;
+
+    private SeedLabelController SeedLabelController;
     private Tilemap_Controller TilemapController;
     private Camera_Controller MainCamController;
     private GameObject[] TuringMachineHeads;
@@ -36,14 +38,15 @@ public class GameMaster : MonoBehaviour {
             if (RunSimulation)
             {
                 SimulateOneStep();
-                yield return new WaitForSeconds(SimulationSpeed);
             }
+            yield return new WaitForSeconds(SimulationSpeed);
         }
     }
 
     // Start is called before the first frame update
     void Start() {
         // Get controllers for various GameObjects
+        SeedLabelController = SeedLabelObject.GetComponent<SeedLabelController>();
         TilemapController = GridTilemap.GetComponent<Tilemap_Controller>();
         MainCamController = MainCamera.GetComponent<Camera_Controller>();
 
@@ -56,6 +59,7 @@ public class GameMaster : MonoBehaviour {
             print("SEED: " + RandomSeed.ToString());
             Random.InitState(RandomSeed);
         }
+        SeedLabelController.SetLabelToSeed(RandomSeed);
 
         // Create Turing machines
         TuringMachineHeads = new GameObject[NumberOfTuringMachines];
@@ -73,7 +77,7 @@ public class GameMaster : MonoBehaviour {
             }
         }
 
-        RunSimulation = true;
+        RunSimulation = false;
         IEnumerator simulationUpdater = TuringMachineUpdateClock();
         StartCoroutine(simulationUpdater);
     }
@@ -106,6 +110,12 @@ public class GameMaster : MonoBehaviour {
         TilemapController.ResetBoard();
         // Reset to the original random seed. 
         Random.InitState(RandomSeed);
+
+        // Move all the old Turing machines back to the center
+        foreach (GameObject tmHead in TuringMachineHeads)
+        {
+            Destroy(tmHead);
+        }
 
         // Create new Turing machines
         _CreateTuringMachines();
@@ -169,6 +179,7 @@ public class GameMaster : MonoBehaviour {
     public void HandleChangeSeedButton()
     {
         RandomSeed = Random.Range(int.MinValue, int.MaxValue);
+        SeedLabelController.SetLabelToSeed(RandomSeed);
     }
 
     public void HandleStepButton()
@@ -177,10 +188,16 @@ public class GameMaster : MonoBehaviour {
         SimulateOneStep();
     }
 
-    public void HandleSimSpeedSlider()
+    public void HandleSimSpeedIncreaseButton()
     {
-        SimulationSpeedSetting = SimulationSpeedSlider.value;
-        SimulationSpeed = 1.0f / SimulationSpeedSetting;
+        SimulationSpeedSetting += 0.25f;
+        _UpdateSimulationSpeed();
+    }
+
+    public void HandleSimSpeedDecreaseButton()
+    {
+        SimulationSpeedSetting -= 0.25f;
+        _UpdateSimulationSpeed();
     }
 
     private void _CreateTuringMachines()
@@ -207,5 +224,10 @@ public class GameMaster : MonoBehaviour {
     private void _ResumeSimulation()
     {
         RunSimulation = true;
+    }
+
+    private void _UpdateSimulationSpeed()
+    {
+        SimulationSpeed = 1.0f / SimulationSpeedSetting;
     }
 }

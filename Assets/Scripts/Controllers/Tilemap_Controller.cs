@@ -77,7 +77,7 @@ public class Tilemap_Controller : MonoBehaviour
 
     // Create a new on tile at the given location
     public void PopulateGridLocation(Vector3Int loc) {
-        Tilemap.SetTile(loc, OnTile);
+        Tilemap.SetTile(loc, OffTile);
     }
 
     public void FlipTileAtWorldPos(Vector3 pos) {
@@ -98,7 +98,7 @@ public class Tilemap_Controller : MonoBehaviour
     public TM_Symbol GetTileSymbol(Vector3Int tile_pos) {
         EnsureTileExists(tile_pos);
         TileBase tgt_tile = Tilemap.GetTile(tile_pos);
-        TM_Symbol symbol = 0;
+        TM_Symbol symbol = TM_Symbol.OFF;
         if (tgt_tile == OnTile) {
             symbol = TM_Symbol.ON;
         } else if (tgt_tile == OffTile) {

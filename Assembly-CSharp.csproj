@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\Controllers\Camera_Controller.cs" />
+     <Compile Include="Assets\Scripts\Controllers\SeedLabelController.cs" />
      <Compile Include="Assets\Scripts\Controllers\Tilemap_Controller.cs" />
      <Compile Include="Assets\Scripts\Controllers\TuringMachineHeadController.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
@@ -617,14 +618,14 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/jmsbo/Coding/2DTM/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/jmsbo/Coding/2DTM/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/jmsbo/Coding/2DTM/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/jmsbo/Coding/2DTM/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/jmsbo/Coding/2DTM/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
