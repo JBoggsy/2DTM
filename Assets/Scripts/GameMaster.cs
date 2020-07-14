@@ -1,12 +1,13 @@
 ﻿using Constants;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
-public class GameMaster : MonoBehaviour {
+public class GameMaster : Singleton<GameMaster> {
 
     public Tilemap GridTilemap;
     public Camera MainCamera;

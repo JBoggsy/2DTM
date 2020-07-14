@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Controllers\Tilemap_Controller.cs" />
      <Compile Include="Assets\Scripts\Controllers\TuringMachineHeadController.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
+     <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\Turing Machine\Transition.cs" />
      <Compile Include="Assets\Scripts\Turing Machine\TuringMachine.cs" />
  <Reference Include="UnityEngine">
