@@ -50,7 +50,6 @@ namespace Constants {
         NUMBER
     }
     public static class RandomDirection{
-        private static Random rngesus = new Random();
 
         /// <summary>
         /// Produces a random direction from the possible directions.

@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18486d7dde1b0af4e92a746e88b4cd9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6af5738afedbbfe4fb126f1eda442c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CAM_SPEED: 10
@@ -389,11 +389,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 951071484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2dcfeed9fed7647b699aa6df9150b3, type: 3}
+  m_Script: {fileID: 11500000, guid: d43ceda015e793f46ab745f13f501aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  on_tile: {fileID: 11400000, guid: 3bb878f5b531fca44bfd5a9fb6bb89c2, type: 2}
-  off_tile: {fileID: 11400000, guid: 6ec5676ee5c979147a8e99f9c9ea46ee, type: 2}
+  on_tile: {fileID: 11400000, guid: b102fb9b771a59e4abc8526f709f987b, type: 2}
+  off_tile: {fileID: 11400000, guid: 7ab9986d9c9ecc64784dd1654dbc09ba, type: 2}
 --- !u!1 &1055542391
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,14 +420,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1055542391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050957e3e2fec074084a7f0a90727ce5, type: 3}
+  m_Script: {fileID: 11500000, guid: daf6ebd1e5a80594990057c4ab03c409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GridTilemap: {fileID: 951071487}
   MainCamera: {fileID: 519420031}
-  TuringMachineHeadPrefab: {fileID: 3263943437388287181, guid: 0cba471aff2d1fb4f906b0deca01de9e,
+  TuringMachineHeadPrefab: {fileID: 3263943437388287181, guid: 6d45afc490f4c6e479920fae25fbdf4a,
     type: 3}
-  NumberOfTuringMachines: 1
+  NumberOfTuringMachines: 25
   RandomBoardGeneration: 0
 --- !u!4 &1055542393
 Transform:

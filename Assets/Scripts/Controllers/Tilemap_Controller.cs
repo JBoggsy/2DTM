@@ -15,7 +15,7 @@ public class Tilemap_Controller : MonoBehaviour
     void Start()
     {
         tilemap = gameObject.GetComponent<Tilemap>();
-        tilemap.SetTile(new Vector3Int(0, 0, 0), on_tile);
+        tilemap.SetTile(new Vector3Int(0, 0, 0), off_tile);
     }
 
     public void PopulateGridAtView(Rect view_rect) {
@@ -32,7 +32,7 @@ public class Tilemap_Controller : MonoBehaviour
             for (int y = yMin; y <= yMax; y++) {
                 Vector3Int tile_loc = new Vector3Int(x, y, 0);
                 if (!tilemap.GetTile(tile_loc)) {
-                    tilemap.SetTile(new Vector3Int(x, y, 0), on_tile);
+                    tilemap.SetTile(new Vector3Int(x, y, 0), off_tile);
                 }
             }
         }

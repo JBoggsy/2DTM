@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
@@ -11,6 +12,8 @@ public class GameMaster : MonoBehaviour {
     public Camera MainCamera;
     public GameObject TuringMachineHeadPrefab;
     public int NumberOfTuringMachines;
+    public int CustomRandomSeed;
+    public bool UseCustomSeed;
     public bool RandomBoardGeneration;
 
     private Tilemap_Controller TilemapController;
@@ -29,13 +32,21 @@ public class GameMaster : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        if (UseCustomSeed) {
+            Random.InitState(CustomRandomSeed);
+        } else
+        {
+            int seed = Random.Range(int.MinValue, int.MaxValue);
+            print("SEED: " + seed.ToString());
+            Random.InitState(seed);
+        }
         TuringMachineHeads = new GameObject[NumberOfTuringMachines];
         TuringMachineHeadControllers = new TuringMachineHeadController[NumberOfTuringMachines];
         TuringMachines = new TuringMachine[NumberOfTuringMachines];
         for (int i = 0; i < NumberOfTuringMachines; i++) {
             TuringMachineHeads[i] = Instantiate(TuringMachineHeadPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             TuringMachineHeadControllers[i] = TuringMachineHeads[i].GetComponent<TuringMachineHeadController>();
-            TuringMachines[i] = new TuringMachine(10);
+            TuringMachines[i] = new TuringMachine(100);
         }
 
         TilemapController = GridTilemap.GetComponent<Tilemap_Controller>();
@@ -46,7 +57,7 @@ public class GameMaster : MonoBehaviour {
         }
 
         RunSimulation = true;
-        IEnumerator simulationUpdater = TuringMachineUpdateClock(1.0f);
+        IEnumerator simulationUpdater = TuringMachineUpdateClock(0.25f);
         StartCoroutine(simulationUpdater);
     }
 
@@ -61,7 +72,7 @@ public class GameMaster : MonoBehaviour {
             MainCamController.moved = false;
         }
 
-        if (Input.GetMouseButtonUp((int)MouseButton.LeftMouse)) {
+        if (Input.GetMouseButtonUp((int)MouseButton.LeftMouse) && !EventSystem.current.IsPointerOverGameObject()) {
             Vector3 mouse_click_pos = Input.mousePosition;
             Vector3 world_pos = MainCamera.ScreenToWorldPoint(mouse_click_pos);
             TilemapController.FlipTileAtWorldPos(world_pos);

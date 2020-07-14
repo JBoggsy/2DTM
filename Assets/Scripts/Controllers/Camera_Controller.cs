@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Camera_Controller : MonoBehaviour
 {
-    public int CAM_SPEED;
+    public float CAM_SPEED;
     public bool moved { get; set; }
     public Rect world_view_rect { 
         get {
@@ -47,6 +48,15 @@ public class Camera_Controller : MonoBehaviour
             translation_vector += Vector3.right * CAM_SPEED * Time.deltaTime;
         }
         gameObject.transform.Translate(translation_vector);
+
+        float scrollDeltaY = Input.mouseScrollDelta.y;
+        if (scrollDeltaY > 0) {
+            gameObject.GetComponent<Camera>().orthographicSize /= 1.2f;
+            CAM_SPEED /= 1.2f;
+        } else if (scrollDeltaY < 0) {
+            gameObject.GetComponent<Camera>().orthographicSize *= 1.2f;
+            CAM_SPEED *= 1.2f;
+        }
 
         if (translation_vector != Vector3.zero) {
             moved = true;
