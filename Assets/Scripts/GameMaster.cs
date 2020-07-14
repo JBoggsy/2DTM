@@ -11,10 +11,18 @@ public class GameMaster : MonoBehaviour {
     public Tilemap GridTilemap;
     public Camera MainCamera;
     public GameObject TuringMachineHeadPrefab;
+    public Slider SimulationSpeedSlider;
     public int NumberOfTuringMachines;
-    public int CustomRandomSeed;
+    public int NumberStatesPerMachine;
+
+    public int RandomSeed;
     public bool UseCustomSeed;
-    public bool RandomBoardGeneration;
+
+    //public bool RandomBoardGeneration;
+    public bool RandomStartingTransitions;
+
+    public float SimulationSpeedSetting;
+    private float SimulationSpeed;
 
     private Tilemap_Controller TilemapController;
     private Camera_Controller MainCamController;
@@ -23,41 +31,50 @@ public class GameMaster : MonoBehaviour {
     private TuringMachine[] TuringMachines;
 
     private bool RunSimulation;
-    private IEnumerator TuringMachineUpdateClock(float waitTime) {
-        while (RunSimulation) {
-            SimulateOneStep();
-            yield return new WaitForSeconds(waitTime);
+    private IEnumerator TuringMachineUpdateClock() {
+        while (true) {
+            if (RunSimulation)
+            {
+                SimulateOneStep();
+                yield return new WaitForSeconds(SimulationSpeed);
+            }
         }
     }
 
     // Start is called before the first frame update
     void Start() {
+        // Get controllers for various GameObjects
+        TilemapController = GridTilemap.GetComponent<Tilemap_Controller>();
+        MainCamController = MainCamera.GetComponent<Camera_Controller>();
+
+        // Set initial seed based on random vs. custom
         if (UseCustomSeed) {
-            Random.InitState(CustomRandomSeed);
+            Random.InitState(RandomSeed);
         } else
         {
-            int seed = Random.Range(int.MinValue, int.MaxValue);
-            print("SEED: " + seed.ToString());
-            Random.InitState(seed);
+            RandomSeed = Random.Range(int.MinValue, int.MaxValue);
+            print("SEED: " + RandomSeed.ToString());
+            Random.InitState(RandomSeed);
         }
+
+        // Create Turing machines
         TuringMachineHeads = new GameObject[NumberOfTuringMachines];
         TuringMachineHeadControllers = new TuringMachineHeadController[NumberOfTuringMachines];
         TuringMachines = new TuringMachine[NumberOfTuringMachines];
-        for (int i = 0; i < NumberOfTuringMachines; i++) {
-            TuringMachineHeads[i] = Instantiate(TuringMachineHeadPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            TuringMachineHeadControllers[i] = TuringMachineHeads[i].GetComponent<TuringMachineHeadController>();
-            TuringMachines[i] = new TuringMachine(100);
-        }
+        _CreateTuringMachines();
 
-        TilemapController = GridTilemap.GetComponent<Tilemap_Controller>();
-        MainCamController = MainCamera.GetComponent<Camera_Controller>();
-        foreach (TuringMachine tm in TuringMachines) {
-            tm.InitWithRandomTransitions();
-            print(tm.ToString());
+        // Randomly create transition functions if requested
+        if (RandomStartingTransitions)
+        {
+            foreach (TuringMachine tm in TuringMachines)
+            {
+                tm.InitWithRandomTransitions();
+                print(tm.ToString());
+            }
         }
 
         RunSimulation = true;
-        IEnumerator simulationUpdater = TuringMachineUpdateClock(0.25f);
+        IEnumerator simulationUpdater = TuringMachineUpdateClock();
         StartCoroutine(simulationUpdater);
     }
 
@@ -79,6 +96,31 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Initialize a simulation/game of 2DTMs by clearing the whole board and creating
+    /// new Turing machines. 
+    /// </summary>
+    public void ResetGame()
+    {
+        // Reset the symbols written on the grid cells
+        TilemapController.ResetBoard();
+        // Reset to the original random seed. 
+        Random.InitState(RandomSeed);
+
+        // Create new Turing machines
+        _CreateTuringMachines();
+
+        // Randomly create transition functions if requested
+        if (RandomStartingTransitions)
+        {
+            foreach (TuringMachine tm in TuringMachines)
+            {
+                tm.InitWithRandomTransitions();
+                print(tm.ToString());
+            }
+        }
+    }
+
     /**
      * <summary>
      * Simulate a single step of the "game" by iterating through each Turing machine.
@@ -92,7 +134,7 @@ public class GameMaster : MonoBehaviour {
             TM_Symbol tm_input_symbol = TilemapController.GetTileSymbol(tm_tile_loc);
 
             tm_output_list[tm_id] = TuringMachines[tm_id].HandleInput(tm_input_symbol);
-            print("TM " + tm_id.ToString() + " state " + TuringMachines[tm_id].CurrentState.ToString() + " output " + tm_output_list[tm_id].ToString());
+            //print("TM " + tm_id.ToString() + " state " + TuringMachines[tm_id].CurrentState.ToString() + " output " + tm_output_list[tm_id].ToString());
         }
 
         // TODO: Resolve any conflicts
@@ -111,5 +153,59 @@ public class GameMaster : MonoBehaviour {
             tm_head_controller.MoveHeadInDirection(move_direction);
             turing_machine.UpdateState();
         }
+    }
+
+    public void HandlePlayPauseButton()
+    {
+        _ToggleSimulation();
+    }
+
+    public void HandleResetButton()
+    {
+        ResetGame();
+        _PauseSimulation();
+    }
+
+    public void HandleChangeSeedButton()
+    {
+        RandomSeed = Random.Range(int.MinValue, int.MaxValue);
+    }
+
+    public void HandleStepButton()
+    {
+        _PauseSimulation();
+        SimulateOneStep();
+    }
+
+    public void HandleSimSpeedSlider()
+    {
+        SimulationSpeedSetting = SimulationSpeedSlider.value;
+        SimulationSpeed = 1.0f / SimulationSpeedSetting;
+    }
+
+    private void _CreateTuringMachines()
+    {
+        for (int i = 0; i < NumberOfTuringMachines; i++)
+        {
+            TuringMachineHeads[i] = Instantiate(TuringMachineHeadPrefab, Vector3.zero, Quaternion.identity);
+            TuringMachineHeadControllers[i] = TuringMachineHeads[i].GetComponent<TuringMachineHeadController>();
+            TuringMachines[i] = new TuringMachine(NumberStatesPerMachine);
+        }
+    }
+
+    private void _ToggleSimulation()
+    {
+        if (RunSimulation) { _PauseSimulation(); }
+        else { _ResumeSimulation(); }
+    }
+
+    private void _PauseSimulation()
+    {
+        RunSimulation = false;
+    }
+
+    private void _ResumeSimulation()
+    {
+        RunSimulation = true;
     }
 }
