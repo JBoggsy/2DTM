@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 class GameMasterMonobehavior : GameObjectMonobehavior
 {
@@ -8,6 +9,13 @@ class GameMasterMonobehavior : GameObjectMonobehavior
 
     void Update()
     {
-        GM.Update();
+        List<KeyCode> keysPressed = new List<KeyCode>();
+        foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode))) {
+            if (Input.GetKey(key)) {
+                keysPressed.Add(key);
+            }
+        }
+
+        GM.HandleKeyPresses(keysPressed);
     }
 }

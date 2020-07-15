@@ -12,6 +12,9 @@ public class GameMaster : Singleton<GameMaster> {
     public GridData GridData; 
     public Rect CurrentViewRect;
 
+    // MONOBEHAVIOR REFERENCES
+    private CameraMonobehavior camera;
+
     // SETTINGS
     public int NumberOfTuringMachines { get; private set; } = 25;
     public int NumberStatesPerMachine { get; private set; } = 3;
@@ -38,7 +41,6 @@ public class GameMaster : Singleton<GameMaster> {
     /// the <see cref="GameMasterMonobehavior"/> in its <c>Awake()</c> method.
     /// </summary>
     public void Initialize() {
-        // Set initial seed based on random vs. custom
         if (UseCustomSeed) {
             Random.InitState(RandomSeed);
         } else {
@@ -47,20 +49,21 @@ public class GameMaster : Singleton<GameMaster> {
             Random.InitState(RandomSeed);
         }
 
-        // Initialize empty grid
         GridData = new GridData();
 
-        // Set up simulation co-routine
         RunSimulation = false;
         IEnumerator simulationUpdater = TuringMachineUpdateClock();
         StartCoroutine(simulationUpdater);
     }
 
     /// <summary>
-    /// Called at every frame by the GameMasterMonobehavior object
+    /// Register the given <see cref="CameraMonobehavior"/> as the camera the
+    /// <see cref="GameMaster"/> should pay attention to and interact with.
     /// </summary>
-    public void Update() {
-
+    public void RegisterCamera(CameraMonobehavior newCamera) {
+        if (camera == null) {
+            camera = newCamera;
+        }
     }
 
     /// <summary>
@@ -79,6 +82,50 @@ public class GameMaster : Singleton<GameMaster> {
     public void SimulateOneStep() {
     }
 
+    /*****************************
+     * KEYPRESS HANDLING METHODS *
+     *****************************/
+    public void HandleKeyPresses(List<KeyCode> keysPressed) {
+        foreach (KeyCode key in keysPressed) {
+            switch (key) {
+                case KeyCode.W:
+                    _HandleKeyW();
+                    break;
+                case KeyCode.A:
+                    _HandleKeyA();
+                    break;
+                case KeyCode.S:
+                    _HandleKeyS();
+                    break;
+                case KeyCode.D:
+                    _HandleKeyD();
+                    break;
+                case KeyCode.Space:
+                    _HandleKeySpace();
+                    break;
+            }
+        }
+    }
+
+    private void _HandleKeyW() {
+        camera.MoveInDirection(TM_Direction.UP);
+    }
+    private void _HandleKeyA() {
+        camera.MoveInDirection(TM_Direction.LEFT);
+    }
+    private void _HandleKeyS() {
+        camera.MoveInDirection(TM_Direction.DOWN);
+    }
+    private void _HandleKeyD() {
+        camera.MoveInDirection(TM_Direction.RIGHT);
+    }
+    private void _HandleKeySpace() {
+        _ToggleSimulation();
+    }
+
+    /***************************
+     * BUTTON HANDLING METHODS *
+     ***************************/
     public void HandleButton(string buttonName) {
         switch (buttonName) {
             case "playPause":
@@ -130,6 +177,9 @@ public class GameMaster : Singleton<GameMaster> {
         _UpdateSimulationSpeed();
     }
 
+    /******************************
+     * SIMULATION CONTROL METHODS *
+     ******************************/
     private void _ToggleSimulation() {
         if (RunSimulation) { _PauseSimulation(); } else { _ResumeSimulation(); }
     }
