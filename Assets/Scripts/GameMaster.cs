@@ -11,9 +11,10 @@ public class GameMaster : Singleton<GameMaster> {
     // CORE DATA REFERENCES
     public GridData GridData; 
     public Rect CurrentViewRect;
+    private TuringMachine[] TuringMachines;
 
     // MONOBEHAVIOR REFERENCES
-    private CameraMonobehavior camera;
+    private CameraMonobehavior CameraMonobehavior;
 
     // SETTINGS
     public int NumberOfTuringMachines { get; private set; } = 25;
@@ -50,6 +51,12 @@ public class GameMaster : Singleton<GameMaster> {
         }
 
         GridData = new GridData();
+        TuringMachines = new TuringMachine[NumberOfTuringMachines];
+        for (int machineID=0; machineID<NumberOfTuringMachines; machineID++) {
+            TuringMachine newMachine = new TuringMachine(machineID, NumberStatesPerMachine);
+            if (RandomStartingTransitions) { newMachine.GenerateRandomTransitions(); }
+            TuringMachines[machineID] = newMachine;
+        }
 
         RunSimulation = false;
         IEnumerator simulationUpdater = TuringMachineUpdateClock();
@@ -60,9 +67,9 @@ public class GameMaster : Singleton<GameMaster> {
     /// Register the given <see cref="CameraMonobehavior"/> as the camera the
     /// <see cref="GameMaster"/> should pay attention to and interact with.
     /// </summary>
-    public void RegisterCamera(CameraMonobehavior newCamera) {
-        if (camera == null) {
-            camera = newCamera;
+    public void RegisterCameraMonobehavior(CameraMonobehavior newCamera) {
+        if (CameraMonobehavior == null) {
+            CameraMonobehavior = newCamera;
         }
     }
 
@@ -82,46 +89,33 @@ public class GameMaster : Singleton<GameMaster> {
     public void SimulateOneStep() {
     }
 
+    /***********************************
+     * GAMEOBJECT INTERACTION HANDLING *
+     ***********************************/
+    public void HandleTuringMachineHeadClick(int machineID) {
+        print("Turing machine clicked...");
+    }
+
     /*****************************
      * KEYPRESS HANDLING METHODS *
      *****************************/
     public void HandleKeyPresses(List<KeyCode> keysPressed) {
         foreach (KeyCode key in keysPressed) {
             switch (key) {
-                case KeyCode.W:
-                    _HandleKeyW();
-                    break;
-                case KeyCode.A:
-                    _HandleKeyA();
-                    break;
-                case KeyCode.S:
-                    _HandleKeyS();
-                    break;
-                case KeyCode.D:
-                    _HandleKeyD();
-                    break;
-                case KeyCode.Space:
-                    _HandleKeySpace();
-                    break;
+                case KeyCode.W: _HandleKeyW(); break;
+                case KeyCode.A: _HandleKeyA(); break;
+                case KeyCode.S: _HandleKeyS(); break;
+                case KeyCode.D: _HandleKeyD(); break;
+                case KeyCode.Space: _HandleKeySpace(); break;
             }
         }
     }
 
-    private void _HandleKeyW() {
-        camera.MoveInDirection(TM_Direction.UP);
-    }
-    private void _HandleKeyA() {
-        camera.MoveInDirection(TM_Direction.LEFT);
-    }
-    private void _HandleKeyS() {
-        camera.MoveInDirection(TM_Direction.DOWN);
-    }
-    private void _HandleKeyD() {
-        camera.MoveInDirection(TM_Direction.RIGHT);
-    }
-    private void _HandleKeySpace() {
-        _ToggleSimulation();
-    }
+    private void _HandleKeyW() { CameraMonobehavior.MoveInDirection(TM_Direction.UP); }
+    private void _HandleKeyA() { CameraMonobehavior.MoveInDirection(TM_Direction.LEFT); }
+    private void _HandleKeyS() { CameraMonobehavior.MoveInDirection(TM_Direction.DOWN); }
+    private void _HandleKeyD() { CameraMonobehavior.MoveInDirection(TM_Direction.RIGHT); }
+    private void _HandleKeySpace() { _ToggleSimulation(); }
 
     /***************************
      * BUTTON HANDLING METHODS *

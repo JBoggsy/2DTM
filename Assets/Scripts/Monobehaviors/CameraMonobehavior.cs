@@ -12,7 +12,7 @@ public class CameraMonobehavior : GameObjectMonobehavior
 
     override protected void Start() {
         base.Start();
-        GM.RegisterCamera(this);
+        GM.RegisterCameraMonobehavior(this);
         GM.CurrentViewRect = _GetWorldViewRect();
     }
 

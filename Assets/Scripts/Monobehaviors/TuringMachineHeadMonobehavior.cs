@@ -5,9 +5,16 @@ using UnityEngine;
 
 public class TuringMachineHeadMonobehavior : GameObjectMonobehavior
 {
+    private int id;
+
+    void OnMouseDown() {
+        GM.HandleTuringMachineHeadClick(id);
+    }
+
     public Vector3 position {
         get { return gameObject.transform.position; }
     }
+
     public void MoveHeadInDirection(TM_Direction dir) {
         Vector3 move_vector = Vector3.zero;
         switch (dir) {
@@ -22,6 +29,9 @@ public class TuringMachineHeadMonobehavior : GameObjectMonobehavior
                 break;
             case TM_Direction.RIGHT:
                 move_vector = new Vector3(1, 0);
+                break;
+            case TM_Direction.STAY:
+                move_vector = Vector3.zero;
                 break;
         }
 

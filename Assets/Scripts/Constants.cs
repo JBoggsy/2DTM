@@ -34,6 +34,10 @@ namespace Constants {
         /// </summary>
         RIGHT,
         /// <summary>
+        /// Don't move in any direction.
+        /// </summary>
+        STAY,
+        /// <summary>
         /// The number of directions a TM can go
         /// </summary>
         NUMBER
