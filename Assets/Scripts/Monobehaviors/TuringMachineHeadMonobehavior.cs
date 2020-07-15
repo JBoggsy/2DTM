@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TuringMachineHeadController : MonoBehaviour
+public class TuringMachineHeadMonobehavior : GameObjectMonobehavior
 {
     public Vector3 position {
         get { return gameObject.transform.position; }
@@ -26,5 +26,15 @@ public class TuringMachineHeadController : MonoBehaviour
         }
 
         gameObject.transform.Translate(move_vector);
+    }
+
+    public void MoveHeadToCenter()
+    {
+        MoveHeadTo(Vector3Int.zero);
+    }
+
+    public void MoveHeadTo(Vector3Int newLocation)
+    {
+        gameObject.transform.position = newLocation;
     }
 }
