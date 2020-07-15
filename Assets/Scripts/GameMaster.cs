@@ -8,20 +8,21 @@ using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
 public class GameMaster : Singleton<GameMaster> {
-    public GridData GridData;
+    // CORE DATA REFERENCES
+    public GridData GridData; 
+    public Rect CurrentViewRect;
 
-    private int NumberOfTuringMachines = 25;
-    private int NumberStatesPerMachine = 3;
+    // SETTINGS
+    public int NumberOfTuringMachines { get; private set; } = 25;
+    public int NumberStatesPerMachine { get; private set; } = 3;
+    public int RandomSeed { get; private set; } = 0;
+    public bool UseCustomSeed { get; private set; } = false;
+    public bool RandomBoardGeneration { get; private set; } = false;
+    public bool RandomStartingTransitions { get; private set; } = true;
+    public float SimulationSpeedSetting { get; private set; } = 1.0f;
 
-    private int RandomSeed = 0;
-    private bool UseCustomSeed = false;
-
-    private bool RandomBoardGeneration = false;
-    private bool RandomStartingTransitions = true;
-
-    private float SimulationSpeedSetting = 1.0f;
+    // SIMULATION STATE
     private float SimulationSpeed = 0.25f;
-
     private bool RunSimulation;
     private IEnumerator TuringMachineUpdateClock() {
         while (true) {
@@ -33,9 +34,10 @@ public class GameMaster : Singleton<GameMaster> {
     }
 
     /// <summary>
-    /// Called before the first frame by the GameMasterMonobehavior object
+    /// Initializes the <see cref="GameMaster"/> singleton. This is called by
+    /// the <see cref="GameMasterMonobehavior"/> in its <c>Awake()</c> method.
     /// </summary>
-    public void Start() {
+    public void Initialize() {
         // Set initial seed based on random vs. custom
         if (UseCustomSeed) {
             Random.InitState(RandomSeed);

@@ -20,6 +20,11 @@ public class TilemapMonobehavior : GameObjectMonobehavior
         GridData = GM.GridData;
     }
 
+    void Update() {
+        Rect currentViewRect = GM.CurrentViewRect;
+        ShowGridAtView(currentViewRect);
+    }
+
     public void ShowGridAtView(Rect view_rect) {
         RectOffset padding = new RectOffset(3, 3, 3, 3);
         view_rect = padding.Add(view_rect);
