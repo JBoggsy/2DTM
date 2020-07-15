@@ -2,8 +2,9 @@
 
 class GameMasterMonobehavior : GameObjectMonobehavior
 {
-    void Start()
+    override protected void Start()
     {
+        base.Start();
         GM.Start();
     }
     void Update()

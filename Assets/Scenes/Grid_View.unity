@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 113180722}
   - component: {fileID: 113180721}
   - component: {fileID: 113180720}
+  - component: {fileID: 113180723}
   m_Layer: 5
   m_Name: ChangeSeedButton
   m_TagString: Untagged
@@ -203,8 +204,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1055542392}
-        m_MethodName: HandleChangeSeedButton
+      - m_Target: {fileID: 113180723}
+        m_MethodName: HandleClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -251,6 +252,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113180718}
   m_CullTransparentMesh: 0
+--- !u!114 &113180723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113180718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aba7a4bffec7bc4cafac7533dee8e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonName: changeSeed
 --- !u!1 &186854525
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +353,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 186854525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fe88d708b6f9d04bb067dc5018d662f, type: 3}
+  m_Script: {fileID: 11500000, guid: e06fd44711fc7e34d909dd7c8b85890e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &199226833
@@ -354,6 +368,7 @@ GameObject:
   - component: {fileID: 199226837}
   - component: {fileID: 199226836}
   - component: {fileID: 199226835}
+  - component: {fileID: 199226838}
   m_Layer: 5
   m_Name: SpeedDecreaseButton
   m_TagString: Untagged
@@ -424,8 +439,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1055542392}
-        m_MethodName: HandleSimSpeedDecreaseButton
+      - m_Target: {fileID: 199226838}
+        m_MethodName: HandleClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -472,6 +487,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199226833}
   m_CullTransparentMesh: 0
+--- !u!114 &199226838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199226833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aba7a4bffec7bc4cafac7533dee8e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonName: simSpeedDown
 --- !u!1 &426439274
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +512,7 @@ GameObject:
   - component: {fileID: 426439278}
   - component: {fileID: 426439277}
   - component: {fileID: 426439276}
+  - component: {fileID: 426439279}
   m_Layer: 5
   m_Name: ResetButton
   m_TagString: Untagged
@@ -554,8 +583,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1055542392}
-        m_MethodName: HandleResetButton
+      - m_Target: {fileID: 426439279}
+        m_MethodName: HandleClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -602,6 +631,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426439274}
   m_CullTransparentMesh: 0
+--- !u!114 &426439279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426439274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aba7a4bffec7bc4cafac7533dee8e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonName: reset
 --- !u!1 &445251897
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,10 +758,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6af5738afedbbfe4fb126f1eda442c87, type: 3}
+  m_Script: {fileID: 11500000, guid: b1a90d6ad75451942852480a1eb65b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CAM_SPEED: 10
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1026,7 +1067,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 951071484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d43ceda015e793f46ab745f13f501aec, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e8f18844de43314c957dda0fced0e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnTile: {fileID: 11400000, guid: b102fb9b771a59e4abc8526f709f987b, type: 2}
@@ -1043,6 +1084,7 @@ GameObject:
   - component: {fileID: 951544231}
   - component: {fileID: 951544230}
   - component: {fileID: 951544229}
+  - component: {fileID: 951544232}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1113,8 +1155,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1055542392}
-        m_MethodName: HandlePlayPauseButton
+      - m_Target: {fileID: 951544232}
+        m_MethodName: HandleClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1161,6 +1203,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951544227}
   m_CullTransparentMesh: 0
+--- !u!114 &951544232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951544227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aba7a4bffec7bc4cafac7533dee8e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonName: playPause
 --- !u!1 &1055542391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,14 +1242,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1055542391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daf6ebd1e5a80594990057c4ab03c409, type: 3}
+  m_Script: {fileID: 11500000, guid: 1393b3436f65d384db626f26d8aa21c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GridTilemap: {fileID: 951071487}
-  MainCamera: {fileID: 519420031}
-  TuringMachineHeadPrefab: {fileID: 3263943437388287181, guid: 6d45afc490f4c6e479920fae25fbdf4a,
-    type: 3}
-  SeedLabelObject: {fileID: 186854525}
 --- !u!4 &1055542393
 Transform:
   m_ObjectHideFlags: 0
@@ -1856,6 +1906,7 @@ GameObject:
   - component: {fileID: 2012479505}
   - component: {fileID: 2012479504}
   - component: {fileID: 2012479503}
+  - component: {fileID: 2012479506}
   m_Layer: 5
   m_Name: SpeedIncreaseButton
   m_TagString: Untagged
@@ -1926,8 +1977,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1055542392}
-        m_MethodName: HandleSimSpeedIncreaseButton
+      - m_Target: {fileID: 2012479506}
+        m_MethodName: HandleClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1974,6 +2025,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012479501}
   m_CullTransparentMesh: 0
+--- !u!114 &2012479506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012479501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aba7a4bffec7bc4cafac7533dee8e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonName: simSpeedUp
 --- !u!1 &2105469904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +2050,7 @@ GameObject:
   - component: {fileID: 2105469908}
   - component: {fileID: 2105469907}
   - component: {fileID: 2105469906}
+  - component: {fileID: 2105469909}
   m_Layer: 5
   m_Name: StepButton
   m_TagString: Untagged
@@ -2056,8 +2121,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1055542392}
-        m_MethodName: HandleStepButton
+      - m_Target: {fileID: 2105469909}
+        m_MethodName: HandleClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2104,3 +2169,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105469904}
   m_CullTransparentMesh: 0
+--- !u!114 &2105469909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105469904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aba7a4bffec7bc4cafac7533dee8e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonName: step

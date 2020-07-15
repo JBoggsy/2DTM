@@ -13,8 +13,9 @@ public class TilemapMonobehavior : GameObjectMonobehavior
     private Tilemap Tilemap;
 
     // Start is called before the first frame update
-    void Start()
+    override protected void Start()
     {
+        base.Start();
         Tilemap = gameObject.GetComponent<Tilemap>();
         GridData = GM.GridData;
     }

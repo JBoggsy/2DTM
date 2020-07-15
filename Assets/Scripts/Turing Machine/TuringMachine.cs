@@ -78,11 +78,11 @@ class TuringMachine {
     public void InitWithRandomTransitions() {
         for (int input = 0; input < (int)TM_Symbol.NUMBER; input++) {
             for (int state=0; state < NumStates; state++) {
-                int next = UnityEngine.Random.Range(0, NumStates);
-                TM_Direction dir = RandomDirection.Get();
-                TM_Symbol write = RandomSymbol.Get();
-                Transition transition = new Transition(next, dir, write);
-                TransitionTable[input, state] = transition;
+                //int next = UnityEngine.Random.Range(0, NumStates);
+                //TM_Direction dir = RandomDirection.Get();
+                //TM_Symbol write = RandomSymbol.Get();
+                //Transition transition = new Transition(next, dir, write);
+                //TransitionTable[input, state] = transition;
             }
         }
     }

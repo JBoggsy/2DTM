@@ -57,10 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Constants.cs" />
+    <Compile Include="Assets\Scripts\GridData.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviors\ButtonMonobehavior.cs" />
     <Compile Include="Assets\Scripts\Monobehaviors\CameraMonobehavior.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviors\GameMasterMonobehavior.cs" />
+    <Compile Include="Assets\Scripts\GameObjectMonobehavior.cs" />
     <Compile Include="Assets\Scripts\Monobehaviors\LabelMonobehavior.cs" />
     <Compile Include="Assets\Scripts\Monobehaviors\TilemapMonobehavior.cs" />
-    <Compile Include="Assets\Scripts\Monobehaviors\TuringMachineHeadController.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviors\TuringMachineHeadMonobehavior.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\Turing Machine\Transition.cs" />
