@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Constants;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 /// <summary>
 /// The <c>TuringMachine</c> class represents the internal mathmatical Turing
@@ -44,10 +45,11 @@ class TuringMachine {
     public int NumberOfStates { get; private set; }
     public int CurrentState { get; private set; }
 
-    private int NextState;
+    private Transition nextTransition;
     private GameObject headObject;
     private TuringMachineHeadMonobehavior headMonobehavior;
     private Dictionary<(int, TM_Symbol), Transition> TransitionTable;
+    private GameMaster GM;
 
     /// <summary>
     /// TODO: DOC
@@ -57,10 +59,37 @@ class TuringMachine {
         ID = id;
         NumberOfStates = numberOfStates;
         CurrentState = 0;
-        NextState = 0;
         TransitionTable = new Dictionary<(int, TM_Symbol), Transition>();
         headObject = GameObject.Instantiate((GameObject)Resources.Load("Turing Machine Head"), Vector3.zero, Quaternion.identity);
         headMonobehavior = headObject.GetComponent<TuringMachineHeadMonobehavior>();
+        headMonobehavior.id = ID;
+        GM = GameMaster.Instance;
+    }
+
+    /**********************
+     * SIMULATION METHODS *
+     **********************/
+    public void PrepareSimulationStep(TM_Symbol inputSymbol) {
+        nextTransition = GetTransition(CurrentState, inputSymbol);
+    }
+
+    public void ApplySimulationStep() {
+        if (nextTransition == null) { return; }
+        GM.WriteSymbolToGrid(position, nextTransition.WriteSymbol);
+        headMonobehavior.MoveHeadInDirection(nextTransition.Direction);
+        CurrentState = nextTransition.NextState;
+        nextTransition = null;
+    }
+
+    /// <summary>
+    /// Returns the coordinates of the read/write head.
+    /// </summary>
+    public Vector3Int position { 
+        get {
+            Vector3 rawHeadPosition = headMonobehavior.position;
+            Vector3Int headPosition = new Vector3Int((int)rawHeadPosition.x, (int)rawHeadPosition.y, 0);
+            return headPosition;
+        }
     }
 
     /******************************
@@ -124,6 +153,34 @@ class TuringMachine {
         AddTransition(symbol, state, transition);
     }
 
+    /// <summary>
+    /// Get the <see cref="Transition"/> produced by the transition function.
+    /// <para>
+    /// Given the current state and the symbol read in by the Turing machine 
+    /// head, produce a transition triple (nextState, moveDirection, 
+    /// writeSymbol). If the (currentState, inputSymbol) pair doesn't have a
+    /// defined transition, it halts the machine.
+    /// </para>
+    /// </summary>
+    /// <param name="currentState">The current state the machine is in</param>
+    /// <param name="inputSymbol">The symbol the read/write head read in</param>
+    /// <returns>A <see cref="Transition"/> object.</returns>
+    public Transition GetTransition(int currentState, TM_Symbol inputSymbol) {
+        Transition returnTransition = new Transition(-1, TM_Direction.STAY, inputSymbol);
+        (int, TM_Symbol) transitionKey = (currentState, inputSymbol);
+        if (TransitionTable.ContainsKey(transitionKey)) {
+            returnTransition = TransitionTable[transitionKey];
+        }
+        return returnTransition;
+    }
+
+    /*******************
+     * UTILITY METHODS *
+     *******************/
+    /// <summary>
+    /// Get a human-readable string representation of this Turing machine.
+    /// TODO: DOC
+    /// </summary>
     override public string ToString() {
         String returnString = String.Format("Current State: {0}\n", CurrentState);
         returnString = String.Concat(returnString, "Transition Table:\n");
