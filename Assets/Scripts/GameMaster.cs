@@ -127,6 +127,14 @@ public class GameMaster : Singleton<GameMaster> {
     /***************************
      * BUTTON HANDLING METHODS *
      ***************************/
+    /// <summary>
+    /// Handle when the mouse wheel scrolls in a direction.
+    /// </summary>
+    /// <param name="direction">An integer either -1 or 1.</param>
+    public void HandleMouseWheelScroll(int direction) {
+        CameraMonobehavior.ZoomCamera(direction);
+    }
+
     public void HandleButton(string buttonName) {
         switch (buttonName) {
             case "playPause":

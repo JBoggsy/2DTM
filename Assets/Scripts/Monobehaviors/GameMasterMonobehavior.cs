@@ -18,5 +18,12 @@ class GameMasterMonobehavior : GameObjectMonobehavior
             }
         }
         GM.HandleKeyPresses(keysPressed);
+
+        float mouseWheelInput = Input.mouseScrollDelta.y;
+        if (mouseWheelInput > 0) {
+            GM.HandleMouseWheelScroll(1);
+        } else if (mouseWheelInput < 0) {
+            GM.HandleMouseWheelScroll(-1);
+        }
     }
 }

@@ -8,7 +8,9 @@ using UnityEngine.Tilemaps;
 
 public class CameraMonobehavior : GameObjectMonobehavior
 {
-    public int CameraSpeed;
+    public const float ZOOM_INCREMENT= 1.2f;
+
+    public float CameraSpeed;
 
     override protected void Start() {
         base.Start();
@@ -18,6 +20,20 @@ public class CameraMonobehavior : GameObjectMonobehavior
 
     void Update() {
         GM.CurrentViewRect = _GetWorldViewRect();
+    }
+
+    /// <summary>
+    /// Zooms the camera in or out by changing its size.
+    /// </summary>
+    /// <param name="direction">An integer either -1 or 1.</param>
+    public void ZoomCamera(int direction) {
+        if (direction > 0) {
+            gameObject.GetComponent<Camera>().orthographicSize /= ZOOM_INCREMENT;
+            CameraSpeed /= ZOOM_INCREMENT;
+        } else if (direction < 0) {
+            gameObject.GetComponent<Camera>().orthographicSize *= ZOOM_INCREMENT;
+            CameraSpeed *= ZOOM_INCREMENT;
+        }
     }
 
     /// <summary>
@@ -40,6 +56,9 @@ public class CameraMonobehavior : GameObjectMonobehavior
                 break;
             case TM_Direction.RIGHT:
                 gameObject.transform.Translate(Vector3.right * moveDistance);
+                break;
+            case TM_Direction.STAY:
+                gameObject.transform.Translate(Vector3.zero);
                 break;
         }
     }
