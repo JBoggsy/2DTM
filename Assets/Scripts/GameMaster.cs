@@ -63,13 +63,20 @@ public class GameMaster : Singleton<GameMaster> {
         StartCoroutine(simulationUpdater);
     }
 
-    /// <summary>
-    /// Register the given <see cref="CameraMonobehavior"/> as the camera the
-    /// <see cref="GameMaster"/> should pay attention to and interact with.
-    /// </summary>
-    public void RegisterCameraMonobehavior(CameraMonobehavior newCamera) {
-        if (CameraMonobehavior == null) {
-            CameraMonobehavior = newCamera;
+    /**********************
+     * SIMULATION METHODS *
+     **********************/
+    /**
+     * <summary>
+     * Simulate a single step of the "game" by iterating through each Turing machine.
+     * </summary>
+     */
+    public void SimulateOneStep() {
+        foreach (TuringMachine tm in TuringMachines) {
+            tm.PrepareSimulationStep(GridData.GetCellSymbol(tm.position));
+        }
+        foreach (TuringMachine tm in TuringMachines) {
+            tm.ApplySimulationStep();
         }
     }
 
@@ -81,13 +88,13 @@ public class GameMaster : Singleton<GameMaster> {
         Random.InitState(RandomSeed);
     }
 
-    /**
-     * <summary>
-     * Simulate a single step of the "game" by iterating through each Turing machine.
-     * </summary>
-     */
-    public void SimulateOneStep() {
+    /// <summary>
+    /// Writes the given symbol to the given location on the grid.
+    /// </summary>
+    public void WriteSymbolToGrid(Vector3Int loc, TM_Symbol symbol) {
+        GridData.SetCellSymbol(loc, symbol);
     }
+
 
     /***********************************
      * GAMEOBJECT INTERACTION HANDLING *
@@ -188,5 +195,18 @@ public class GameMaster : Singleton<GameMaster> {
 
     private void _UpdateSimulationSpeed() {
         SimulationSpeed = 1.0f / SimulationSpeedSetting;
+    }
+
+    /*******************
+     * UTILITY METHODS *
+     *******************/
+    /// <summary>
+    /// Register the given <see cref="CameraMonobehavior"/> as the camera the
+    /// <see cref="GameMaster"/> should pay attention to and interact with.
+    /// </summary>
+    public void RegisterCameraMonobehavior(CameraMonobehavior newCamera) {
+        if (CameraMonobehavior == null) {
+            CameraMonobehavior = newCamera;
+        }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TuringMachineHeadMonobehavior : GameObjectMonobehavior
 {
-    private int id;
+    public int id;
 
     void OnMouseDown() {
         GM.HandleTuringMachineHeadClick(id);
