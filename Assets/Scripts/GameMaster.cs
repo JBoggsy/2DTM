@@ -36,6 +36,8 @@ public class GameMaster : Singleton<GameMaster> {
             yield return new WaitForSeconds(SimulationSpeed);
         }
     }
+    public bool Running { get{return RunSimulation;} }
+
 
     /// <summary>
     /// Initializes the <see cref="GameMaster"/> singleton. This is called by
@@ -169,6 +171,10 @@ public class GameMaster : Singleton<GameMaster> {
 
     public void HandleChangeSeedButton() {
         RandomSeed = Random.Range(int.MinValue, int.MaxValue);
+    }
+
+    public void SetSeed(int value) {
+        RandomSeed = Mathf.Clamp(value, int.MinValue, int.MaxValue);
     }
 
     public void HandleStepButton() {
