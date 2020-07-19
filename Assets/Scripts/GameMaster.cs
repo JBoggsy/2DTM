@@ -16,6 +16,10 @@ public class GameMaster : Singleton<GameMaster> {
     // MONOBEHAVIOR REFERENCES
     private CameraMonobehavior CameraMonobehavior;
 
+    // PREFAB REFERENCES
+    public GameObject TuringMachineEditorPanelPrefab;
+    public GameObject TuringMachineHeadPrefab;
+
     // SETTINGS
     public int NumberOfTuringMachines { get; private set; } = 25;
     public int NumberStatesPerMachine { get; private set; } = 3;
@@ -51,6 +55,9 @@ public class GameMaster : Singleton<GameMaster> {
             print("SEED: " + RandomSeed.ToString());
             Random.InitState(RandomSeed);
         }
+
+        TuringMachineHeadPrefab = (GameObject)Resources.Load("Turing Machine Head");
+        TuringMachineEditorPanelPrefab = (GameObject)Resources.Load("TuringMachineEditorOuterPanel");
 
         GridData = new GridData();
         TuringMachines = new TuringMachine[NumberOfTuringMachines];
