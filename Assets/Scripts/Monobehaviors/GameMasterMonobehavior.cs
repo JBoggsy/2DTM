@@ -6,6 +6,7 @@ class GameMasterMonobehavior : GameObjectMonobehavior
 {
     void Awake() {
         GameMaster.Instance.Initialize();
+        GameObjectMonobehavior.SetGameMaster(GameMaster.Instance);
     }
 
     void Update()
