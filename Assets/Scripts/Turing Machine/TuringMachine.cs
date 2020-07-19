@@ -50,20 +50,20 @@ class TuringMachine {
     private TuringMachineHeadMonobehavior headMonobehavior;
     private Dictionary<(int, TM_Symbol), Transition> TransitionTable;
     private GameMaster GM;
-
+        
     /// <summary>
     /// TODO: DOC
     /// </summary>
     /// <param name="id"></param>
     public TuringMachine(int id, int numberOfStates) {
+        GM = GameMaster.Instance;
         ID = id;
         NumberOfStates = numberOfStates;
         CurrentState = 0;
         TransitionTable = new Dictionary<(int, TM_Symbol), Transition>();
-        headObject = GameObject.Instantiate((GameObject)Resources.Load("Turing Machine Head"), Vector3.zero, Quaternion.identity);
+        headObject = GameObject.Instantiate(GM.TuringMachineHeadPrefab, Vector3.zero, Quaternion.identity);
         headMonobehavior = headObject.GetComponent<TuringMachineHeadMonobehavior>();
         headMonobehavior.id = ID;
-        GM = GameMaster.Instance;
     }
 
     /**********************
@@ -172,6 +172,12 @@ class TuringMachine {
             returnTransition = TransitionTable[transitionKey];
         }
         return returnTransition;
+    }
+
+    public void RemoveTransition(int currentState, TM_Symbol inputSymbol) {
+        (int, TM_Symbol) transitionKey = (currentState, inputSymbol);
+        TransitionTable.Remove(transitionKey);
+        TransitionTable[transitionKey] = null;
     }
 
     /*******************
