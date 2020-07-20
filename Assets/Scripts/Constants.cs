@@ -15,17 +15,6 @@ namespace Constants {
         /// </summary>
         NUMBER
     }
-    public static class RandomSymbol {
-        /// <summary>
-        /// Produces a random symbol from the alphabet.
-        /// </summary>
-        /// <returns>
-        /// An <c>TM_Symbol</c> <c>s</c> such that <c>0 <= s < TM_Symbol.NUMBER</c>
-        /// </returns>
-        public static TM_Symbol Get() {
-            return (TM_Symbol) UnityEngine.Random.Range(0, (int)TM_Symbol.NUMBER);
-        }
-    }
 
     public enum TM_Direction : int {
         /// <summary>
@@ -45,23 +34,13 @@ namespace Constants {
         /// </summary>
         RIGHT,
         /// <summary>
+        /// Don't move in any direction.
+        /// </summary>
+        STAY,
+        /// <summary>
         /// The number of directions a TM can go
         /// </summary>
         NUMBER
     }
-    public static class RandomDirection{
-        private static Random rngesus = new Random();
-
-        /// <summary>
-        /// Produces a random direction from the possible directions.
-        /// </summary>
-        /// <returns>
-        /// An <c>TM_Direction</c> <c>d</c> such that <c>0 <= d < TM_Direction.NUMBER</c>
-        /// </returns>
-        public static TM_Direction Get() {
-            return (TM_Direction)UnityEngine.Random.Range(0, (int)TM_Direction.NUMBER);
-        }
-    }
-
 }
 

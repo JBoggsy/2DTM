@@ -18,8 +18,8 @@ class Transition {
     /// Create a new <c>Transition</c> object for use in the transition table.
     /// </summary>
     public Transition() {
-        NextState = 0;
-        Direction = 0;
+        NextState = -1;
+        Direction = TM_Direction.STAY;
         WriteSymbol = 0;
     }
 

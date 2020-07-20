@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Constants;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 /// <summary>
 /// The <c>TuringMachine</c> class represents the internal mathmatical Turing
@@ -38,51 +40,74 @@ using UnityEngine;
 /// see https://en.wikipedia.org/wiki/Turing_machine.
 /// </para>
 /// </remarks>
-class TuringMachine { 
-    // INTERNAL STATE
-    public int NumStates { get; private set; }
-    public int[] States { get; private set; }
+class TuringMachine {
+    public int ID { get; private set; }
+    public int NumberOfStates { get; private set; }
     public int CurrentState { get; private set; }
 
-    private int NextState;
-    private Transition[,] TransitionTable;
-
-    /** 
-     * <summary>
-     * Instantiate a Turing machine with 'n' possible States. The
-     * transition function defaults to completely undefined, meaning every
-     * state will immediately halt on any input.
-     * </summary>
-     */
-    public TuringMachine(int n) {
-        n = Math.Max(n, 1);
-
-        NumStates = n;
-        States = new int[NumStates];
-        for (int stateID = 0; stateID < NumStates; stateID++) {
-            States[stateID] = stateID;
-        }
+    private Transition nextTransition;
+    private GameObject headObject;
+    private TuringMachineHeadMonobehavior headMonobehavior;
+    private Dictionary<(int, TM_Symbol), Transition> TransitionTable;
+    private GameMaster GM;
+        
+    /// <summary>
+    /// TODO: DOC
+    /// </summary>
+    /// <param name="id"></param>
+    public TuringMachine(int id, int numberOfStates) {
+        GM = GameMaster.Instance;
+        ID = id;
+        NumberOfStates = numberOfStates;
         CurrentState = 0;
-        NextState = 0;
-        TransitionTable = new Transition[(int)TM_Symbol.NUMBER, NumStates];
+        TransitionTable = new Dictionary<(int, TM_Symbol), Transition>();
+        headObject = GameObject.Instantiate(GM.TuringMachineHeadPrefab, Vector3.zero, Quaternion.identity);
+        headMonobehavior = headObject.GetComponent<TuringMachineHeadMonobehavior>();
+        headMonobehavior.id = ID;
     }
 
-    /**
-     * <summary>
-     * Instantiate the transition table with random valid transitions.
-     * <br></br>
-     * There is no guarantee this will create anything interesting and it is
-     * guaranteed to never halt.
-     * </summary>
-     */
-    public void InitWithRandomTransitions() {
-        for (int input = 0; input < (int)TM_Symbol.NUMBER; input++) {
-            for (int state=0; state < NumStates; state++) {
-                int next = UnityEngine.Random.Range(0, NumStates);
-                TM_Direction dir = RandomDirection.Get();
-                TM_Symbol write = RandomSymbol.Get();
-                Transition transition = new Transition(next, dir, write);
-                TransitionTable[input, state] = transition;
+    /**********************
+     * SIMULATION METHODS *
+     **********************/
+    public void PrepareSimulationStep(TM_Symbol inputSymbol) {
+        nextTransition = GetTransition(CurrentState, inputSymbol);
+    }
+
+    public void ApplySimulationStep() {
+        if (nextTransition == null) { return; }
+        GM.WriteSymbolToGrid(position, nextTransition.WriteSymbol);
+        headMonobehavior.MoveHeadInDirection(nextTransition.Direction);
+        CurrentState = nextTransition.NextState;
+        nextTransition = null;
+    }
+
+    /// <summary>
+    /// Returns the coordinates of the read/write head.
+    /// </summary>
+    public Vector3Int position { 
+        get {
+            Vector3 rawHeadPosition = headMonobehavior.position;
+            Vector3Int headPosition = new Vector3Int((int)rawHeadPosition.x, (int)rawHeadPosition.y, 0);
+            return headPosition;
+        }
+    }
+
+    /******************************
+     * TRANSITION TABLE FUNCTIONS *
+     ******************************/
+    /// <summary>
+    /// Fills the <c>TransitionTable</c> with randomly-generated valid transitions.
+    /// <para>
+    /// This method guarantees a non-halting Turing machine.
+    /// </para>
+    /// </summary>
+    public void GenerateRandomTransitions() {
+        for (int state = 0; state < NumberOfStates; state++) {
+            for (int input = 0; input < (int)TM_Symbol.NUMBER; input++) {
+                int nextState = UnityEngine.Random.Range(0, NumberOfStates);
+                int writeSymbol = UnityEngine.Random.Range(0, (int)TM_Symbol.NUMBER);
+                int direction = UnityEngine.Random.Range(0, (int)TM_Direction.NUMBER);
+                AddTransition(input, state, nextState, direction, writeSymbol);
             }
         }
     }
@@ -94,12 +119,17 @@ class TuringMachine {
      * table at the specified pair of input 'symbol' and current 'state'. This
      * partially defines the transition function <c>d</c> for <c>d(symbol, 
      * state)</c></summary>.
-     * <param name="symbol">The input symbol the transition requires</param>
+     * <param name="input">The input symbol the transition requires</param>
      * <param name="state">The state the TM should be in for the transition</param>
      * <param name="transition">The <c>Transition</c> object to be used</param>
      */
-    public void AddTransition(int symbol, int state, Transition transition) {
-        TransitionTable[symbol, state] = transition;
+    public void AddTransition(int input, int state, Transition transition) {
+        TM_Symbol inputSymbol = (TM_Symbol)input;
+        TransitionTable[(state, inputSymbol)] = transition;
+    }
+
+    public void AddTransition(TM_Symbol input, int state, Transition transition) {
+        TransitionTable[(state, input)] = transition;
     }
 
     /**
@@ -123,35 +153,49 @@ class TuringMachine {
         AddTransition(symbol, state, transition);
     }
 
-    /**
-     * <summary>Handle a given input given the current state.</summary>
-     * <param name="input">The current symbol the TM head is over</param>
-     * <returns>A pair of <c>int</c>s <c>(direction, write)</c> indicating
-     * the movement of the head and the symbol to write.</returns>
-     */
-    public (TM_Direction, TM_Symbol) HandleInput(TM_Symbol input) {
-        Transition transition = TransitionTable[(int)input, CurrentState];
-        NextState = transition.NextState;
-        return (transition.Direction, transition.WriteSymbol);
+    /// <summary>
+    /// Get the <see cref="Transition"/> produced by the transition function.
+    /// <para>
+    /// Given the current state and the symbol read in by the Turing machine 
+    /// head, produce a transition triple (nextState, moveDirection, 
+    /// writeSymbol). If the (currentState, inputSymbol) pair doesn't have a
+    /// defined transition, it halts the machine.
+    /// </para>
+    /// </summary>
+    /// <param name="currentState">The current state the machine is in</param>
+    /// <param name="inputSymbol">The symbol the read/write head read in</param>
+    /// <returns>A <see cref="Transition"/> object.</returns>
+    public Transition GetTransition(int currentState, TM_Symbol inputSymbol) {
+        Transition returnTransition = new Transition(-1, TM_Direction.STAY, inputSymbol);
+        (int, TM_Symbol) transitionKey = (currentState, inputSymbol);
+        if (TransitionTable.ContainsKey(transitionKey)) {
+            returnTransition = TransitionTable[transitionKey];
+        }
+        return returnTransition;
     }
 
+    public void RemoveTransition(int currentState, TM_Symbol inputSymbol) {
+        (int, TM_Symbol) transitionKey = (currentState, inputSymbol);
+        TransitionTable.Remove(transitionKey);
+        TransitionTable[transitionKey] = null;
+    }
+
+    /*******************
+     * UTILITY METHODS *
+     *******************/
+    /// <summary>
+    /// Get a human-readable string representation of this Turing machine.
+    /// TODO: DOC
+    /// </summary>
     override public string ToString() {
         String returnString = String.Format("Current State: {0}\n", CurrentState);
         returnString = String.Concat(returnString, "Transition Table:\n");
-        for (int sym=0; sym<(int)TM_Symbol.NUMBER; sym++) {
-            for (int state=0; state<NumStates; state++) {
-                Transition transition = TransitionTable[sym, state];
+        for (int state = 0; state < NumberOfStates; state++) {
+            for (int sym = 0; sym < (int)TM_Symbol.NUMBER; sym++) {
+                Transition transition = TransitionTable[(state, (TM_Symbol)sym)];
                 returnString = String.Concat(returnString, String.Format("\t({0},{1})=>{2}\n", sym, state, transition.ToString()));
             }
         }
         return returnString;
-    }
-
-    /**
-     * <summary>Update the current state with the next state.</summary>
-     */
-    public void UpdateState() {
-        CurrentState = NextState;
-        NextState = 0;
     }
 }
