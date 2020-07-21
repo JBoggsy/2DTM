@@ -9,9 +9,13 @@ using System.Collections;
 public class GameObjectMonobehavior : MonoBehaviour
 {
     /// <summary>The singleton <c><see cref="GameMaster"/></c> instance.</summary>
-    protected GameMaster GM;
+    protected static GameMaster GM;
 
     virtual protected void Start() {
-        GM = GameMaster.Instance;
+        print("Starting a monobehavior...");
+    }
+
+    public static void SetGameMaster(GameMaster newGM) {
+        GM = newGM;
     }
 }
