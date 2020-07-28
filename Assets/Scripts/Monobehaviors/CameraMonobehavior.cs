@@ -8,9 +8,8 @@ using UnityEngine.Tilemaps;
 
 public class CameraMonobehavior : GameObjectMonobehavior
 {
-    public const float ZOOM_INCREMENT= 1.2f;
-
-    public float CameraSpeed;
+    private const float ZOOM_INCREMENT = 1.2f;
+    private const float CAMERA_SPEED = 3;
 
     override protected void Start() {
         base.Start();
@@ -29,10 +28,8 @@ public class CameraMonobehavior : GameObjectMonobehavior
     public void ZoomCamera(int direction) {
         if (direction > 0) {
             gameObject.GetComponent<Camera>().orthographicSize /= ZOOM_INCREMENT;
-            CameraSpeed /= ZOOM_INCREMENT;
         } else if (direction < 0) {
             gameObject.GetComponent<Camera>().orthographicSize *= ZOOM_INCREMENT;
-            CameraSpeed *= ZOOM_INCREMENT;
         }
     }
 
@@ -43,7 +40,7 @@ public class CameraMonobehavior : GameObjectMonobehavior
     /// </summary>
     /// <param name="dir">The direction to move the camera</param>
     public void MoveInDirection(TM_Direction dir) {
-        float moveDistance = CameraSpeed * Time.deltaTime;
+        float moveDistance = CAMERA_SPEED * gameObject.GetComponent<Camera>().orthographicSize * Time.deltaTime;
         switch (dir) {
             case TM_Direction.UP:
                 gameObject.transform.Translate(Vector3.up * moveDistance);
