@@ -12,6 +12,10 @@ public class GridData
         CellDictionary = new Dictionary<Vector3Int, TM_Symbol>();
     }
 
+    public void ResetGrid() {
+        CellDictionary.Clear();
+    }
+
     public TM_Symbol GetCellSymbol(Vector3Int loc)
     {
         _EnsureCellSymbol(loc);

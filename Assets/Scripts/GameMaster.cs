@@ -95,6 +95,7 @@ public class GameMaster : Singleton<GameMaster> {
     /// </summary>
     public void ResetGame() {
         Random.InitState(RandomSeed);
+        GridData.ResetGrid();
     }
 
     /// <summary>

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Monobehaviour : MonoBehaviour
+public class SimulationControlCanvasMonobehavior : MonoBehaviour
 {
     public Text SpeedLabel;
     public InputField SeedField;
