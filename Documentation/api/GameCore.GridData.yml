@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: GameCore.GridData
+  commentId: T:GameCore.GridData
+  id: GridData
+  parent: GameCore
+  children:
+  - GameCore.GridData.#ctor
+  - GameCore.GridData.GetCellSymbol(UnityEngine.Vector3Int)
+  - GameCore.GridData.ResetGrid
+  - GameCore.GridData.SetCellSymbol(UnityEngine.Vector3Int,Constants.TM_Symbol)
+  langs:
+  - csharp
+  - vb
+  name: GridData
+  nameWithType: GridData
+  fullName: GameCore.GridData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GridData.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GridData
+    path: ../Assets/Scripts/GameCore/GridData.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public class GridData
+    content.vb: Public Class GridData
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: GameCore.GridData.#ctor
+  commentId: M:GameCore.GridData.#ctor
+  id: '#ctor'
+  parent: GameCore.GridData
+  langs:
+  - csharp
+  - vb
+  name: GridData()
+  nameWithType: GridData.GridData()
+  fullName: GameCore.GridData.GridData()
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GridData.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: .ctor
+    path: ../Assets/Scripts/GameCore/GridData.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public GridData()
+    content.vb: Public Sub New
+  overload: GameCore.GridData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GridData.ResetGrid
+  commentId: M:GameCore.GridData.ResetGrid
+  id: ResetGrid
+  parent: GameCore.GridData
+  langs:
+  - csharp
+  - vb
+  name: ResetGrid()
+  nameWithType: GridData.ResetGrid()
+  fullName: GameCore.GridData.ResetGrid()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GridData.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ResetGrid
+    path: ../Assets/Scripts/GameCore/GridData.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void ResetGrid()
+    content.vb: Public Sub ResetGrid
+  overload: GameCore.GridData.ResetGrid*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GridData.GetCellSymbol(UnityEngine.Vector3Int)
+  commentId: M:GameCore.GridData.GetCellSymbol(UnityEngine.Vector3Int)
+  id: GetCellSymbol(UnityEngine.Vector3Int)
+  parent: GameCore.GridData
+  langs:
+  - csharp
+  - vb
+  name: GetCellSymbol(Vector3Int)
+  nameWithType: GridData.GetCellSymbol(Vector3Int)
+  fullName: GameCore.GridData.GetCellSymbol(UnityEngine.Vector3Int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GridData.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GetCellSymbol
+    path: ../Assets/Scripts/GameCore/GridData.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public TM_Symbol GetCellSymbol(Vector3Int loc)
+    parameters:
+    - id: loc
+      type: UnityEngine.Vector3Int
+    return:
+      type: Constants.TM_Symbol
+    content.vb: Public Function GetCellSymbol(loc As Vector3Int) As TM_Symbol
+  overload: GameCore.GridData.GetCellSymbol*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GridData.SetCellSymbol(UnityEngine.Vector3Int,Constants.TM_Symbol)
+  commentId: M:GameCore.GridData.SetCellSymbol(UnityEngine.Vector3Int,Constants.TM_Symbol)
+  id: SetCellSymbol(UnityEngine.Vector3Int,Constants.TM_Symbol)
+  parent: GameCore.GridData
+  langs:
+  - csharp
+  - vb
+  name: SetCellSymbol(Vector3Int, TM_Symbol)
+  nameWithType: GridData.SetCellSymbol(Vector3Int, TM_Symbol)
+  fullName: GameCore.GridData.SetCellSymbol(UnityEngine.Vector3Int, Constants.TM_Symbol)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GridData.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SetCellSymbol
+    path: ../Assets/Scripts/GameCore/GridData.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void SetCellSymbol(Vector3Int loc, TM_Symbol symbol)
+    parameters:
+    - id: loc
+      type: UnityEngine.Vector3Int
+    - id: symbol
+      type: Constants.TM_Symbol
+    content.vb: Public Sub SetCellSymbol(loc As Vector3Int, symbol As TM_Symbol)
+  overload: GameCore.GridData.SetCellSymbol*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: GameCore
+  commentId: N:GameCore
+  name: GameCore
+  nameWithType: GameCore
+  fullName: GameCore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GameCore.GridData.#ctor*
+  commentId: Overload:GameCore.GridData.#ctor
+  name: GridData
+  nameWithType: GridData.GridData
+  fullName: GameCore.GridData.GridData
+- uid: GameCore.GridData.ResetGrid*
+  commentId: Overload:GameCore.GridData.ResetGrid
+  name: ResetGrid
+  nameWithType: GridData.ResetGrid
+  fullName: GameCore.GridData.ResetGrid
+- uid: GameCore.GridData.GetCellSymbol*
+  commentId: Overload:GameCore.GridData.GetCellSymbol
+  name: GetCellSymbol
+  nameWithType: GridData.GetCellSymbol
+  fullName: GameCore.GridData.GetCellSymbol
+- uid: UnityEngine.Vector3Int
+  commentId: T:UnityEngine.Vector3Int
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3Int
+  nameWithType: Vector3Int
+  fullName: UnityEngine.Vector3Int
+- uid: Constants.TM_Symbol
+  commentId: T:Constants.TM_Symbol
+  parent: Constants
+  name: TM_Symbol
+  nameWithType: TM_Symbol
+  fullName: Constants.TM_Symbol
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+- uid: GameCore.GridData.SetCellSymbol*
+  commentId: Overload:GameCore.GridData.SetCellSymbol
+  name: SetCellSymbol
+  nameWithType: GridData.SetCellSymbol
+  fullName: GameCore.GridData.SetCellSymbol

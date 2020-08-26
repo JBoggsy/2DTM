@@ -1,0 +1,226 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.GameObjectMonobehavior
+  commentId: T:MonoBehaviours.GameObjectMonobehavior
+  id: GameObjectMonobehavior
+  parent: MonoBehaviours
+  children:
+  - MonoBehaviours.GameObjectMonobehavior.GM
+  - MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  - MonoBehaviours.GameObjectMonobehavior.Start
+  langs:
+  - csharp
+  - vb
+  name: GameObjectMonobehavior
+  nameWithType: GameObjectMonobehavior
+  fullName: MonoBehaviours.GameObjectMonobehavior
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GameObjectMonobehavior
+    path: ../Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: 'public class GameObjectMonobehavior : MonoBehaviour'
+    content.vb: >-
+      Public Class GameObjectMonobehavior
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - MonoBehaviours.CameraMonobehavior
+  - MonoBehaviours.TilemapMonobehavior
+  - MonoBehaviours.TuringMachineHeadMonobehavior
+  - MonoBehaviours.UI.LabelMonobehavior
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MonoBehaviours.GameObjectMonobehavior.GM
+  commentId: F:MonoBehaviours.GameObjectMonobehavior.GM
+  id: GM
+  parent: MonoBehaviours.GameObjectMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: GM
+  nameWithType: GameObjectMonobehavior.GM
+  fullName: MonoBehaviours.GameObjectMonobehavior.GM
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GM
+    path: ../Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  summary: The singleton <code><xref href="GameCore.GameMaster" data-throw-if-not-resolved="false"></xref></code> instance.
+  example: []
+  syntax:
+    content: protected static GameMaster GM
+    return:
+      type: GameCore.GameMaster
+    content.vb: Protected Shared GM As GameMaster
+  modifiers.csharp:
+  - protected
+  - static
+  modifiers.vb:
+  - Protected
+  - Shared
+- uid: MonoBehaviours.GameObjectMonobehavior.Start
+  commentId: M:MonoBehaviours.GameObjectMonobehavior.Start
+  id: Start
+  parent: MonoBehaviours.GameObjectMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: GameObjectMonobehavior.Start()
+  fullName: MonoBehaviours.GameObjectMonobehavior.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Start
+    path: ../Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start
+  overload: MonoBehaviours.GameObjectMonobehavior.Start*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  commentId: M:MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  id: SetGameMaster(GameCore.GameMaster)
+  parent: MonoBehaviours.GameObjectMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: SetGameMaster(GameMaster)
+  nameWithType: GameObjectMonobehavior.SetGameMaster(GameMaster)
+  fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SetGameMaster
+    path: ../Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: public static void SetGameMaster(GameMaster newGM)
+    parameters:
+    - id: newGM
+      type: GameCore.GameMaster
+    content.vb: Public Shared Sub SetGameMaster(newGM As GameMaster)
+  overload: MonoBehaviours.GameObjectMonobehavior.SetGameMaster*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: MonoBehaviours
+  commentId: N:MonoBehaviours
+  name: MonoBehaviours
+  nameWithType: MonoBehaviours
+  fullName: MonoBehaviours
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  parent: GameCore
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
+- uid: GameCore
+  commentId: N:GameCore
+  name: GameCore
+  nameWithType: GameCore
+  fullName: GameCore
+- uid: MonoBehaviours.GameObjectMonobehavior.Start*
+  commentId: Overload:MonoBehaviours.GameObjectMonobehavior.Start
+  name: Start
+  nameWithType: GameObjectMonobehavior.Start
+  fullName: MonoBehaviours.GameObjectMonobehavior.Start
+- uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster*
+  commentId: Overload:MonoBehaviours.GameObjectMonobehavior.SetGameMaster
+  name: SetGameMaster
+  nameWithType: GameObjectMonobehavior.SetGameMaster
+  fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster

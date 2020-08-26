@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.UI.GlassLayerMonobehaviour
+  commentId: T:MonoBehaviours.UI.GlassLayerMonobehaviour
+  id: GlassLayerMonobehaviour
+  parent: MonoBehaviours.UI
+  children:
+  - MonoBehaviours.UI.GlassLayerMonobehaviour.Awake
+  - MonoBehaviours.UI.GlassLayerMonobehaviour.Camera
+  - MonoBehaviours.UI.GlassLayerMonobehaviour.Shader
+  langs:
+  - csharp
+  - vb
+  name: GlassLayerMonobehaviour
+  nameWithType: GlassLayerMonobehaviour
+  fullName: MonoBehaviours.UI.GlassLayerMonobehaviour
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GlassLayerMonobehaviour
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: 'public class GlassLayerMonobehaviour : MonoBehaviour'
+    content.vb: >-
+      Public Class GlassLayerMonobehaviour
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MonoBehaviours.UI.GlassLayerMonobehaviour.Camera
+  commentId: F:MonoBehaviours.UI.GlassLayerMonobehaviour.Camera
+  id: Camera
+  parent: MonoBehaviours.UI.GlassLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: Camera
+  nameWithType: GlassLayerMonobehaviour.Camera
+  fullName: MonoBehaviours.UI.GlassLayerMonobehaviour.Camera
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Camera
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Camera Camera
+    return:
+      type: UnityEngine.Camera
+    content.vb: Public Camera As Camera
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.GlassLayerMonobehaviour.Shader
+  commentId: F:MonoBehaviours.UI.GlassLayerMonobehaviour.Shader
+  id: Shader
+  parent: MonoBehaviours.UI.GlassLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: Shader
+  nameWithType: GlassLayerMonobehaviour.Shader
+  fullName: MonoBehaviours.UI.GlassLayerMonobehaviour.Shader
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Shader
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Shader Shader
+    return:
+      type: UnityEngine.Shader
+    content.vb: Public Shader As Shader
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.GlassLayerMonobehaviour.Awake
+  commentId: M:MonoBehaviours.UI.GlassLayerMonobehaviour.Awake
+  id: Awake
+  parent: MonoBehaviours.UI.GlassLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: GlassLayerMonobehaviour.Awake()
+  fullName: MonoBehaviours.UI.GlassLayerMonobehaviour.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Awake
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public void Awake()
+    content.vb: Public Sub Awake
+  overload: MonoBehaviours.UI.GlassLayerMonobehaviour.Awake*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MonoBehaviours.UI
+  commentId: N:MonoBehaviours.UI
+  name: MonoBehaviours.UI
+  nameWithType: MonoBehaviours.UI
+  fullName: MonoBehaviours.UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Camera
+  commentId: T:UnityEngine.Camera
+  parent: UnityEngine
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: UnityEngine.Shader
+  commentId: T:UnityEngine.Shader
+  parent: UnityEngine
+  isExternal: true
+  name: Shader
+  nameWithType: Shader
+  fullName: UnityEngine.Shader
+- uid: MonoBehaviours.UI.GlassLayerMonobehaviour.Awake*
+  commentId: Overload:MonoBehaviours.UI.GlassLayerMonobehaviour.Awake
+  name: Awake
+  nameWithType: GlassLayerMonobehaviour.Awake
+  fullName: MonoBehaviours.UI.GlassLayerMonobehaviour.Awake

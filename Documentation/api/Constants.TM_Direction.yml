@@ -1,0 +1,256 @@
+### YamlMime:ManagedReference
+items:
+- uid: Constants.TM_Direction
+  commentId: T:Constants.TM_Direction
+  id: TM_Direction
+  parent: Constants
+  children:
+  - Constants.TM_Direction.DOWN
+  - Constants.TM_Direction.LEFT
+  - Constants.TM_Direction.NUMBER
+  - Constants.TM_Direction.RIGHT
+  - Constants.TM_Direction.STAY
+  - Constants.TM_Direction.UP
+  langs:
+  - csharp
+  - vb
+  name: TM_Direction
+  nameWithType: TM_Direction
+  fullName: Constants.TM_Direction
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TM_Direction
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  syntax:
+    content: public enum TM_Direction
+    content.vb: Public Enum TM_Direction
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Constants.TM_Direction.UP
+  commentId: F:Constants.TM_Direction.UP
+  id: UP
+  parent: Constants.TM_Direction
+  langs:
+  - csharp
+  - vb
+  name: UP
+  nameWithType: TM_Direction.UP
+  fullName: Constants.TM_Direction.UP
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: UP
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nThe upward (positive y) direction\n"
+  example: []
+  syntax:
+    content: UP = 0
+    return:
+      type: Constants.TM_Direction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Constants.TM_Direction.DOWN
+  commentId: F:Constants.TM_Direction.DOWN
+  id: DOWN
+  parent: Constants.TM_Direction
+  langs:
+  - csharp
+  - vb
+  name: DOWN
+  nameWithType: TM_Direction.DOWN
+  fullName: Constants.TM_Direction.DOWN
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: DOWN
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nThe downward (negative y) direction\n"
+  example: []
+  syntax:
+    content: DOWN = 1
+    return:
+      type: Constants.TM_Direction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Constants.TM_Direction.LEFT
+  commentId: F:Constants.TM_Direction.LEFT
+  id: LEFT
+  parent: Constants.TM_Direction
+  langs:
+  - csharp
+  - vb
+  name: LEFT
+  nameWithType: TM_Direction.LEFT
+  fullName: Constants.TM_Direction.LEFT
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: LEFT
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nThe leftward (negative x) direction\n"
+  example: []
+  syntax:
+    content: LEFT = 2
+    return:
+      type: Constants.TM_Direction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Constants.TM_Direction.RIGHT
+  commentId: F:Constants.TM_Direction.RIGHT
+  id: RIGHT
+  parent: Constants.TM_Direction
+  langs:
+  - csharp
+  - vb
+  name: RIGHT
+  nameWithType: TM_Direction.RIGHT
+  fullName: Constants.TM_Direction.RIGHT
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: RIGHT
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 32
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nThe rightward  (positive x) direction\n"
+  example: []
+  syntax:
+    content: RIGHT = 3
+    return:
+      type: Constants.TM_Direction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Constants.TM_Direction.STAY
+  commentId: F:Constants.TM_Direction.STAY
+  id: STAY
+  parent: Constants.TM_Direction
+  langs:
+  - csharp
+  - vb
+  name: STAY
+  nameWithType: TM_Direction.STAY
+  fullName: Constants.TM_Direction.STAY
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: STAY
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 36
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nDon&apos;t move in any direction.\n"
+  example: []
+  syntax:
+    content: STAY = 4
+    return:
+      type: Constants.TM_Direction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Constants.TM_Direction.NUMBER
+  commentId: F:Constants.TM_Direction.NUMBER
+  id: NUMBER
+  parent: Constants.TM_Direction
+  langs:
+  - csharp
+  - vb
+  name: NUMBER
+  nameWithType: TM_Direction.NUMBER
+  fullName: Constants.TM_Direction.NUMBER
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: NUMBER
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 40
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nThe number of directions a TM can go\n"
+  example: []
+  syntax:
+    content: NUMBER = 5
+    return:
+      type: Constants.TM_Direction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+- uid: Constants.TM_Direction
+  commentId: T:Constants.TM_Direction
+  parent: Constants
+  name: TM_Direction
+  nameWithType: TM_Direction
+  fullName: Constants.TM_Direction

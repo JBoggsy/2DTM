@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: Constants
+  commentId: N:Constants
+  id: Constants
+  children:
+  - Constants.TM_Direction
+  - Constants.TM_Symbol
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: Constants.TM_Symbol
+  commentId: T:Constants.TM_Symbol
+  parent: Constants
+  name: TM_Symbol
+  nameWithType: TM_Symbol
+  fullName: Constants.TM_Symbol
+- uid: Constants.TM_Direction
+  commentId: T:Constants.TM_Direction
+  parent: Constants
+  name: TM_Direction
+  nameWithType: TM_Direction
+  fullName: Constants.TM_Direction
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants

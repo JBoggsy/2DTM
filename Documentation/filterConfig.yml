@@ -1,0 +1,36 @@
+apiRules:
+- include:
+    uidRegex: ^Contants$
+    type: Namespace
+- include:
+    uidRegex: ^GameCore$
+    type: Namespace
+- include:
+    uidRegex: ^MonoBehaviours$
+    type: Namespace
+- include:
+    uidRegex: ^MonoBehaviours\.UI$
+    type: Namespace
+- include:
+    uidRegex: ^TuringMachines$
+    type: Namespace
+- exclude:
+    # inherited Object methods
+    uidRegex: ^System\.Object\..*$
+    type: Method
+- exclude:
+    # inherited Unity methods
+    uidRegex: ^UnityEngine\..*$
+    type: Method
+- exclude:
+    # inherited Unity fields
+    uidRegex: ^UnityEngine\..*$
+    type: Field
+- exclude:
+    # inherited Unity properties
+    uidRegex: ^UnityEngine\..*$
+    type: Property
+- exclude:
+    # inherited Unity types
+    uidRegex: ^UnityEngine\..*$
+    type: Type

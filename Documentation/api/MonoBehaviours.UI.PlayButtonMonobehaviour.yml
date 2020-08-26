@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.UI.PlayButtonMonobehaviour
+  commentId: T:MonoBehaviours.UI.PlayButtonMonobehaviour
+  id: PlayButtonMonobehaviour
+  parent: MonoBehaviours.UI
+  children:
+  - MonoBehaviours.UI.PlayButtonMonobehaviour.Awake
+  - MonoBehaviours.UI.PlayButtonMonobehaviour.PauseTexture
+  - MonoBehaviours.UI.PlayButtonMonobehaviour.PlayTexture
+  - MonoBehaviours.UI.PlayButtonMonobehaviour.UpdateTexture
+  langs:
+  - csharp
+  - vb
+  name: PlayButtonMonobehaviour
+  nameWithType: PlayButtonMonobehaviour
+  fullName: MonoBehaviours.UI.PlayButtonMonobehaviour
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: PlayButtonMonobehaviour
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: 'public class PlayButtonMonobehaviour : MonoBehaviour'
+    content.vb: >-
+      Public Class PlayButtonMonobehaviour
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MonoBehaviours.UI.PlayButtonMonobehaviour.PlayTexture
+  commentId: F:MonoBehaviours.UI.PlayButtonMonobehaviour.PlayTexture
+  id: PlayTexture
+  parent: MonoBehaviours.UI.PlayButtonMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: PlayTexture
+  nameWithType: PlayButtonMonobehaviour.PlayTexture
+  fullName: MonoBehaviours.UI.PlayButtonMonobehaviour.PlayTexture
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: PlayTexture
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Texture2D PlayTexture
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: Public PlayTexture As Texture2D
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.PlayButtonMonobehaviour.PauseTexture
+  commentId: F:MonoBehaviours.UI.PlayButtonMonobehaviour.PauseTexture
+  id: PauseTexture
+  parent: MonoBehaviours.UI.PlayButtonMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: PauseTexture
+  nameWithType: PlayButtonMonobehaviour.PauseTexture
+  fullName: MonoBehaviours.UI.PlayButtonMonobehaviour.PauseTexture
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: PauseTexture
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Texture2D PauseTexture
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: Public PauseTexture As Texture2D
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.PlayButtonMonobehaviour.Awake
+  commentId: M:MonoBehaviours.UI.PlayButtonMonobehaviour.Awake
+  id: Awake
+  parent: MonoBehaviours.UI.PlayButtonMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: PlayButtonMonobehaviour.Awake()
+  fullName: MonoBehaviours.UI.PlayButtonMonobehaviour.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Awake
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public void Awake()
+    content.vb: Public Sub Awake
+  overload: MonoBehaviours.UI.PlayButtonMonobehaviour.Awake*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.PlayButtonMonobehaviour.UpdateTexture
+  commentId: M:MonoBehaviours.UI.PlayButtonMonobehaviour.UpdateTexture
+  id: UpdateTexture
+  parent: MonoBehaviours.UI.PlayButtonMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: UpdateTexture()
+  nameWithType: PlayButtonMonobehaviour.UpdateTexture()
+  fullName: MonoBehaviours.UI.PlayButtonMonobehaviour.UpdateTexture()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: UpdateTexture
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public void UpdateTexture()
+    content.vb: Public Sub UpdateTexture
+  overload: MonoBehaviours.UI.PlayButtonMonobehaviour.UpdateTexture*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MonoBehaviours.UI
+  commentId: N:MonoBehaviours.UI
+  name: MonoBehaviours.UI
+  nameWithType: MonoBehaviours.UI
+  fullName: MonoBehaviours.UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Texture2D
+  commentId: T:UnityEngine.Texture2D
+  parent: UnityEngine
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: UnityEngine.Texture2D
+- uid: MonoBehaviours.UI.PlayButtonMonobehaviour.Awake*
+  commentId: Overload:MonoBehaviours.UI.PlayButtonMonobehaviour.Awake
+  name: Awake
+  nameWithType: PlayButtonMonobehaviour.Awake
+  fullName: MonoBehaviours.UI.PlayButtonMonobehaviour.Awake
+- uid: MonoBehaviours.UI.PlayButtonMonobehaviour.UpdateTexture*
+  commentId: Overload:MonoBehaviours.UI.PlayButtonMonobehaviour.UpdateTexture
+  name: UpdateTexture
+  nameWithType: PlayButtonMonobehaviour.UpdateTexture
+  fullName: MonoBehaviours.UI.PlayButtonMonobehaviour.UpdateTexture

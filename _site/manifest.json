@@ -1,0 +1,402 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://2DTM.github.io/Documentation/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://2DTM.github.io/Documentation/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "C:/Users/jmsbo/Coding/2DTM/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Constants.TM_Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Constants.TM_Direction.html",
+          "hash": "QCGLUG/Au3M0tLHT2DbRng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Constants.TM_Symbol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Constants.TM_Symbol.html",
+          "hash": "oaXbzGw7dNv3aSngAJD6yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Constants.html",
+          "hash": "BKNzQzD01NSrY+aOOr8WEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GameCore.GameMaster.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GameCore.GameMaster.html",
+          "hash": "1t89h9vgqj+ooVRy/mm7/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GameCore.GridData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GameCore.GridData.html",
+          "hash": "lQBEHbRnnnS+Ag9Kc3cy4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GameCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GameCore.html",
+          "hash": "BE1BXQwvTyxpk+6Hiy/WXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.Singleton-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.Singleton-1.html",
+          "hash": "UhHEkiMVjx5wa5m5aYWfbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.html",
+          "hash": "nE4olYjYWt+MVptfXRP/lg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.CameraMonobehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.CameraMonobehavior.html",
+          "hash": "+rhVXAaY+DFAE7Zc6fnIHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.GameObjectMonobehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.GameObjectMonobehavior.html",
+          "hash": "HtcoxkEMCD1o3WBjCF3x8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.TilemapMonobehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.TilemapMonobehavior.html",
+          "hash": "s94QS9DJfSXyKm6OySSfpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.TuringMachineHeadMonobehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.TuringMachineHeadMonobehavior.html",
+          "hash": "7eEyEb3QnJ1IewXGxYh1Ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.UI.GlassLayerMonobehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.UI.GlassLayerMonobehaviour.html",
+          "hash": "0aP8JhViP8agWcGSpJjKiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.UI.LabelMonobehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.UI.LabelMonobehavior.html",
+          "hash": "5Od70BQsmp8rtFdPQ/Se6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.UI.LightsLayerMonobehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.UI.LightsLayerMonobehaviour.html",
+          "hash": "Nd/0ZDR2P7HYYA02qhR3Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.UI.PlayButtonMonobehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.UI.PlayButtonMonobehaviour.html",
+          "hash": "477OhfowK6m3Y74YqnCWBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.UI.SimulationControlCanvasMonobehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.UI.SimulationControlCanvasMonobehavior.html",
+          "hash": "MwTXXlFArkG3/A1wj/tCRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.UI.TuringMachineEditorPanel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.UI.TuringMachineEditorPanel.html",
+          "hash": "KopS1X69LfgjR44yQ+uALw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.UI.html",
+          "hash": "d5dNql/VAZHhcO78GcFEUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoBehaviours.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoBehaviours.html",
+          "hash": "xNL6Dl3dRtHfp6CSHOpPAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "FOGDvrm4cS/sL6A8m8jvVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/coniunctis.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/coniunctis.html",
+          "hash": "UFSZyLeJr4PnU7ssqoYABw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/etiam.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/etiam.html",
+          "hash": "Ml5e83aSkXbFhZfz9FRcTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "2q0qq03gpYNjYV8lSAAcVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleManual.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleManual.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleScriptingApi.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleScriptingApi.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "9HLlE+Av+IYBf0jVpsFUQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 2
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 20,
+          "skipped_file_count": 18
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

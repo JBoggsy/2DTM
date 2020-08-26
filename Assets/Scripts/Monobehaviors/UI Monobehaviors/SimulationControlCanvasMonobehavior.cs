@@ -1,85 +1,76 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class SimulationControlCanvasMonobehavior : MonoBehaviour
-{
-    public Text SpeedLabel;
-    public InputField SeedField;
-    public Text GenerationLabel;
-    public PlayButtonMonobehaviour PlayButton;
+using GameCore;
 
-    public void Start()
-    {
-        UpdateSpeedLabel();
-        UpdateSeedLabel();
-        UpdateGenerationLabel();
-    }
+namespace MonoBehaviours {
+    namespace UI {
+        public class SimulationControlCanvasMonobehavior : MonoBehaviour {
+            public Text SpeedLabel;
+            public InputField SeedField;
+            public Text GenerationLabel;
+            public PlayButtonMonobehaviour PlayButton;
 
-    public void Play()
-    {
-        GameMaster.Instance.HandlePlayPauseButton();
-        PlayButton.UpdateTexture();
-    }
+            public void Start() {
+                UpdateSpeedLabel();
+                UpdateSeedLabel();
+                UpdateGenerationLabel();
+            }
 
-    public void Restart()
-    {
-        GameMaster.Instance.HandleResetButton();
-        PlayButton.UpdateTexture();
-    }
+            public void Play() {
+                GameMaster.Instance.HandlePlayPauseButton();
+                PlayButton.UpdateTexture();
+            }
 
-    public void Step()
-    {
-        GameMaster.Instance.HandleStepButton();
-        PlayButton.UpdateTexture();
-    }
+            public void Restart() {
+                GameMaster.Instance.HandleResetButton();
+                PlayButton.UpdateTexture();
+            }
 
-    public void Faster()
-    {
-        GameMaster.Instance.HandleSimSpeedIncreaseButton();
-        UpdateSpeedLabel();
-    }
+            public void Step() {
+                GameMaster.Instance.HandleStepButton();
+                PlayButton.UpdateTexture();
+            }
 
-    public void Slower()
-    {
-        GameMaster.Instance.HandleSimSpeedDecreaseButton();
-        UpdateSpeedLabel();
-    }
+            public void Faster() {
+                GameMaster.Instance.HandleSimSpeedIncreaseButton();
+                UpdateSpeedLabel();
+            }
 
-    private void UpdateSpeedLabel()
-    {
-        //float speed = GameMaster.Instance.SimulationSpeedSetting;
-        SpeedLabel.text = "x1/2";
-    }
+            public void Slower() {
+                GameMaster.Instance.HandleSimSpeedDecreaseButton();
+                UpdateSpeedLabel();
+            }
 
-    public void Randomize()
-    {
-        GameMaster.Instance.HandleChangeSeedButton();
-        UpdateSeedLabel();
-    }
+            private void UpdateSpeedLabel() {
+                //float speed = GameMaster.Instance.SimulationSpeedSetting;
+                SpeedLabel.text = "x1/2";
+            }
 
-    public void ChangeSeed(string value)
-    {
-        if (int.TryParse(value, out int seed))
-        {
-            GameMaster.Instance.SetSeed(seed);
+            public void Randomize() {
+                GameMaster.Instance.HandleChangeSeedButton();
+                UpdateSeedLabel();
+            }
+
+            public void ChangeSeed(string value) {
+                if (int.TryParse(value, out int seed)) {
+                    GameMaster.Instance.SetSeed(seed);
+                }
+                UpdateSeedLabel();
+            }
+
+            private void UpdateSeedLabel() {
+                SeedField.text = GameMaster.Instance.RandomSeed.ToString();
+            }
+
+            private void UpdateGenerationLabel() {
+                int generation = 1;
+                string text = generation.ToString();
+                while (text.Length < 8) {
+                    text = "0" + text;
+                }
+                GenerationLabel.text = text;
+            }
         }
-        UpdateSeedLabel();
-    }
-
-    private void UpdateSeedLabel()
-    {
-        SeedField.text = GameMaster.Instance.RandomSeed.ToString();
-    }
-
-    private void UpdateGenerationLabel()
-    {
-        int generation = 1;
-        string text = generation.ToString();
-        while (text.Length < 8)
-        {
-            text = "0" + text;
-        }
-        GenerationLabel.text = text;
     }
 }

@@ -1,0 +1,388 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.UI.LabelMonobehavior
+  commentId: T:MonoBehaviours.UI.LabelMonobehavior
+  id: LabelMonobehavior
+  parent: MonoBehaviours.UI
+  children:
+  - MonoBehaviours.UI.LabelMonobehavior.GetLabel
+  - MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Boolean)
+  - MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Int32)
+  - MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Single)
+  - MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.String)
+  langs:
+  - csharp
+  - vb
+  name: LabelMonobehavior
+  nameWithType: LabelMonobehavior
+  fullName: MonoBehaviours.UI.LabelMonobehavior
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: LabelMonobehavior
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: 'public class LabelMonobehavior : GameObjectMonobehavior'
+    content.vb: >-
+      Public Class LabelMonobehavior
+          Inherits GameObjectMonobehavior
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - MonoBehaviours.GameObjectMonobehavior
+  inheritedMembers:
+  - MonoBehaviours.GameObjectMonobehavior.GM
+  - MonoBehaviours.GameObjectMonobehavior.Start
+  - MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.String)
+  commentId: M:MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.String)
+  id: SetLabel(System.String)
+  parent: MonoBehaviours.UI.LabelMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: SetLabel(String)
+  nameWithType: LabelMonobehavior.SetLabel(String)
+  fullName: MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.String)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SetLabel
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public void SetLabel(string newLabel)
+    parameters:
+    - id: newLabel
+      type: System.String
+    content.vb: Public Sub SetLabel(newLabel As String)
+  overload: MonoBehaviours.UI.LabelMonobehavior.SetLabel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Int32)
+  commentId: M:MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Int32)
+  id: SetLabel(System.Int32)
+  parent: MonoBehaviours.UI.LabelMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: SetLabel(Int32)
+  nameWithType: LabelMonobehavior.SetLabel(Int32)
+  fullName: MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SetLabel
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public void SetLabel(int newLabel)
+    parameters:
+    - id: newLabel
+      type: System.Int32
+    content.vb: Public Sub SetLabel(newLabel As Integer)
+  overload: MonoBehaviours.UI.LabelMonobehavior.SetLabel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Single)
+  commentId: M:MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Single)
+  id: SetLabel(System.Single)
+  parent: MonoBehaviours.UI.LabelMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: SetLabel(Single)
+  nameWithType: LabelMonobehavior.SetLabel(Single)
+  fullName: MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Single)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SetLabel
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public void SetLabel(float newLabel)
+    parameters:
+    - id: newLabel
+      type: System.Single
+    content.vb: Public Sub SetLabel(newLabel As Single)
+  overload: MonoBehaviours.UI.LabelMonobehavior.SetLabel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Boolean)
+  commentId: M:MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Boolean)
+  id: SetLabel(System.Boolean)
+  parent: MonoBehaviours.UI.LabelMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: SetLabel(Boolean)
+  nameWithType: LabelMonobehavior.SetLabel(Boolean)
+  fullName: MonoBehaviours.UI.LabelMonobehavior.SetLabel(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SetLabel
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public void SetLabel(bool newLabel)
+    parameters:
+    - id: newLabel
+      type: System.Boolean
+    content.vb: Public Sub SetLabel(newLabel As Boolean)
+  overload: MonoBehaviours.UI.LabelMonobehavior.SetLabel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LabelMonobehavior.GetLabel
+  commentId: M:MonoBehaviours.UI.LabelMonobehavior.GetLabel
+  id: GetLabel
+  parent: MonoBehaviours.UI.LabelMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: GetLabel()
+  nameWithType: LabelMonobehavior.GetLabel()
+  fullName: MonoBehaviours.UI.LabelMonobehavior.GetLabel()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GetLabel
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public string GetLabel()
+    return:
+      type: System.String
+    content.vb: Public Function GetLabel As String
+  overload: MonoBehaviours.UI.LabelMonobehavior.GetLabel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MonoBehaviours.UI
+  commentId: N:MonoBehaviours.UI
+  name: MonoBehaviours.UI
+  nameWithType: MonoBehaviours.UI
+  fullName: MonoBehaviours.UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: MonoBehaviours.GameObjectMonobehavior
+  commentId: T:MonoBehaviours.GameObjectMonobehavior
+  parent: MonoBehaviours
+  name: GameObjectMonobehavior
+  nameWithType: GameObjectMonobehavior
+  fullName: MonoBehaviours.GameObjectMonobehavior
+- uid: MonoBehaviours.GameObjectMonobehavior.GM
+  commentId: F:MonoBehaviours.GameObjectMonobehavior.GM
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: GM
+  nameWithType: GameObjectMonobehavior.GM
+  fullName: MonoBehaviours.GameObjectMonobehavior.GM
+- uid: MonoBehaviours.GameObjectMonobehavior.Start
+  commentId: M:MonoBehaviours.GameObjectMonobehavior.Start
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: Start()
+  nameWithType: GameObjectMonobehavior.Start()
+  fullName: MonoBehaviours.GameObjectMonobehavior.Start()
+  spec.csharp:
+  - uid: MonoBehaviours.GameObjectMonobehavior.Start
+    name: Start
+    nameWithType: GameObjectMonobehavior.Start
+    fullName: MonoBehaviours.GameObjectMonobehavior.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MonoBehaviours.GameObjectMonobehavior.Start
+    name: Start
+    nameWithType: GameObjectMonobehavior.Start
+    fullName: MonoBehaviours.GameObjectMonobehavior.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  commentId: M:MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: SetGameMaster(GameMaster)
+  nameWithType: GameObjectMonobehavior.SetGameMaster(GameMaster)
+  fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  spec.csharp:
+  - uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+    name: SetGameMaster
+    nameWithType: GameObjectMonobehavior.SetGameMaster
+    fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: GameCore.GameMaster
+    name: GameMaster
+    nameWithType: GameMaster
+    fullName: GameCore.GameMaster
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+    name: SetGameMaster
+    nameWithType: GameObjectMonobehavior.SetGameMaster
+    fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: GameCore.GameMaster
+    name: GameMaster
+    nameWithType: GameMaster
+    fullName: GameCore.GameMaster
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: MonoBehaviours
+  commentId: N:MonoBehaviours
+  name: MonoBehaviours
+  nameWithType: MonoBehaviours
+  fullName: MonoBehaviours
+- uid: MonoBehaviours.UI.LabelMonobehavior.SetLabel*
+  commentId: Overload:MonoBehaviours.UI.LabelMonobehavior.SetLabel
+  name: SetLabel
+  nameWithType: LabelMonobehavior.SetLabel
+  fullName: MonoBehaviours.UI.LabelMonobehavior.SetLabel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MonoBehaviours.UI.LabelMonobehavior.GetLabel*
+  commentId: Overload:MonoBehaviours.UI.LabelMonobehavior.GetLabel
+  name: GetLabel
+  nameWithType: LabelMonobehavior.GetLabel
+  fullName: MonoBehaviours.UI.LabelMonobehavior.GetLabel

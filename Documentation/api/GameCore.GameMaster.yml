@@ -1,0 +1,1440 @@
+### YamlMime:ManagedReference
+items:
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  id: GameMaster
+  parent: GameCore
+  children:
+  - GameCore.GameMaster.CurrentViewRect
+  - GameCore.GameMaster.GridData
+  - GameCore.GameMaster.HandleButton(System.String)
+  - GameCore.GameMaster.HandleChangeSeedButton
+  - GameCore.GameMaster.HandleKeyPresses(System.Collections.Generic.List{UnityEngine.KeyCode})
+  - GameCore.GameMaster.HandleMouseWheelScroll(System.Int32)
+  - GameCore.GameMaster.HandlePlayPauseButton
+  - GameCore.GameMaster.HandleResetButton
+  - GameCore.GameMaster.HandleSimSpeedDecreaseButton
+  - GameCore.GameMaster.HandleSimSpeedIncreaseButton
+  - GameCore.GameMaster.HandleStepButton
+  - GameCore.GameMaster.HandleTuringMachineHeadClick(System.Int32)
+  - GameCore.GameMaster.Initialize
+  - GameCore.GameMaster.NumberOfTuringMachines
+  - GameCore.GameMaster.NumberStatesPerMachine
+  - GameCore.GameMaster.RandomBoardGeneration
+  - GameCore.GameMaster.RandomSeed
+  - GameCore.GameMaster.RandomStartingTransitions
+  - GameCore.GameMaster.RegisterCameraMonobehavior(MonoBehaviours.CameraMonobehavior)
+  - GameCore.GameMaster.ResetGame
+  - GameCore.GameMaster.Running
+  - GameCore.GameMaster.SetSeed(System.Int32)
+  - GameCore.GameMaster.SimulateOneStep
+  - GameCore.GameMaster.SimulationSpeedSetting
+  - GameCore.GameMaster.TuringMachineEditorPanelPrefab
+  - GameCore.GameMaster.TuringMachineHeadPrefab
+  - GameCore.GameMaster.UseCustomSeed
+  - GameCore.GameMaster.WriteSymbolToGrid(UnityEngine.Vector3Int,Constants.TM_Symbol)
+  langs:
+  - csharp
+  - vb
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GameMaster
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  summary: "\nThe GameMaster class is the central authority in charge of running the game.\n"
+  example: []
+  syntax:
+    content: 'public class GameMaster : Singleton<GameMaster>'
+    content.vb: >-
+      Public Class GameMaster
+          Inherits Singleton(Of GameMaster)
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - Global.Singleton{GameCore.GameMaster}
+  inheritedMembers:
+  - Global.Singleton{GameCore.GameMaster}.Instance
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: GameCore.GameMaster.GridData
+  commentId: F:GameCore.GameMaster.GridData
+  id: GridData
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: GridData
+  nameWithType: GameMaster.GridData
+  fullName: GameCore.GameMaster.GridData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GridData
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public GridData GridData
+    return:
+      type: GameCore.GridData
+    content.vb: Public GridData As GridData
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.CurrentViewRect
+  commentId: F:GameCore.GameMaster.CurrentViewRect
+  id: CurrentViewRect
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: CurrentViewRect
+  nameWithType: GameMaster.CurrentViewRect
+  fullName: GameCore.GameMaster.CurrentViewRect
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: CurrentViewRect
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public Rect CurrentViewRect
+    return:
+      type: UnityEngine.Rect
+    content.vb: Public CurrentViewRect As Rect
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.TuringMachineEditorPanelPrefab
+  commentId: F:GameCore.GameMaster.TuringMachineEditorPanelPrefab
+  id: TuringMachineEditorPanelPrefab
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: TuringMachineEditorPanelPrefab
+  nameWithType: GameMaster.TuringMachineEditorPanelPrefab
+  fullName: GameCore.GameMaster.TuringMachineEditorPanelPrefab
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TuringMachineEditorPanelPrefab
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public GameObject TuringMachineEditorPanelPrefab
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public TuringMachineEditorPanelPrefab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.TuringMachineHeadPrefab
+  commentId: F:GameCore.GameMaster.TuringMachineHeadPrefab
+  id: TuringMachineHeadPrefab
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: TuringMachineHeadPrefab
+  nameWithType: GameMaster.TuringMachineHeadPrefab
+  fullName: GameCore.GameMaster.TuringMachineHeadPrefab
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TuringMachineHeadPrefab
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public GameObject TuringMachineHeadPrefab
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public TuringMachineHeadPrefab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.NumberOfTuringMachines
+  commentId: P:GameCore.GameMaster.NumberOfTuringMachines
+  id: NumberOfTuringMachines
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: NumberOfTuringMachines
+  nameWithType: GameMaster.NumberOfTuringMachines
+  fullName: GameCore.GameMaster.NumberOfTuringMachines
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: NumberOfTuringMachines
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public int NumberOfTuringMachines { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NumberOfTuringMachines As Integer
+  overload: GameCore.GameMaster.NumberOfTuringMachines*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: GameCore.GameMaster.NumberStatesPerMachine
+  commentId: P:GameCore.GameMaster.NumberStatesPerMachine
+  id: NumberStatesPerMachine
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: NumberStatesPerMachine
+  nameWithType: GameMaster.NumberStatesPerMachine
+  fullName: GameCore.GameMaster.NumberStatesPerMachine
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: NumberStatesPerMachine
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public int NumberStatesPerMachine { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NumberStatesPerMachine As Integer
+  overload: GameCore.GameMaster.NumberStatesPerMachine*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: GameCore.GameMaster.RandomSeed
+  commentId: P:GameCore.GameMaster.RandomSeed
+  id: RandomSeed
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: RandomSeed
+  nameWithType: GameMaster.RandomSeed
+  fullName: GameCore.GameMaster.RandomSeed
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: RandomSeed
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public int RandomSeed { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RandomSeed As Integer
+  overload: GameCore.GameMaster.RandomSeed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: GameCore.GameMaster.UseCustomSeed
+  commentId: P:GameCore.GameMaster.UseCustomSeed
+  id: UseCustomSeed
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: UseCustomSeed
+  nameWithType: GameMaster.UseCustomSeed
+  fullName: GameCore.GameMaster.UseCustomSeed
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: UseCustomSeed
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public bool UseCustomSeed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property UseCustomSeed As Boolean
+  overload: GameCore.GameMaster.UseCustomSeed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: GameCore.GameMaster.RandomBoardGeneration
+  commentId: P:GameCore.GameMaster.RandomBoardGeneration
+  id: RandomBoardGeneration
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: RandomBoardGeneration
+  nameWithType: GameMaster.RandomBoardGeneration
+  fullName: GameCore.GameMaster.RandomBoardGeneration
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: RandomBoardGeneration
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public bool RandomBoardGeneration { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RandomBoardGeneration As Boolean
+  overload: GameCore.GameMaster.RandomBoardGeneration*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: GameCore.GameMaster.RandomStartingTransitions
+  commentId: P:GameCore.GameMaster.RandomStartingTransitions
+  id: RandomStartingTransitions
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: RandomStartingTransitions
+  nameWithType: GameMaster.RandomStartingTransitions
+  fullName: GameCore.GameMaster.RandomStartingTransitions
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: RandomStartingTransitions
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public bool RandomStartingTransitions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RandomStartingTransitions As Boolean
+  overload: GameCore.GameMaster.RandomStartingTransitions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: GameCore.GameMaster.SimulationSpeedSetting
+  commentId: P:GameCore.GameMaster.SimulationSpeedSetting
+  id: SimulationSpeedSetting
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: SimulationSpeedSetting
+  nameWithType: GameMaster.SimulationSpeedSetting
+  fullName: GameCore.GameMaster.SimulationSpeedSetting
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SimulationSpeedSetting
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 32
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public float SimulationSpeedSetting { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property SimulationSpeedSetting As Single
+  overload: GameCore.GameMaster.SimulationSpeedSetting*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: GameCore.GameMaster.Running
+  commentId: P:GameCore.GameMaster.Running
+  id: Running
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: Running
+  nameWithType: GameMaster.Running
+  fullName: GameCore.GameMaster.Running
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Running
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 45
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public bool Running { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Running As Boolean
+  overload: GameCore.GameMaster.Running*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: GameCore.GameMaster.Initialize
+  commentId: M:GameCore.GameMaster.Initialize
+  id: Initialize
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: GameMaster.Initialize()
+  fullName: GameCore.GameMaster.Initialize()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Initialize
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 52
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  summary: "\nInitializes the <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> singleton. This is called by\nthe <xref href=\"MonoBehaviours.GameMasterMonobehavior\" data-throw-if-not-resolved=\"false\"></xref> in its <code>Awake()</code> method.\n"
+  example: []
+  syntax:
+    content: public void Initialize()
+    content.vb: Public Sub Initialize
+  overload: GameCore.GameMaster.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.SimulateOneStep
+  commentId: M:GameCore.GameMaster.SimulateOneStep
+  id: SimulateOneStep
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: SimulateOneStep()
+  nameWithType: GameMaster.SimulateOneStep()
+  fullName: GameCore.GameMaster.SimulateOneStep()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SimulateOneStep
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 85
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  summary: "\nSimulate a single step of the &quot;game&quot; by iterating through each Turing machine.\n"
+  example: []
+  syntax:
+    content: public void SimulateOneStep()
+    content.vb: Public Sub SimulateOneStep
+  overload: GameCore.GameMaster.SimulateOneStep*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.ResetGame
+  commentId: M:GameCore.GameMaster.ResetGame
+  id: ResetGame
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: ResetGame()
+  nameWithType: GameMaster.ResetGame()
+  fullName: GameCore.GameMaster.ResetGame()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ResetGame
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 98
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  summary: "\nInitialize a simulation/game of 2DTMs by clearing the whole board and creating\nnew Turing machines. \n"
+  example: []
+  syntax:
+    content: public void ResetGame()
+    content.vb: Public Sub ResetGame
+  overload: GameCore.GameMaster.ResetGame*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.WriteSymbolToGrid(UnityEngine.Vector3Int,Constants.TM_Symbol)
+  commentId: M:GameCore.GameMaster.WriteSymbolToGrid(UnityEngine.Vector3Int,Constants.TM_Symbol)
+  id: WriteSymbolToGrid(UnityEngine.Vector3Int,Constants.TM_Symbol)
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: WriteSymbolToGrid(Vector3Int, TM_Symbol)
+  nameWithType: GameMaster.WriteSymbolToGrid(Vector3Int, TM_Symbol)
+  fullName: GameCore.GameMaster.WriteSymbolToGrid(UnityEngine.Vector3Int, Constants.TM_Symbol)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: WriteSymbolToGrid
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 109
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  summary: "\nWrites the given symbol to the given location on the grid.\n"
+  example: []
+  syntax:
+    content: public void WriteSymbolToGrid(Vector3Int loc, TM_Symbol symbol)
+    parameters:
+    - id: loc
+      type: UnityEngine.Vector3Int
+    - id: symbol
+      type: Constants.TM_Symbol
+    content.vb: Public Sub WriteSymbolToGrid(loc As Vector3Int, symbol As TM_Symbol)
+  overload: GameCore.GameMaster.WriteSymbolToGrid*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandleTuringMachineHeadClick(System.Int32)
+  commentId: M:GameCore.GameMaster.HandleTuringMachineHeadClick(System.Int32)
+  id: HandleTuringMachineHeadClick(System.Int32)
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleTuringMachineHeadClick(Int32)
+  nameWithType: GameMaster.HandleTuringMachineHeadClick(Int32)
+  fullName: GameCore.GameMaster.HandleTuringMachineHeadClick(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleTuringMachineHeadClick
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 117
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandleTuringMachineHeadClick(int machineID)
+    parameters:
+    - id: machineID
+      type: System.Int32
+    content.vb: Public Sub HandleTuringMachineHeadClick(machineID As Integer)
+  overload: GameCore.GameMaster.HandleTuringMachineHeadClick*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandleKeyPresses(System.Collections.Generic.List{UnityEngine.KeyCode})
+  commentId: M:GameCore.GameMaster.HandleKeyPresses(System.Collections.Generic.List{UnityEngine.KeyCode})
+  id: HandleKeyPresses(System.Collections.Generic.List{UnityEngine.KeyCode})
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleKeyPresses(List<KeyCode>)
+  nameWithType: GameMaster.HandleKeyPresses(List<KeyCode>)
+  fullName: GameCore.GameMaster.HandleKeyPresses(System.Collections.Generic.List<UnityEngine.KeyCode>)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleKeyPresses
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 124
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandleKeyPresses(List<KeyCode> keysPressed)
+    parameters:
+    - id: keysPressed
+      type: System.Collections.Generic.List{UnityEngine.KeyCode}
+    content.vb: Public Sub HandleKeyPresses(keysPressed As List(Of KeyCode))
+  overload: GameCore.GameMaster.HandleKeyPresses*
+  nameWithType.vb: GameMaster.HandleKeyPresses(List(Of KeyCode))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: GameCore.GameMaster.HandleKeyPresses(System.Collections.Generic.List(Of UnityEngine.KeyCode))
+  name.vb: HandleKeyPresses(List(Of KeyCode))
+- uid: GameCore.GameMaster.HandleMouseWheelScroll(System.Int32)
+  commentId: M:GameCore.GameMaster.HandleMouseWheelScroll(System.Int32)
+  id: HandleMouseWheelScroll(System.Int32)
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleMouseWheelScroll(Int32)
+  nameWithType: GameMaster.HandleMouseWheelScroll(Int32)
+  fullName: GameCore.GameMaster.HandleMouseWheelScroll(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleMouseWheelScroll
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 149
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  summary: "\nHandle when the mouse wheel scrolls in a direction.\n"
+  example: []
+  syntax:
+    content: public void HandleMouseWheelScroll(int direction)
+    parameters:
+    - id: direction
+      type: System.Int32
+      description: An integer either -1 or 1.
+    content.vb: Public Sub HandleMouseWheelScroll(direction As Integer)
+  overload: GameCore.GameMaster.HandleMouseWheelScroll*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandleButton(System.String)
+  commentId: M:GameCore.GameMaster.HandleButton(System.String)
+  id: HandleButton(System.String)
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleButton(String)
+  nameWithType: GameMaster.HandleButton(String)
+  fullName: GameCore.GameMaster.HandleButton(System.String)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleButton
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 153
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandleButton(string buttonName)
+    parameters:
+    - id: buttonName
+      type: System.String
+    content.vb: Public Sub HandleButton(buttonName As String)
+  overload: GameCore.GameMaster.HandleButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandlePlayPauseButton
+  commentId: M:GameCore.GameMaster.HandlePlayPauseButton
+  id: HandlePlayPauseButton
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandlePlayPauseButton()
+  nameWithType: GameMaster.HandlePlayPauseButton()
+  fullName: GameCore.GameMaster.HandlePlayPauseButton()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandlePlayPauseButton
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 176
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandlePlayPauseButton()
+    content.vb: Public Sub HandlePlayPauseButton
+  overload: GameCore.GameMaster.HandlePlayPauseButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandleResetButton
+  commentId: M:GameCore.GameMaster.HandleResetButton
+  id: HandleResetButton
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleResetButton()
+  nameWithType: GameMaster.HandleResetButton()
+  fullName: GameCore.GameMaster.HandleResetButton()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleResetButton
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 180
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandleResetButton()
+    content.vb: Public Sub HandleResetButton
+  overload: GameCore.GameMaster.HandleResetButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandleChangeSeedButton
+  commentId: M:GameCore.GameMaster.HandleChangeSeedButton
+  id: HandleChangeSeedButton
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleChangeSeedButton()
+  nameWithType: GameMaster.HandleChangeSeedButton()
+  fullName: GameCore.GameMaster.HandleChangeSeedButton()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleChangeSeedButton
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 185
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandleChangeSeedButton()
+    content.vb: Public Sub HandleChangeSeedButton
+  overload: GameCore.GameMaster.HandleChangeSeedButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.SetSeed(System.Int32)
+  commentId: M:GameCore.GameMaster.SetSeed(System.Int32)
+  id: SetSeed(System.Int32)
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: SetSeed(Int32)
+  nameWithType: GameMaster.SetSeed(Int32)
+  fullName: GameCore.GameMaster.SetSeed(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SetSeed
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 189
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void SetSeed(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    content.vb: Public Sub SetSeed(value As Integer)
+  overload: GameCore.GameMaster.SetSeed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandleStepButton
+  commentId: M:GameCore.GameMaster.HandleStepButton
+  id: HandleStepButton
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleStepButton()
+  nameWithType: GameMaster.HandleStepButton()
+  fullName: GameCore.GameMaster.HandleStepButton()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleStepButton
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 193
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandleStepButton()
+    content.vb: Public Sub HandleStepButton
+  overload: GameCore.GameMaster.HandleStepButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandleSimSpeedIncreaseButton
+  commentId: M:GameCore.GameMaster.HandleSimSpeedIncreaseButton
+  id: HandleSimSpeedIncreaseButton
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleSimSpeedIncreaseButton()
+  nameWithType: GameMaster.HandleSimSpeedIncreaseButton()
+  fullName: GameCore.GameMaster.HandleSimSpeedIncreaseButton()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleSimSpeedIncreaseButton
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 198
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandleSimSpeedIncreaseButton()
+    content.vb: Public Sub HandleSimSpeedIncreaseButton
+  overload: GameCore.GameMaster.HandleSimSpeedIncreaseButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.HandleSimSpeedDecreaseButton
+  commentId: M:GameCore.GameMaster.HandleSimSpeedDecreaseButton
+  id: HandleSimSpeedDecreaseButton
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: HandleSimSpeedDecreaseButton()
+  nameWithType: GameMaster.HandleSimSpeedDecreaseButton()
+  fullName: GameCore.GameMaster.HandleSimSpeedDecreaseButton()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: HandleSimSpeedDecreaseButton
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 203
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: public void HandleSimSpeedDecreaseButton()
+    content.vb: Public Sub HandleSimSpeedDecreaseButton
+  overload: GameCore.GameMaster.HandleSimSpeedDecreaseButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: GameCore.GameMaster.RegisterCameraMonobehavior(MonoBehaviours.CameraMonobehavior)
+  commentId: M:GameCore.GameMaster.RegisterCameraMonobehavior(MonoBehaviours.CameraMonobehavior)
+  id: RegisterCameraMonobehavior(MonoBehaviours.CameraMonobehavior)
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: RegisterCameraMonobehavior(CameraMonobehavior)
+  nameWithType: GameMaster.RegisterCameraMonobehavior(CameraMonobehavior)
+  fullName: GameCore.GameMaster.RegisterCameraMonobehavior(MonoBehaviours.CameraMonobehavior)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: RegisterCameraMonobehavior
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 234
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  summary: "\nRegister the given <xref href=\"GameCore.GameMaster.CameraMonobehavior\" data-throw-if-not-resolved=\"false\"></xref> as the camera the\n<xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> should pay attention to and interact with.\n"
+  example: []
+  syntax:
+    content: public void RegisterCameraMonobehavior(CameraMonobehavior newCamera)
+    parameters:
+    - id: newCamera
+      type: MonoBehaviours.CameraMonobehavior
+    content.vb: Public Sub RegisterCameraMonobehavior(newCamera As CameraMonobehavior)
+  overload: GameCore.GameMaster.RegisterCameraMonobehavior*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: GameCore
+  commentId: N:GameCore
+  name: GameCore
+  nameWithType: GameCore
+  fullName: GameCore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: Global.Singleton{GameCore.GameMaster}
+  commentId: T:Global.Singleton{GameCore.GameMaster}
+  definition: Global.Singleton`1
+  name: Singleton<GameMaster>
+  nameWithType: Singleton<GameMaster>
+  fullName: Singleton<GameCore.GameMaster>
+  nameWithType.vb: Singleton(Of GameMaster)
+  fullName.vb: Singleton(Of GameCore.GameMaster)
+  name.vb: Singleton(Of GameMaster)
+  spec.csharp:
+  - uid: Global.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: GameCore.GameMaster
+    name: GameMaster
+    nameWithType: GameMaster
+    fullName: GameCore.GameMaster
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: GameCore.GameMaster
+    name: GameMaster
+    nameWithType: GameMaster
+    fullName: GameCore.GameMaster
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Singleton{GameCore.GameMaster}.Instance
+  commentId: P:Global.Singleton{GameCore.GameMaster}.Instance
+  parent: Global.Singleton{GameCore.GameMaster}
+  definition: Global.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<GameMaster>.Instance
+  fullName: Singleton<GameCore.GameMaster>.Instance
+  nameWithType.vb: Singleton(Of GameMaster).Instance
+  fullName.vb: Singleton(Of GameCore.GameMaster).Instance
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Global.Singleton`1
+  commentId: T:Global.Singleton`1
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: Singleton<T>
+  nameWithType.vb: Singleton(Of T)
+  fullName.vb: Singleton(Of T)
+  name.vb: Singleton(Of T)
+  spec.csharp:
+  - uid: Global.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Singleton`1.Instance
+  commentId: P:Global.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: Singleton<T>.Instance
+  nameWithType.vb: Singleton(Of T).Instance
+  fullName.vb: Singleton(Of T).Instance
+- uid: GameCore.GridData
+  commentId: T:GameCore.GridData
+  parent: GameCore
+  name: GridData
+  nameWithType: GridData
+  fullName: GameCore.GridData
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: GameCore.GameMaster.NumberOfTuringMachines*
+  commentId: Overload:GameCore.GameMaster.NumberOfTuringMachines
+  name: NumberOfTuringMachines
+  nameWithType: GameMaster.NumberOfTuringMachines
+  fullName: GameCore.GameMaster.NumberOfTuringMachines
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: GameCore.GameMaster.NumberStatesPerMachine*
+  commentId: Overload:GameCore.GameMaster.NumberStatesPerMachine
+  name: NumberStatesPerMachine
+  nameWithType: GameMaster.NumberStatesPerMachine
+  fullName: GameCore.GameMaster.NumberStatesPerMachine
+- uid: GameCore.GameMaster.RandomSeed*
+  commentId: Overload:GameCore.GameMaster.RandomSeed
+  name: RandomSeed
+  nameWithType: GameMaster.RandomSeed
+  fullName: GameCore.GameMaster.RandomSeed
+- uid: GameCore.GameMaster.UseCustomSeed*
+  commentId: Overload:GameCore.GameMaster.UseCustomSeed
+  name: UseCustomSeed
+  nameWithType: GameMaster.UseCustomSeed
+  fullName: GameCore.GameMaster.UseCustomSeed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: GameCore.GameMaster.RandomBoardGeneration*
+  commentId: Overload:GameCore.GameMaster.RandomBoardGeneration
+  name: RandomBoardGeneration
+  nameWithType: GameMaster.RandomBoardGeneration
+  fullName: GameCore.GameMaster.RandomBoardGeneration
+- uid: GameCore.GameMaster.RandomStartingTransitions*
+  commentId: Overload:GameCore.GameMaster.RandomStartingTransitions
+  name: RandomStartingTransitions
+  nameWithType: GameMaster.RandomStartingTransitions
+  fullName: GameCore.GameMaster.RandomStartingTransitions
+- uid: GameCore.GameMaster.SimulationSpeedSetting*
+  commentId: Overload:GameCore.GameMaster.SimulationSpeedSetting
+  name: SimulationSpeedSetting
+  nameWithType: GameMaster.SimulationSpeedSetting
+  fullName: GameCore.GameMaster.SimulationSpeedSetting
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: GameCore.GameMaster.Running*
+  commentId: Overload:GameCore.GameMaster.Running
+  name: Running
+  nameWithType: GameMaster.Running
+  fullName: GameCore.GameMaster.Running
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  parent: GameCore
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
+- uid: MonoBehaviours.GameMasterMonobehavior
+  commentId: T:MonoBehaviours.GameMasterMonobehavior
+  isExternal: true
+- uid: GameCore.GameMaster.Initialize*
+  commentId: Overload:GameCore.GameMaster.Initialize
+  name: Initialize
+  nameWithType: GameMaster.Initialize
+  fullName: GameCore.GameMaster.Initialize
+- uid: GameCore.GameMaster.SimulateOneStep*
+  commentId: Overload:GameCore.GameMaster.SimulateOneStep
+  name: SimulateOneStep
+  nameWithType: GameMaster.SimulateOneStep
+  fullName: GameCore.GameMaster.SimulateOneStep
+- uid: GameCore.GameMaster.ResetGame*
+  commentId: Overload:GameCore.GameMaster.ResetGame
+  name: ResetGame
+  nameWithType: GameMaster.ResetGame
+  fullName: GameCore.GameMaster.ResetGame
+- uid: GameCore.GameMaster.WriteSymbolToGrid*
+  commentId: Overload:GameCore.GameMaster.WriteSymbolToGrid
+  name: WriteSymbolToGrid
+  nameWithType: GameMaster.WriteSymbolToGrid
+  fullName: GameCore.GameMaster.WriteSymbolToGrid
+- uid: UnityEngine.Vector3Int
+  commentId: T:UnityEngine.Vector3Int
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3Int
+  nameWithType: Vector3Int
+  fullName: UnityEngine.Vector3Int
+- uid: Constants.TM_Symbol
+  commentId: T:Constants.TM_Symbol
+  parent: Constants
+  name: TM_Symbol
+  nameWithType: TM_Symbol
+  fullName: Constants.TM_Symbol
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+- uid: GameCore.GameMaster.HandleTuringMachineHeadClick*
+  commentId: Overload:GameCore.GameMaster.HandleTuringMachineHeadClick
+  name: HandleTuringMachineHeadClick
+  nameWithType: GameMaster.HandleTuringMachineHeadClick
+  fullName: GameCore.GameMaster.HandleTuringMachineHeadClick
+- uid: GameCore.GameMaster.HandleKeyPresses*
+  commentId: Overload:GameCore.GameMaster.HandleKeyPresses
+  name: HandleKeyPresses
+  nameWithType: GameMaster.HandleKeyPresses
+  fullName: GameCore.GameMaster.HandleKeyPresses
+- uid: System.Collections.Generic.List{UnityEngine.KeyCode}
+  commentId: T:System.Collections.Generic.List{UnityEngine.KeyCode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<KeyCode>
+  nameWithType: List<KeyCode>
+  fullName: System.Collections.Generic.List<UnityEngine.KeyCode>
+  nameWithType.vb: List(Of KeyCode)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.KeyCode)
+  name.vb: List(Of KeyCode)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: UnityEngine.KeyCode
+    name: KeyCode
+    nameWithType: KeyCode
+    fullName: UnityEngine.KeyCode
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: UnityEngine.KeyCode
+    name: KeyCode
+    nameWithType: KeyCode
+    fullName: UnityEngine.KeyCode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: GameCore.GameMaster.HandleMouseWheelScroll*
+  commentId: Overload:GameCore.GameMaster.HandleMouseWheelScroll
+  name: HandleMouseWheelScroll
+  nameWithType: GameMaster.HandleMouseWheelScroll
+  fullName: GameCore.GameMaster.HandleMouseWheelScroll
+- uid: GameCore.GameMaster.HandleButton*
+  commentId: Overload:GameCore.GameMaster.HandleButton
+  name: HandleButton
+  nameWithType: GameMaster.HandleButton
+  fullName: GameCore.GameMaster.HandleButton
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: GameCore.GameMaster.HandlePlayPauseButton*
+  commentId: Overload:GameCore.GameMaster.HandlePlayPauseButton
+  name: HandlePlayPauseButton
+  nameWithType: GameMaster.HandlePlayPauseButton
+  fullName: GameCore.GameMaster.HandlePlayPauseButton
+- uid: GameCore.GameMaster.HandleResetButton*
+  commentId: Overload:GameCore.GameMaster.HandleResetButton
+  name: HandleResetButton
+  nameWithType: GameMaster.HandleResetButton
+  fullName: GameCore.GameMaster.HandleResetButton
+- uid: GameCore.GameMaster.HandleChangeSeedButton*
+  commentId: Overload:GameCore.GameMaster.HandleChangeSeedButton
+  name: HandleChangeSeedButton
+  nameWithType: GameMaster.HandleChangeSeedButton
+  fullName: GameCore.GameMaster.HandleChangeSeedButton
+- uid: GameCore.GameMaster.SetSeed*
+  commentId: Overload:GameCore.GameMaster.SetSeed
+  name: SetSeed
+  nameWithType: GameMaster.SetSeed
+  fullName: GameCore.GameMaster.SetSeed
+- uid: GameCore.GameMaster.HandleStepButton*
+  commentId: Overload:GameCore.GameMaster.HandleStepButton
+  name: HandleStepButton
+  nameWithType: GameMaster.HandleStepButton
+  fullName: GameCore.GameMaster.HandleStepButton
+- uid: GameCore.GameMaster.HandleSimSpeedIncreaseButton*
+  commentId: Overload:GameCore.GameMaster.HandleSimSpeedIncreaseButton
+  name: HandleSimSpeedIncreaseButton
+  nameWithType: GameMaster.HandleSimSpeedIncreaseButton
+  fullName: GameCore.GameMaster.HandleSimSpeedIncreaseButton
+- uid: GameCore.GameMaster.HandleSimSpeedDecreaseButton*
+  commentId: Overload:GameCore.GameMaster.HandleSimSpeedDecreaseButton
+  name: HandleSimSpeedDecreaseButton
+  nameWithType: GameMaster.HandleSimSpeedDecreaseButton
+  fullName: GameCore.GameMaster.HandleSimSpeedDecreaseButton
+- uid: GameCore.GameMaster.CameraMonobehavior
+  commentId: F:GameCore.GameMaster.CameraMonobehavior
+  isExternal: true
+- uid: GameCore.GameMaster.RegisterCameraMonobehavior*
+  commentId: Overload:GameCore.GameMaster.RegisterCameraMonobehavior
+  name: RegisterCameraMonobehavior
+  nameWithType: GameMaster.RegisterCameraMonobehavior
+  fullName: GameCore.GameMaster.RegisterCameraMonobehavior
+- uid: MonoBehaviours.CameraMonobehavior
+  commentId: T:MonoBehaviours.CameraMonobehavior
+  parent: MonoBehaviours
+  name: CameraMonobehavior
+  nameWithType: CameraMonobehavior
+  fullName: MonoBehaviours.CameraMonobehavior
+- uid: MonoBehaviours
+  commentId: N:MonoBehaviours
+  name: MonoBehaviours
+  nameWithType: MonoBehaviours
+  fullName: MonoBehaviours

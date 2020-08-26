@@ -1,0 +1,395 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior
+  commentId: T:MonoBehaviours.TuringMachineHeadMonobehavior
+  id: TuringMachineHeadMonobehavior
+  parent: MonoBehaviours
+  children:
+  - MonoBehaviours.TuringMachineHeadMonobehavior.id
+  - MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection(Constants.TM_Direction)
+  - MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo(UnityEngine.Vector3Int)
+  - MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter
+  - MonoBehaviours.TuringMachineHeadMonobehavior.position
+  langs:
+  - csharp
+  - vb
+  name: TuringMachineHeadMonobehavior
+  nameWithType: TuringMachineHeadMonobehavior
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TuringMachineHeadMonobehavior
+    path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: 'public class TuringMachineHeadMonobehavior : GameObjectMonobehavior'
+    content.vb: >-
+      Public Class TuringMachineHeadMonobehavior
+          Inherits GameObjectMonobehavior
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - MonoBehaviours.GameObjectMonobehavior
+  inheritedMembers:
+  - MonoBehaviours.GameObjectMonobehavior.GM
+  - MonoBehaviours.GameObjectMonobehavior.Start
+  - MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.id
+  commentId: F:MonoBehaviours.TuringMachineHeadMonobehavior.id
+  id: id
+  parent: MonoBehaviours.TuringMachineHeadMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: TuringMachineHeadMonobehavior.id
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.id
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: id
+    path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: public int id
+    return:
+      type: System.Int32
+    content.vb: Public id As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.position
+  commentId: P:MonoBehaviours.TuringMachineHeadMonobehavior.position
+  id: position
+  parent: MonoBehaviours.TuringMachineHeadMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: position
+  nameWithType: TuringMachineHeadMonobehavior.position
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.position
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: position
+    path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: public Vector3 position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property position As Vector3
+  overload: MonoBehaviours.TuringMachineHeadMonobehavior.position*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection(Constants.TM_Direction)
+  commentId: M:MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection(Constants.TM_Direction)
+  id: MoveHeadInDirection(Constants.TM_Direction)
+  parent: MonoBehaviours.TuringMachineHeadMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: MoveHeadInDirection(TM_Direction)
+  nameWithType: TuringMachineHeadMonobehavior.MoveHeadInDirection(TM_Direction)
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection(Constants.TM_Direction)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: MoveHeadInDirection
+    path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: public void MoveHeadInDirection(TM_Direction dir)
+    parameters:
+    - id: dir
+      type: Constants.TM_Direction
+    content.vb: Public Sub MoveHeadInDirection(dir As TM_Direction)
+  overload: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter
+  commentId: M:MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter
+  id: MoveHeadToCenter
+  parent: MonoBehaviours.TuringMachineHeadMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: MoveHeadToCenter()
+  nameWithType: TuringMachineHeadMonobehavior.MoveHeadToCenter()
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: MoveHeadToCenter
+    path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+    startLine: 40
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: public void MoveHeadToCenter()
+    content.vb: Public Sub MoveHeadToCenter
+  overload: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo(UnityEngine.Vector3Int)
+  commentId: M:MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo(UnityEngine.Vector3Int)
+  id: MoveHeadTo(UnityEngine.Vector3Int)
+  parent: MonoBehaviours.TuringMachineHeadMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: MoveHeadTo(Vector3Int)
+  nameWithType: TuringMachineHeadMonobehavior.MoveHeadTo(Vector3Int)
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo(UnityEngine.Vector3Int)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: MoveHeadTo
+    path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
+    startLine: 44
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: public void MoveHeadTo(Vector3Int newLocation)
+    parameters:
+    - id: newLocation
+      type: UnityEngine.Vector3Int
+    content.vb: Public Sub MoveHeadTo(newLocation As Vector3Int)
+  overload: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MonoBehaviours
+  commentId: N:MonoBehaviours
+  name: MonoBehaviours
+  nameWithType: MonoBehaviours
+  fullName: MonoBehaviours
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: MonoBehaviours.GameObjectMonobehavior
+  commentId: T:MonoBehaviours.GameObjectMonobehavior
+  parent: MonoBehaviours
+  name: GameObjectMonobehavior
+  nameWithType: GameObjectMonobehavior
+  fullName: MonoBehaviours.GameObjectMonobehavior
+- uid: MonoBehaviours.GameObjectMonobehavior.GM
+  commentId: F:MonoBehaviours.GameObjectMonobehavior.GM
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: GM
+  nameWithType: GameObjectMonobehavior.GM
+  fullName: MonoBehaviours.GameObjectMonobehavior.GM
+- uid: MonoBehaviours.GameObjectMonobehavior.Start
+  commentId: M:MonoBehaviours.GameObjectMonobehavior.Start
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: Start()
+  nameWithType: GameObjectMonobehavior.Start()
+  fullName: MonoBehaviours.GameObjectMonobehavior.Start()
+  spec.csharp:
+  - uid: MonoBehaviours.GameObjectMonobehavior.Start
+    name: Start
+    nameWithType: GameObjectMonobehavior.Start
+    fullName: MonoBehaviours.GameObjectMonobehavior.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MonoBehaviours.GameObjectMonobehavior.Start
+    name: Start
+    nameWithType: GameObjectMonobehavior.Start
+    fullName: MonoBehaviours.GameObjectMonobehavior.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  commentId: M:MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: SetGameMaster(GameMaster)
+  nameWithType: GameObjectMonobehavior.SetGameMaster(GameMaster)
+  fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  spec.csharp:
+  - uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+    name: SetGameMaster
+    nameWithType: GameObjectMonobehavior.SetGameMaster
+    fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: GameCore.GameMaster
+    name: GameMaster
+    nameWithType: GameMaster
+    fullName: GameCore.GameMaster
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+    name: SetGameMaster
+    nameWithType: GameObjectMonobehavior.SetGameMaster
+    fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: GameCore.GameMaster
+    name: GameMaster
+    nameWithType: GameMaster
+    fullName: GameCore.GameMaster
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.position*
+  commentId: Overload:MonoBehaviours.TuringMachineHeadMonobehavior.position
+  name: position
+  nameWithType: TuringMachineHeadMonobehavior.position
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection*
+  commentId: Overload:MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection
+  name: MoveHeadInDirection
+  nameWithType: TuringMachineHeadMonobehavior.MoveHeadInDirection
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection
+- uid: Constants.TM_Direction
+  commentId: T:Constants.TM_Direction
+  parent: Constants
+  name: TM_Direction
+  nameWithType: TM_Direction
+  fullName: Constants.TM_Direction
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter*
+  commentId: Overload:MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter
+  name: MoveHeadToCenter
+  nameWithType: TuringMachineHeadMonobehavior.MoveHeadToCenter
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo*
+  commentId: Overload:MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo
+  name: MoveHeadTo
+  nameWithType: TuringMachineHeadMonobehavior.MoveHeadTo
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo
+- uid: UnityEngine.Vector3Int
+  commentId: T:UnityEngine.Vector3Int
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3Int
+  nameWithType: Vector3Int
+  fullName: UnityEngine.Vector3Int

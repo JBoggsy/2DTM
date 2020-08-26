@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Constants {
+﻿namespace Constants {
     public enum TM_Symbol : int {
         /// <summary>
         /// Symbol representing the off state of tiles

@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.UI
+  commentId: N:MonoBehaviours.UI
+  id: MonoBehaviours.UI
+  children:
+  - MonoBehaviours.UI.GlassLayerMonobehaviour
+  - MonoBehaviours.UI.LabelMonobehavior
+  - MonoBehaviours.UI.LightsLayerMonobehaviour
+  - MonoBehaviours.UI.PlayButtonMonobehaviour
+  - MonoBehaviours.UI.SimulationControlCanvasMonobehavior
+  - MonoBehaviours.UI.TuringMachineEditorPanel
+  langs:
+  - csharp
+  - vb
+  name: MonoBehaviours.UI
+  nameWithType: MonoBehaviours.UI
+  fullName: MonoBehaviours.UI
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: MonoBehaviours.UI.GlassLayerMonobehaviour
+  commentId: T:MonoBehaviours.UI.GlassLayerMonobehaviour
+  name: GlassLayerMonobehaviour
+  nameWithType: GlassLayerMonobehaviour
+  fullName: MonoBehaviours.UI.GlassLayerMonobehaviour
+- uid: MonoBehaviours.UI.LabelMonobehavior
+  commentId: T:MonoBehaviours.UI.LabelMonobehavior
+  name: LabelMonobehavior
+  nameWithType: LabelMonobehavior
+  fullName: MonoBehaviours.UI.LabelMonobehavior
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour
+  commentId: T:MonoBehaviours.UI.LightsLayerMonobehaviour
+  name: LightsLayerMonobehaviour
+  nameWithType: LightsLayerMonobehaviour
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour
+- uid: MonoBehaviours.UI.PlayButtonMonobehaviour
+  commentId: T:MonoBehaviours.UI.PlayButtonMonobehaviour
+  parent: MonoBehaviours.UI
+  name: PlayButtonMonobehaviour
+  nameWithType: PlayButtonMonobehaviour
+  fullName: MonoBehaviours.UI.PlayButtonMonobehaviour
+- uid: MonoBehaviours.UI.SimulationControlCanvasMonobehavior
+  commentId: T:MonoBehaviours.UI.SimulationControlCanvasMonobehavior
+  name: SimulationControlCanvasMonobehavior
+  nameWithType: SimulationControlCanvasMonobehavior
+  fullName: MonoBehaviours.UI.SimulationControlCanvasMonobehavior
+- uid: MonoBehaviours.UI.TuringMachineEditorPanel
+  commentId: T:MonoBehaviours.UI.TuringMachineEditorPanel
+  name: TuringMachineEditorPanel
+  nameWithType: TuringMachineEditorPanel
+  fullName: MonoBehaviours.UI.TuringMachineEditorPanel
+- uid: MonoBehaviours.UI
+  commentId: N:MonoBehaviours.UI
+  name: MonoBehaviours.UI
+  nameWithType: MonoBehaviours.UI
+  fullName: MonoBehaviours.UI

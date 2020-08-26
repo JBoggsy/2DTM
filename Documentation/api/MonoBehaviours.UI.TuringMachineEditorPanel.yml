@@ -1,0 +1,95 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.UI.TuringMachineEditorPanel
+  commentId: T:MonoBehaviours.UI.TuringMachineEditorPanel
+  id: TuringMachineEditorPanel
+  parent: MonoBehaviours.UI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: TuringMachineEditorPanel
+  nameWithType: TuringMachineEditorPanel
+  fullName: MonoBehaviours.UI.TuringMachineEditorPanel
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/TuringMachineEditorPanel.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TuringMachineEditorPanel
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/TuringMachineEditorPanel.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: 'public class TuringMachineEditorPanel : MonoBehaviour'
+    content.vb: >-
+      Public Class TuringMachineEditorPanel
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: MonoBehaviours.UI
+  commentId: N:MonoBehaviours.UI
+  name: MonoBehaviours.UI
+  nameWithType: MonoBehaviours.UI
+  fullName: MonoBehaviours.UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

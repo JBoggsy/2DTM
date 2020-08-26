@@ -1,0 +1,151 @@
+### YamlMime:ManagedReference
+items:
+- uid: Constants.TM_Symbol
+  commentId: T:Constants.TM_Symbol
+  id: TM_Symbol
+  parent: Constants
+  children:
+  - Constants.TM_Symbol.NUMBER
+  - Constants.TM_Symbol.OFF
+  - Constants.TM_Symbol.ON
+  langs:
+  - csharp
+  - vb
+  name: TM_Symbol
+  nameWithType: TM_Symbol
+  fullName: Constants.TM_Symbol
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TM_Symbol
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 1
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  syntax:
+    content: public enum TM_Symbol
+    content.vb: Public Enum TM_Symbol
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Constants.TM_Symbol.OFF
+  commentId: F:Constants.TM_Symbol.OFF
+  id: OFF
+  parent: Constants.TM_Symbol
+  langs:
+  - csharp
+  - vb
+  name: OFF
+  nameWithType: TM_Symbol.OFF
+  fullName: Constants.TM_Symbol.OFF
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: OFF
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nSymbol representing the off state of tiles\n"
+  example: []
+  syntax:
+    content: OFF = 0
+    return:
+      type: Constants.TM_Symbol
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Constants.TM_Symbol.ON
+  commentId: F:Constants.TM_Symbol.ON
+  id: ON
+  parent: Constants.TM_Symbol
+  langs:
+  - csharp
+  - vb
+  name: ON
+  nameWithType: TM_Symbol.ON
+  fullName: Constants.TM_Symbol.ON
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ON
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nSymbol representing the on state of tiles\n"
+  example: []
+  syntax:
+    content: ON = 1
+    return:
+      type: Constants.TM_Symbol
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Constants.TM_Symbol.NUMBER
+  commentId: F:Constants.TM_Symbol.NUMBER
+  id: NUMBER
+  parent: Constants.TM_Symbol
+  langs:
+  - csharp
+  - vb
+  name: NUMBER
+  nameWithType: TM_Symbol.NUMBER
+  fullName: Constants.TM_Symbol.NUMBER
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Constants.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: NUMBER
+    path: ../Assets/Scripts/Constants.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: Constants
+  summary: "\nThe number of different symbols in the alphabet\n"
+  example: []
+  syntax:
+    content: NUMBER = 2
+    return:
+      type: Constants.TM_Symbol
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+- uid: Constants.TM_Symbol
+  commentId: T:Constants.TM_Symbol
+  parent: Constants
+  name: TM_Symbol
+  nameWithType: TM_Symbol
+  fullName: Constants.TM_Symbol

@@ -1,0 +1,321 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.CameraMonobehavior
+  commentId: T:MonoBehaviours.CameraMonobehavior
+  id: CameraMonobehavior
+  parent: MonoBehaviours
+  children:
+  - MonoBehaviours.CameraMonobehavior.MoveInDirection(Constants.TM_Direction)
+  - MonoBehaviours.CameraMonobehavior.Start
+  - MonoBehaviours.CameraMonobehavior.ZoomCamera(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: CameraMonobehavior
+  nameWithType: CameraMonobehavior
+  fullName: MonoBehaviours.CameraMonobehavior
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: CameraMonobehavior
+    path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: 'public class CameraMonobehavior : GameObjectMonobehavior'
+    content.vb: >-
+      Public Class CameraMonobehavior
+          Inherits GameObjectMonobehavior
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - MonoBehaviours.GameObjectMonobehavior
+  inheritedMembers:
+  - MonoBehaviours.GameObjectMonobehavior.GM
+  - MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MonoBehaviours.CameraMonobehavior.Start
+  commentId: M:MonoBehaviours.CameraMonobehavior.Start
+  id: Start
+  parent: MonoBehaviours.CameraMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: CameraMonobehavior.Start()
+  fullName: MonoBehaviours.CameraMonobehavior.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Start
+    path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  syntax:
+    content: protected override void Start()
+    content.vb: Protected Overrides Sub Start
+  overridden: MonoBehaviours.GameObjectMonobehavior.Start
+  overload: MonoBehaviours.CameraMonobehavior.Start*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: MonoBehaviours.CameraMonobehavior.ZoomCamera(System.Int32)
+  commentId: M:MonoBehaviours.CameraMonobehavior.ZoomCamera(System.Int32)
+  id: ZoomCamera(System.Int32)
+  parent: MonoBehaviours.CameraMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: ZoomCamera(Int32)
+  nameWithType: CameraMonobehavior.ZoomCamera(Int32)
+  fullName: MonoBehaviours.CameraMonobehavior.ZoomCamera(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ZoomCamera
+    path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  summary: "\nZooms the camera in or out by changing its size.\n"
+  example: []
+  syntax:
+    content: public void ZoomCamera(int direction)
+    parameters:
+    - id: direction
+      type: System.Int32
+      description: An integer either -1 or 1.
+    content.vb: Public Sub ZoomCamera(direction As Integer)
+  overload: MonoBehaviours.CameraMonobehavior.ZoomCamera*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.CameraMonobehavior.MoveInDirection(Constants.TM_Direction)
+  commentId: M:MonoBehaviours.CameraMonobehavior.MoveInDirection(Constants.TM_Direction)
+  id: MoveInDirection(Constants.TM_Direction)
+  parent: MonoBehaviours.CameraMonobehavior
+  langs:
+  - csharp
+  - vb
+  name: MoveInDirection(TM_Direction)
+  nameWithType: CameraMonobehavior.MoveInDirection(TM_Direction)
+  fullName: MonoBehaviours.CameraMonobehavior.MoveInDirection(Constants.TM_Direction)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: MoveInDirection
+    path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
+    startLine: 37
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours
+  summary: "\nMove the camera in the given direction. The actual view from the camera\nwill only be updated once the <code>Update()</code> method of the \n<xref href=\"MonoBehaviours.TilemapMonobehavior\" data-throw-if-not-resolved=\"false\"></xref> is called.\n"
+  example: []
+  syntax:
+    content: public void MoveInDirection(TM_Direction dir)
+    parameters:
+    - id: dir
+      type: Constants.TM_Direction
+      description: The direction to move the camera
+    content.vb: Public Sub MoveInDirection(dir As TM_Direction)
+  overload: MonoBehaviours.CameraMonobehavior.MoveInDirection*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MonoBehaviours
+  commentId: N:MonoBehaviours
+  name: MonoBehaviours
+  nameWithType: MonoBehaviours
+  fullName: MonoBehaviours
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: MonoBehaviours.GameObjectMonobehavior
+  commentId: T:MonoBehaviours.GameObjectMonobehavior
+  parent: MonoBehaviours
+  name: GameObjectMonobehavior
+  nameWithType: GameObjectMonobehavior
+  fullName: MonoBehaviours.GameObjectMonobehavior
+- uid: MonoBehaviours.GameObjectMonobehavior.GM
+  commentId: F:MonoBehaviours.GameObjectMonobehavior.GM
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: GM
+  nameWithType: GameObjectMonobehavior.GM
+  fullName: MonoBehaviours.GameObjectMonobehavior.GM
+- uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  commentId: M:MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: SetGameMaster(GameMaster)
+  nameWithType: GameObjectMonobehavior.SetGameMaster(GameMaster)
+  fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+  spec.csharp:
+  - uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+    name: SetGameMaster
+    nameWithType: GameObjectMonobehavior.SetGameMaster
+    fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: GameCore.GameMaster
+    name: GameMaster
+    nameWithType: GameMaster
+    fullName: GameCore.GameMaster
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster(GameCore.GameMaster)
+    name: SetGameMaster
+    nameWithType: GameObjectMonobehavior.SetGameMaster
+    fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: GameCore.GameMaster
+    name: GameMaster
+    nameWithType: GameMaster
+    fullName: GameCore.GameMaster
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: MonoBehaviours.GameObjectMonobehavior.Start
+  commentId: M:MonoBehaviours.GameObjectMonobehavior.Start
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: Start()
+  nameWithType: GameObjectMonobehavior.Start()
+  fullName: MonoBehaviours.GameObjectMonobehavior.Start()
+  spec.csharp:
+  - uid: MonoBehaviours.GameObjectMonobehavior.Start
+    name: Start
+    nameWithType: GameObjectMonobehavior.Start
+    fullName: MonoBehaviours.GameObjectMonobehavior.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MonoBehaviours.GameObjectMonobehavior.Start
+    name: Start
+    nameWithType: GameObjectMonobehavior.Start
+    fullName: MonoBehaviours.GameObjectMonobehavior.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MonoBehaviours.CameraMonobehavior.Start*
+  commentId: Overload:MonoBehaviours.CameraMonobehavior.Start
+  name: Start
+  nameWithType: CameraMonobehavior.Start
+  fullName: MonoBehaviours.CameraMonobehavior.Start
+- uid: MonoBehaviours.CameraMonobehavior.ZoomCamera*
+  commentId: Overload:MonoBehaviours.CameraMonobehavior.ZoomCamera
+  name: ZoomCamera
+  nameWithType: CameraMonobehavior.ZoomCamera
+  fullName: MonoBehaviours.CameraMonobehavior.ZoomCamera
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MonoBehaviours.TilemapMonobehavior
+  commentId: T:MonoBehaviours.TilemapMonobehavior
+  name: TilemapMonobehavior
+  nameWithType: TilemapMonobehavior
+  fullName: MonoBehaviours.TilemapMonobehavior
+- uid: MonoBehaviours.CameraMonobehavior.MoveInDirection*
+  commentId: Overload:MonoBehaviours.CameraMonobehavior.MoveInDirection
+  name: MoveInDirection
+  nameWithType: CameraMonobehavior.MoveInDirection
+  fullName: MonoBehaviours.CameraMonobehavior.MoveInDirection
+- uid: Constants.TM_Direction
+  commentId: T:Constants.TM_Direction
+  parent: Constants
+  name: TM_Direction
+  nameWithType: TM_Direction
+  fullName: Constants.TM_Direction
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants

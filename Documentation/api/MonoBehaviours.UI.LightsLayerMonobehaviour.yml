@@ -1,0 +1,312 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour
+  commentId: T:MonoBehaviours.UI.LightsLayerMonobehaviour
+  id: LightsLayerMonobehaviour
+  parent: MonoBehaviours.UI
+  children:
+  - MonoBehaviours.UI.LightsLayerMonobehaviour.Awake
+  - MonoBehaviours.UI.LightsLayerMonobehaviour.Camera
+  - MonoBehaviours.UI.LightsLayerMonobehaviour.ErrorColor
+  - MonoBehaviours.UI.LightsLayerMonobehaviour.OffColor
+  - MonoBehaviours.UI.LightsLayerMonobehaviour.OnColor
+  - MonoBehaviours.UI.LightsLayerMonobehaviour.Shader
+  langs:
+  - csharp
+  - vb
+  name: LightsLayerMonobehaviour
+  nameWithType: LightsLayerMonobehaviour
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: LightsLayerMonobehaviour
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: 'public class LightsLayerMonobehaviour : MonoBehaviour'
+    content.vb: >-
+      Public Class LightsLayerMonobehaviour
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour.Camera
+  commentId: F:MonoBehaviours.UI.LightsLayerMonobehaviour.Camera
+  id: Camera
+  parent: MonoBehaviours.UI.LightsLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: Camera
+  nameWithType: LightsLayerMonobehaviour.Camera
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour.Camera
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Camera
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Camera Camera
+    return:
+      type: UnityEngine.Camera
+    content.vb: Public Camera As Camera
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour.Shader
+  commentId: F:MonoBehaviours.UI.LightsLayerMonobehaviour.Shader
+  id: Shader
+  parent: MonoBehaviours.UI.LightsLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: Shader
+  nameWithType: LightsLayerMonobehaviour.Shader
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour.Shader
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Shader
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Shader Shader
+    return:
+      type: UnityEngine.Shader
+    content.vb: Public Shader As Shader
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour.OnColor
+  commentId: F:MonoBehaviours.UI.LightsLayerMonobehaviour.OnColor
+  id: OnColor
+  parent: MonoBehaviours.UI.LightsLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: OnColor
+  nameWithType: LightsLayerMonobehaviour.OnColor
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour.OnColor
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: OnColor
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Color OnColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public OnColor As Color
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour.OffColor
+  commentId: F:MonoBehaviours.UI.LightsLayerMonobehaviour.OffColor
+  id: OffColor
+  parent: MonoBehaviours.UI.LightsLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: OffColor
+  nameWithType: LightsLayerMonobehaviour.OffColor
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour.OffColor
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: OffColor
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Color OffColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public OffColor As Color
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour.ErrorColor
+  commentId: F:MonoBehaviours.UI.LightsLayerMonobehaviour.ErrorColor
+  id: ErrorColor
+  parent: MonoBehaviours.UI.LightsLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: ErrorColor
+  nameWithType: LightsLayerMonobehaviour.ErrorColor
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour.ErrorColor
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ErrorColor
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public Color ErrorColor
+    return:
+      type: UnityEngine.Color
+    content.vb: Public ErrorColor As Color
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour.Awake
+  commentId: M:MonoBehaviours.UI.LightsLayerMonobehaviour.Awake
+  id: Awake
+  parent: MonoBehaviours.UI.LightsLayerMonobehaviour
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: LightsLayerMonobehaviour.Awake()
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour.Awake()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Awake
+    path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: MonoBehaviours.UI
+  syntax:
+    content: public void Awake()
+    content.vb: Public Sub Awake
+  overload: MonoBehaviours.UI.LightsLayerMonobehaviour.Awake*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MonoBehaviours.UI
+  commentId: N:MonoBehaviours.UI
+  name: MonoBehaviours.UI
+  nameWithType: MonoBehaviours.UI
+  fullName: MonoBehaviours.UI
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Camera
+  commentId: T:UnityEngine.Camera
+  parent: UnityEngine
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: UnityEngine.Shader
+  commentId: T:UnityEngine.Shader
+  parent: UnityEngine
+  isExternal: true
+  name: Shader
+  nameWithType: Shader
+  fullName: UnityEngine.Shader
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour.Awake*
+  commentId: Overload:MonoBehaviours.UI.LightsLayerMonobehaviour.Awake
+  name: Awake
+  nameWithType: LightsLayerMonobehaviour.Awake
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour.Awake

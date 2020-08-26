@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: GameCore
+  commentId: N:GameCore
+  id: GameCore
+  children:
+  - GameCore.GameMaster
+  - GameCore.GridData
+  langs:
+  - csharp
+  - vb
+  name: GameCore
+  nameWithType: GameCore
+  fullName: GameCore
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  parent: GameCore
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
+- uid: GameCore.GridData
+  commentId: T:GameCore.GridData
+  parent: GameCore
+  name: GridData
+  nameWithType: GridData
+  fullName: GameCore.GridData
+- uid: GameCore
+  commentId: N:GameCore
+  name: GameCore
+  nameWithType: GameCore
+  fullName: GameCore

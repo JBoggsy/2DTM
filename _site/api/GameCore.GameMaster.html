@@ -1,0 +1,888 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GameMaster
+   | 2D Turing Machine Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GameMaster
+   | 2D Turing Machine Documentation ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="GameCore.GameMaster">
+  
+  
+  <h1 id="GameCore_GameMaster" data-uid="GameCore.GameMaster" class="text-break">Class GameMaster
+  </h1>
+  <div class="markdown level0 summary"><p>The GameMaster class is the central authority in charge of running the game.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
+    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
+    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
+    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
+    <div class="level5"><a class="xref" href="Global.Singleton-1.html">Singleton</a>&lt;<a class="xref" href="GameCore.GameMaster.html">GameMaster</a>&gt;</div>
+    <div class="level6"><span class="xref">GameMaster</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Global.Singleton-1.html#Global_Singleton_1_Instance">Singleton&lt;GameMaster&gt;.Instance</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GameCore.html">GameCore</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
+  <h5 id="GameCore_GameMaster_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GameMaster : Singleton&lt;GameMaster&gt;</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_CurrentViewRect.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.CurrentViewRect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L16">View Source</a>
+  </span>
+  <h4 id="GameCore_GameMaster_CurrentViewRect" data-uid="GameCore.GameMaster.CurrentViewRect">CurrentViewRect</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect CurrentViewRect</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_GridData.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.GridData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L15">View Source</a>
+  </span>
+  <h4 id="GameCore_GameMaster_GridData" data-uid="GameCore.GameMaster.GridData">GridData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridData GridData</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GameCore.GridData.html">GridData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_TuringMachineEditorPanelPrefab.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.TuringMachineEditorPanelPrefab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L23">View Source</a>
+  </span>
+  <h4 id="GameCore_GameMaster_TuringMachineEditorPanelPrefab" data-uid="GameCore.GameMaster.TuringMachineEditorPanelPrefab">TuringMachineEditorPanelPrefab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject TuringMachineEditorPanelPrefab</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_TuringMachineHeadPrefab.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.TuringMachineHeadPrefab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L24">View Source</a>
+  </span>
+  <h4 id="GameCore_GameMaster_TuringMachineHeadPrefab" data-uid="GameCore.GameMaster.TuringMachineHeadPrefab">TuringMachineHeadPrefab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject TuringMachineHeadPrefab</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_NumberOfTuringMachines.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.NumberOfTuringMachines%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L27">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_NumberOfTuringMachines_" data-uid="GameCore.GameMaster.NumberOfTuringMachines*"></a>
+  <h4 id="GameCore_GameMaster_NumberOfTuringMachines" data-uid="GameCore.GameMaster.NumberOfTuringMachines">NumberOfTuringMachines</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumberOfTuringMachines { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_NumberStatesPerMachine.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.NumberStatesPerMachine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L28">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_NumberStatesPerMachine_" data-uid="GameCore.GameMaster.NumberStatesPerMachine*"></a>
+  <h4 id="GameCore_GameMaster_NumberStatesPerMachine" data-uid="GameCore.GameMaster.NumberStatesPerMachine">NumberStatesPerMachine</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumberStatesPerMachine { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_RandomBoardGeneration.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.RandomBoardGeneration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L31">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_RandomBoardGeneration_" data-uid="GameCore.GameMaster.RandomBoardGeneration*"></a>
+  <h4 id="GameCore_GameMaster_RandomBoardGeneration" data-uid="GameCore.GameMaster.RandomBoardGeneration">RandomBoardGeneration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RandomBoardGeneration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_RandomSeed.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.RandomSeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L29">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_RandomSeed_" data-uid="GameCore.GameMaster.RandomSeed*"></a>
+  <h4 id="GameCore_GameMaster_RandomSeed" data-uid="GameCore.GameMaster.RandomSeed">RandomSeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RandomSeed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_RandomStartingTransitions.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.RandomStartingTransitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L32">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_RandomStartingTransitions_" data-uid="GameCore.GameMaster.RandomStartingTransitions*"></a>
+  <h4 id="GameCore_GameMaster_RandomStartingTransitions" data-uid="GameCore.GameMaster.RandomStartingTransitions">RandomStartingTransitions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RandomStartingTransitions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_Running.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.Running%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L46">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_Running_" data-uid="GameCore.GameMaster.Running*"></a>
+  <h4 id="GameCore_GameMaster_Running" data-uid="GameCore.GameMaster.Running">Running</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Running { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_SimulationSpeedSetting.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.SimulationSpeedSetting%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L33">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_SimulationSpeedSetting_" data-uid="GameCore.GameMaster.SimulationSpeedSetting*"></a>
+  <h4 id="GameCore_GameMaster_SimulationSpeedSetting" data-uid="GameCore.GameMaster.SimulationSpeedSetting">SimulationSpeedSetting</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SimulationSpeedSetting { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_UseCustomSeed.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.UseCustomSeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L30">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_UseCustomSeed_" data-uid="GameCore.GameMaster.UseCustomSeed*"></a>
+  <h4 id="GameCore_GameMaster_UseCustomSeed" data-uid="GameCore.GameMaster.UseCustomSeed">UseCustomSeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseCustomSeed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleButton_System_String_.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleButton(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L154">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleButton_" data-uid="GameCore.GameMaster.HandleButton*"></a>
+  <h4 id="GameCore_GameMaster_HandleButton_System_String_" data-uid="GameCore.GameMaster.HandleButton(System.String)">HandleButton(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleButton(string buttonName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">buttonName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleChangeSeedButton.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleChangeSeedButton%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L186">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleChangeSeedButton_" data-uid="GameCore.GameMaster.HandleChangeSeedButton*"></a>
+  <h4 id="GameCore_GameMaster_HandleChangeSeedButton" data-uid="GameCore.GameMaster.HandleChangeSeedButton">HandleChangeSeedButton()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleChangeSeedButton()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleKeyPresses_System_Collections_Generic_List_UnityEngine_KeyCode__.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleKeyPresses(System.Collections.Generic.List%7BUnityEngine.KeyCode%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L125">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleKeyPresses_" data-uid="GameCore.GameMaster.HandleKeyPresses*"></a>
+  <h4 id="GameCore_GameMaster_HandleKeyPresses_System_Collections_Generic_List_UnityEngine_KeyCode__" data-uid="GameCore.GameMaster.HandleKeyPresses(System.Collections.Generic.List{UnityEngine.KeyCode})">HandleKeyPresses(List&lt;KeyCode&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleKeyPresses(List&lt;KeyCode&gt; keysPressed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/KeyCode.html">KeyCode</a>&gt;</td>
+        <td><span class="parametername">keysPressed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleMouseWheelScroll_System_Int32_.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleMouseWheelScroll(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L150">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleMouseWheelScroll_" data-uid="GameCore.GameMaster.HandleMouseWheelScroll*"></a>
+  <h4 id="GameCore_GameMaster_HandleMouseWheelScroll_System_Int32_" data-uid="GameCore.GameMaster.HandleMouseWheelScroll(System.Int32)">HandleMouseWheelScroll(Int32)</h4>
+  <div class="markdown level1 summary"><p>Handle when the mouse wheel scrolls in a direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleMouseWheelScroll(int direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>An integer either -1 or 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandlePlayPauseButton.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandlePlayPauseButton%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L177">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandlePlayPauseButton_" data-uid="GameCore.GameMaster.HandlePlayPauseButton*"></a>
+  <h4 id="GameCore_GameMaster_HandlePlayPauseButton" data-uid="GameCore.GameMaster.HandlePlayPauseButton">HandlePlayPauseButton()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandlePlayPauseButton()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleResetButton.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleResetButton%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L181">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleResetButton_" data-uid="GameCore.GameMaster.HandleResetButton*"></a>
+  <h4 id="GameCore_GameMaster_HandleResetButton" data-uid="GameCore.GameMaster.HandleResetButton">HandleResetButton()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleResetButton()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleSimSpeedDecreaseButton.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleSimSpeedDecreaseButton%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L204">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleSimSpeedDecreaseButton_" data-uid="GameCore.GameMaster.HandleSimSpeedDecreaseButton*"></a>
+  <h4 id="GameCore_GameMaster_HandleSimSpeedDecreaseButton" data-uid="GameCore.GameMaster.HandleSimSpeedDecreaseButton">HandleSimSpeedDecreaseButton()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleSimSpeedDecreaseButton()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleSimSpeedIncreaseButton.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleSimSpeedIncreaseButton%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L199">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleSimSpeedIncreaseButton_" data-uid="GameCore.GameMaster.HandleSimSpeedIncreaseButton*"></a>
+  <h4 id="GameCore_GameMaster_HandleSimSpeedIncreaseButton" data-uid="GameCore.GameMaster.HandleSimSpeedIncreaseButton">HandleSimSpeedIncreaseButton()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleSimSpeedIncreaseButton()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleStepButton.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleStepButton%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L194">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleStepButton_" data-uid="GameCore.GameMaster.HandleStepButton*"></a>
+  <h4 id="GameCore_GameMaster_HandleStepButton" data-uid="GameCore.GameMaster.HandleStepButton">HandleStepButton()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleStepButton()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_HandleTuringMachineHeadClick_System_Int32_.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.HandleTuringMachineHeadClick(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L118">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_HandleTuringMachineHeadClick_" data-uid="GameCore.GameMaster.HandleTuringMachineHeadClick*"></a>
+  <h4 id="GameCore_GameMaster_HandleTuringMachineHeadClick_System_Int32_" data-uid="GameCore.GameMaster.HandleTuringMachineHeadClick(System.Int32)">HandleTuringMachineHeadClick(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleTuringMachineHeadClick(int machineID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">machineID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_Initialize.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L53">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_Initialize_" data-uid="GameCore.GameMaster.Initialize*"></a>
+  <h4 id="GameCore_GameMaster_Initialize" data-uid="GameCore.GameMaster.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"><p>Initializes the <a class="xref" href="GameCore.GameMaster.html">GameMaster</a> singleton. This is called by
+the <span class="xref">MonoBehaviours.GameMasterMonobehavior</span> in its <code>Awake()</code> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_RegisterCameraMonobehavior_MonoBehaviours_CameraMonobehavior_.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.RegisterCameraMonobehavior(MonoBehaviours.CameraMonobehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L235">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_RegisterCameraMonobehavior_" data-uid="GameCore.GameMaster.RegisterCameraMonobehavior*"></a>
+  <h4 id="GameCore_GameMaster_RegisterCameraMonobehavior_MonoBehaviours_CameraMonobehavior_" data-uid="GameCore.GameMaster.RegisterCameraMonobehavior(MonoBehaviours.CameraMonobehavior)">RegisterCameraMonobehavior(CameraMonobehavior)</h4>
+  <div class="markdown level1 summary"><p>Register the given <span class="xref">GameCore.GameMaster.CameraMonobehavior</span> as the camera the
+<a class="xref" href="GameCore.GameMaster.html">GameMaster</a> should pay attention to and interact with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterCameraMonobehavior(CameraMonobehavior newCamera)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoBehaviours.CameraMonobehavior.html">CameraMonobehavior</a></td>
+        <td><span class="parametername">newCamera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_ResetGame.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.ResetGame%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L99">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_ResetGame_" data-uid="GameCore.GameMaster.ResetGame*"></a>
+  <h4 id="GameCore_GameMaster_ResetGame" data-uid="GameCore.GameMaster.ResetGame">ResetGame()</h4>
+  <div class="markdown level1 summary"><p>Initialize a simulation/game of 2DTMs by clearing the whole board and creating
+new Turing machines. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetGame()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_SetSeed_System_Int32_.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.SetSeed(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L190">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_SetSeed_" data-uid="GameCore.GameMaster.SetSeed*"></a>
+  <h4 id="GameCore_GameMaster_SetSeed_System_Int32_" data-uid="GameCore.GameMaster.SetSeed(System.Int32)">SetSeed(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSeed(int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_SimulateOneStep.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.SimulateOneStep%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L86">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_SimulateOneStep_" data-uid="GameCore.GameMaster.SimulateOneStep*"></a>
+  <h4 id="GameCore_GameMaster_SimulateOneStep" data-uid="GameCore.GameMaster.SimulateOneStep">SimulateOneStep()</h4>
+  <div class="markdown level1 summary"><p>Simulate a single step of the &quot;game&quot; by iterating through each Turing machine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SimulateOneStep()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster_WriteSymbolToGrid_UnityEngine_Vector3Int_Constants_TM_Symbol_.md&amp;value=---%0Auid%3A%20GameCore.GameMaster.WriteSymbolToGrid(UnityEngine.Vector3Int%2CConstants.TM_Symbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L110">View Source</a>
+  </span>
+  <a id="GameCore_GameMaster_WriteSymbolToGrid_" data-uid="GameCore.GameMaster.WriteSymbolToGrid*"></a>
+  <h4 id="GameCore_GameMaster_WriteSymbolToGrid_UnityEngine_Vector3Int_Constants_TM_Symbol_" data-uid="GameCore.GameMaster.WriteSymbolToGrid(UnityEngine.Vector3Int,Constants.TM_Symbol)">WriteSymbolToGrid(Vector3Int, TM_Symbol)</h4>
+  <div class="markdown level1 summary"><p>Writes the given symbol to the given location on the grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteSymbolToGrid(Vector3Int loc, TM_Symbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3Int</span></td>
+        <td><span class="parametername">loc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a></td>
+        <td><span class="parametername">symbol</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GameMaster.md&amp;value=---%0Auid%3A%20GameCore.GameMaster%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GameMaster.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            2D Turing Machine Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
