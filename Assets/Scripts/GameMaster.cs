@@ -96,6 +96,9 @@ public class GameMaster : Singleton<GameMaster> {
     public void ResetGame() {
         Random.InitState(RandomSeed);
         GridData.ResetGrid();
+        foreach (TuringMachine tm in TuringMachines) {
+            tm.Reset();
+        }
     }
 
     /// <summary>

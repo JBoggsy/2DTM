@@ -92,6 +92,11 @@ class TuringMachine {
         }
     }
 
+    public void Reset() {
+        CurrentState = 0;
+        headMonobehavior.MoveHeadToCenter();
+    }
+
     /******************************
      * TRANSITION TABLE FUNCTIONS *
      ******************************/
