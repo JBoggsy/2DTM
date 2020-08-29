@@ -138,11 +138,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: MoveInDirection
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 86
+    startLine: 84
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
-  summary: "\nMove the camera in the given direction. The actual view from the camera\nwill only be updated once the <code>Update()</code> method of the \n<see cref=\"!:TilemapMonobehavior\"></see> is called.\n"
+  summary: "\nMove the camera in the given direction.\n"
   example: []
   syntax:
     content: public void MoveInDirection(TM_Direction dir)

@@ -63,9 +63,7 @@ namespace MonoBehaviours {
         }
 
         /// <summary>
-        /// Move the camera in the given direction. The actual view from the camera
-        /// will only be updated once the <c>Update()</c> method of the 
-        /// <see cref="TilemapMonobehavior"/> is called.
+        /// Move the camera in the given direction.
         /// </summary>
         /// <param name="dir">
         /// The direction to move the camera. One of:

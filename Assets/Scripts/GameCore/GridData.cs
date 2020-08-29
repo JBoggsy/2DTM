@@ -13,9 +13,9 @@ namespace GameCore {
     /// move in one of the four cardinal directions. This class exists to model
     /// the grid in simulation, and has no connection with actually displaying
     /// the grid to the user. For that, see 
-    /// <see cref="MonoBehaviours.TilemapMonobehavior"/>.
+    /// <see cref="MonoBehaviours.UI.LightsLayerMonobehaviour"/>.
     /// </summary>
-    /// <seealso cref="MonoBehaviours.TilemapMonobehavior"/>
+    /// <seealso cref="MonoBehaviours.UI.LightsLayerMonobehaviour"/>
     /// <seealso cref="TuringMachines.TuringMachine"/>
     /// <seealso cref="GameMaster"/>
     public class GridData {

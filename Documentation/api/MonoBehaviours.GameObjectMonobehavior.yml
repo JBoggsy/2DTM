@@ -26,6 +26,8 @@ items:
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nA parent class for all other Monobehaviors in 2DTM which provides them with\na private <code>GM</code> field giving easy access to the <code><xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref></code>\ninstance.\n"
+  example: []
   syntax:
     content: 'public class GameObjectMonobehavior : MonoBehaviour'
     content.vb: >-
@@ -153,6 +155,12 @@ items:
   - Public
   - Shared
 references:
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  parent: GameCore
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
 - uid: MonoBehaviours
   commentId: N:MonoBehaviours
   name: MonoBehaviours
@@ -193,6 +201,11 @@ references:
   name: MonoBehaviour
   nameWithType: MonoBehaviour
   fullName: UnityEngine.MonoBehaviour
+- uid: GameCore
+  commentId: N:GameCore
+  name: GameCore
+  nameWithType: GameCore
+  fullName: GameCore
 - uid: System
   commentId: N:System
   isExternal: true
@@ -205,17 +218,6 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
-- uid: GameCore.GameMaster
-  commentId: T:GameCore.GameMaster
-  parent: GameCore
-  name: GameMaster
-  nameWithType: GameMaster
-  fullName: GameCore.GameMaster
-- uid: GameCore
-  commentId: N:GameCore
-  name: GameCore
-  nameWithType: GameCore
-  fullName: GameCore
 - uid: MonoBehaviours.GameObjectMonobehavior.Start*
   commentId: Overload:MonoBehaviours.GameObjectMonobehavior.Start
   name: Start

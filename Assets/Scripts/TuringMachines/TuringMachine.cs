@@ -8,16 +8,17 @@ using Constants;
 
 namespace TuringMachines {
     /// <summary>
-    /// The <c>TuringMachine</c> class represents the internal mathmatical Turing
+    /// The <see cref="TuringMachine"/> class represents the internal mathmatical Turing
     /// machine model of a Turing machine in the game. 
     /// </summary>
     /// <remarks>
     /// <para>
-    /// A <c>TuringMachine</c> instance contains three pieces of internal state data
+    /// A <see cref="TuringMachine"/> instance contains three pieces of internal state data
     /// as well as accessory data and methods which allow the Turing machine to be
-    /// run. In particular, an instance contains an integer array <c>States</c>, an
-    /// integer <c>CurrentState</c>, and a look-up table <c>TransitionTable</c>
-    /// serving as a function defined as <c>f(symbol, state)->(state, direction, symbol)</c>.
+    /// run. In particular, it has a number of states represented as integer IDs,
+    /// maintains the ID of the <see cref="CurrentState"/>, and a 
+    /// <see cref="TransitionType"/> serving as a function defined as 
+    /// <c>d(symbol, state)->(state, direction, symbol)</c>.
     /// </para>
     /// <para>
     /// A formal, mathematical Turing machine is defined as a 7-tuple which includes
@@ -222,12 +223,13 @@ namespace TuringMachines {
         }
 
         /**
-         * <summary>Add a new transition to the transition table. 
+         * <summary>Add a new <see cref="Transition"/> to the transition table. 
          * <br></br>
-         * Insert the given <c>transition</c> 'transition' into the transition
-         * table at the specified pair of input 'symbol' and current 'state'. This
+         * Insert the given <see cref="Transition"/> into the <see cref="TransitionTable"/>
+         * at the specified pair of input symbol and current state. This
          * partially defines the transition function <c>d</c> for <c>d(symbol, 
-         * state)</c></summary>.
+         * state)</c>
+         * </summary>.
          * <param name="input">The input symbol the transition requires</param>
          * <param name="state">The state the TM should be in for the transition</param>
          * <param name="transition">The <c>Transition</c> object to be used</param>
@@ -239,10 +241,12 @@ namespace TuringMachines {
         /**
          * <summary>Add a new transition to the transition table. 
          * <br></br>
-         * First creates a <c>Transition</c> based on the last three parameters, then
-         * inserts the <c>Transition</c> in the table at the specified pair of input 
-         * 'symbol' and current 'state'. This partially defines the transition function
-         * <c>d</c> for <c>d(symbol, state)</c></summary>.
+         * First creates a <see cref="Transition"/> based on the last three 
+         * parameters, then inserts the <see cref="Transition"/> into the 
+         * <see cref="TransitionTable"/> at the specified pair of input symbol
+         * and current state. This partially defines the transition function
+         * <c>d</c> for <c>d(symbol, state)</c>
+         * </summary>.
          * <param name="symbol">The input symbol the transition requires</param>
          * <param name="state">The state the TM should be in for the transition</param>
          * <param name="nextState">The ID of the state to transition to</param>
@@ -286,7 +290,8 @@ namespace TuringMachines {
         /// state.
         /// </summary>
         /// <param name="currentState">
-        /// An integer 0 < <see cref="NumberOfStates"/>. Part of the (state, inpit pair).
+        /// An integer between 0 and <see cref="NumberOfStates"/>. Part of the
+        /// (state, input) pair.
         /// </param>
         /// <param name="inputSymbol">
         /// A valid <see cref="TM_Symbol"/>. Part of the (state, inpit pair).

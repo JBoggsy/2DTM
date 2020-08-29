@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using GameCore;
 
-/// <summary>
-/// A parent class for all other Monobehaviors in 2DTM which provides them with
-/// a private <c>GM</c> field giving easy access to the <c><see cref="GameMaster"/></c>
-/// instance.
-/// </summary>
 namespace MonoBehaviours {
+    /// <summary>
+    /// A parent class for all other Monobehaviors in 2DTM which provides them with
+    /// a private <c>GM</c> field giving easy access to the <c><see cref="GameMaster"/></c>
+    /// instance.
+    /// </summary>
     public class GameObjectMonobehavior : MonoBehaviour {
         /// <value>The <c><see cref="GameMaster"/></c> singleton instance.</value>
         protected static GameMaster GM;

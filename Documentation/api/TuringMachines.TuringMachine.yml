@@ -39,12 +39,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: TuringMachine
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "\nThe <code>TuringMachine</code> class represents the internal mathmatical Turing\nmachine model of a Turing machine in the game. \n"
-  remarks: "\n<p>\nA <code>TuringMachine</code> instance contains three pieces of internal state data\nas well as accessory data and methods which allow the Turing machine to be\nrun. In particular, an instance contains an integer array <code>States</code>, an\ninteger <code>CurrentState</code>, and a look-up table <code>TransitionTable</code>\nserving as a function defined as <code>f(symbol, state)->(state, direction, symbol)</code>.\n</p>\n<p>\nA formal, mathematical Turing machine is defined as a 7-tuple which includes\n<ul><li>A set of States</li><li>An alphabet of symbols</li><li>An initial state</li><li>A set of accepting States</li><li>A transition function</li></ul>\nas well as a couple others. To learn more about mathematical Turing machines,\nsee https://en.wikipedia.org/wiki/Turing_machine.\n</p>\n"
+  summary: "\nThe <xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref> class represents the internal mathmatical Turing\nmachine model of a Turing machine in the game. \n"
+  remarks: "\n<p>\nA <xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref> instance contains three pieces of internal state data\nas well as accessory data and methods which allow the Turing machine to be\nrun. In particular, it has a number of states represented as integer IDs,\nmaintains the ID of the <xref href=\"TuringMachines.TuringMachine.CurrentState\" data-throw-if-not-resolved=\"false\"></xref>, and a \n<xref href=\"UnityEngine.TransitionType\" data-throw-if-not-resolved=\"false\"></xref> serving as a function defined as \n<code>d(symbol, state)->(state, direction, symbol)</code>.\n</p>\n<p>\nA formal, mathematical Turing machine is defined as a 7-tuple which includes\n<ul><li>A set of States</li><li>An alphabet of symbols</li><li>An initial state</li><li>A set of accepting States</li><li>A transition function</li></ul>\nas well as a couple others. To learn more about mathematical Turing machines,\nsee https://en.wikipedia.org/wiki/Turing_machine.\n</p>\n"
   example: []
   syntax:
     content: public class TuringMachine
@@ -75,7 +75,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ID
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 49
+    startLine: 50
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -112,7 +112,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: NumberOfStates
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 53
+    startLine: 54
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -149,7 +149,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: CurrentState
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 57
+    startLine: 58
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -186,7 +186,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: nextTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 63
+    startLine: 64
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -219,7 +219,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: headObject
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 68
+    startLine: 69
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -252,7 +252,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: headMonobehavior
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 73
+    startLine: 74
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -285,7 +285,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: TransitionTable
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 79
+    startLine: 80
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -318,7 +318,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GM
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 83
+    startLine: 84
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -351,7 +351,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: .ctor
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 93
+    startLine: 94
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -389,7 +389,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: PrepareSimulationStep
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 130
+    startLine: 131
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -428,7 +428,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ApplySimulationStep
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 156
+    startLine: 157
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -461,7 +461,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: position
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 167
+    startLine: 168
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -498,7 +498,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Reset
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 179
+    startLine: 180
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -530,7 +530,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GenerateRandomTransitions
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 196
+    startLine: 197
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -563,7 +563,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 218
+    startLine: 219
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -605,11 +605,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 234
+    startLine: 236
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "Add a new transition to the transition table. \n<br />\nInsert the given <code>transition</code> &apos;transition&apos; into the transition\ntable at the specified pair of input &apos;symbol&apos; and current &apos;state&apos;. This\npartially defines the transition function <code>d</code> for <code>d(symbol, \nstate)</code>"
+  summary: "Add a new <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> to the transition table. \n<br />\nInsert the given <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> into the <xref href=\"TuringMachines.TuringMachine.TransitionTable\" data-throw-if-not-resolved=\"false\"></xref>\nat the specified pair of input symbol and current state. This\npartially defines the transition function <code>d</code> for <code>d(symbol, \nstate)</code>\n"
   example: []
   syntax:
     content: public void AddTransition(TM_Symbol input, int state, Transition transition)
@@ -647,11 +647,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 251
+    startLine: 255
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "Add a new transition to the transition table. \n<br />\nFirst creates a <code>Transition</code> based on the last three parameters, then\ninserts the <code>Transition</code> in the table at the specified pair of input \n&apos;symbol&apos; and current &apos;state&apos;. This partially defines the transition function\n<code>d</code> for <code>d(symbol, state)</code>"
+  summary: "Add a new transition to the transition table. \n<br />\nFirst creates a <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> based on the last three \nparameters, then inserts the <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> into the \n<xref href=\"TuringMachines.TuringMachine.TransitionTable\" data-throw-if-not-resolved=\"false\"></xref> at the specified pair of input symbol\nand current state. This partially defines the transition function\n<code>d</code> for <code>d(symbol, state)</code>\n"
   example: []
   syntax:
     content: public void AddTransition(int symbol, int state, int nextState, int direction, int writeSymbol)
@@ -695,7 +695,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GetTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 273
+    startLine: 277
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -737,17 +737,21 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RemoveTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 293
+    startLine: 298
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  summary: "\nRemove the transition given be <code>d(state, input)</code>. The previous\nvalue for that input is replaced with null, which indicates a halting\nstate.\n"
+  example: []
   syntax:
     content: public void RemoveTransition(int currentState, TM_Symbol inputSymbol)
     parameters:
     - id: currentState
       type: System.Int32
+      description: "\nAn integer between 0 and <xref href=\"TuringMachines.TuringMachine.NumberOfStates\" data-throw-if-not-resolved=\"false\"></xref>. Part of the\n(state, input) pair.\n"
     - id: inputSymbol
       type: Constants.TM_Symbol
+      description: "\nA valid <xref href=\"Constants.TM_Symbol\" data-throw-if-not-resolved=\"false\"></xref>. Part of the (state, inpit pair).\n"
     content.vb: Public Sub RemoveTransition(currentState As Integer, inputSymbol As TM_Symbol)
   overload: TuringMachines.TuringMachine.RemoveTransition*
   modifiers.csharp:
@@ -772,7 +776,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ToString
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 308
+    startLine: 313
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -792,6 +796,17 @@ items:
   - Public
   - Overrides
 references:
+- uid: TuringMachines.TuringMachine
+  commentId: T:TuringMachines.TuringMachine
+  name: TuringMachine
+  nameWithType: TuringMachine
+  fullName: TuringMachines.TuringMachine
+- uid: TuringMachines.TuringMachine.CurrentState
+  commentId: P:TuringMachines.TuringMachine.CurrentState
+  isExternal: true
+- uid: UnityEngine.TransitionType
+  commentId: T:UnityEngine.TransitionType
+  isExternal: true
 - uid: TuringMachines
   commentId: N:TuringMachines
   name: TuringMachines
@@ -1097,6 +1112,9 @@ references:
   name: GetTransition
   nameWithType: TuringMachine.GetTransition
   fullName: TuringMachines.TuringMachine.GetTransition
+- uid: TuringMachines.TuringMachine.NumberOfStates
+  commentId: P:TuringMachines.TuringMachine.NumberOfStates
+  isExternal: true
 - uid: TuringMachines.TuringMachine.RemoveTransition*
   commentId: Overload:TuringMachines.TuringMachine.RemoveTransition
   name: RemoveTransition

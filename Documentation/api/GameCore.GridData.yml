@@ -29,12 +29,14 @@ items:
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
-  summary: "\nThe <xref href=\"GameCore.GridData\" data-throw-if-not-resolved=\"false\"></xref> class maintains the current state of the grid.\n\nThe grid is the two-dimensional equivalent of a Turing machine tape. As\nsuch, Turing machines operating on the grid can read a symbol off of the\ngrid cell they are on, can write a new symbol to the grid cell, and can\nmove in one of the four cardinal directions. This class exists to model\nthe grid in simulation, and has no connection with actually displaying\nthe grid to the user. For that, see \n<see cref=\"!:MonoBehaviours.TilemapMonobehavior\"></see>.\n"
+  summary: "\nThe <xref href=\"GameCore.GridData\" data-throw-if-not-resolved=\"false\"></xref> class maintains the current state of the grid.\n\nThe grid is the two-dimensional equivalent of a Turing machine tape. As\nsuch, Turing machines operating on the grid can read a symbol off of the\ngrid cell they are on, can write a new symbol to the grid cell, and can\nmove in one of the four cardinal directions. This class exists to model\nthe grid in simulation, and has no connection with actually displaying\nthe grid to the user. For that, see \n<xref href=\"MonoBehaviours.UI.LightsLayerMonobehaviour\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public class GridData
     content.vb: Public Class GridData
   seealso:
+  - linkId: MonoBehaviours.UI.LightsLayerMonobehaviour
+    commentId: T:MonoBehaviours.UI.LightsLayerMonobehaviour
   - linkId: TuringMachines.TuringMachine
     commentId: T:TuringMachines.TuringMachine
   - linkId: GameCore.GameMaster
@@ -264,6 +266,11 @@ references:
   name: GridData
   nameWithType: GridData
   fullName: GameCore.GridData
+- uid: MonoBehaviours.UI.LightsLayerMonobehaviour
+  commentId: T:MonoBehaviours.UI.LightsLayerMonobehaviour
+  name: LightsLayerMonobehaviour
+  nameWithType: LightsLayerMonobehaviour
+  fullName: MonoBehaviours.UI.LightsLayerMonobehaviour
 - uid: TuringMachines.TuringMachine
   commentId: T:TuringMachines.TuringMachine
   name: TuringMachine
