@@ -1,4 +1,8 @@
 ﻿namespace Constants {
+    /// <summary>
+    /// Enumerates the Turing machine "alphabet": which symbols can be written
+    /// to cells and read by Turing machines.
+    /// </summary>
     public enum TM_Symbol : int {
         /// <summary>
         /// Symbol representing the off state of tiles
@@ -14,6 +18,9 @@
         NUMBER
     }
 
+    /// <summary>
+    /// Enumerates the directions a Turing machine's head can move.
+    /// </summary>
     public enum TM_Direction : int {
         /// <summary>
         /// The upward (positive y) direction

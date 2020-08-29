@@ -103,11 +103,14 @@ namespace TuringMachines {
          * TRANSITION TABLE FUNCTIONS *
          ******************************/
         /// <summary>
-        /// Fills the <c>TransitionTable</c> with randomly-generated valid transitions.
-        /// <para>
-        /// This method guarantees a non-halting Turing machine.
-        /// </para>
+        /// Fills the <c>TransitionTable</c> with randomly-generated valid
+        /// transitions. The algorithm simply iterates through each possible
+        /// state-input pair and chooses a random next state, symbol to write,
+        /// and direction to move.
         /// </summary>
+        /// <remarks>
+        /// This method guarantees a non-halting Turing machine.
+        /// </remarks>
         public void GenerateRandomTransitions() {
             for (int state = 0; state < NumberOfStates; state++) {
                 for (int input = 0; input < (int)TM_Symbol.NUMBER; input++) {
@@ -135,6 +138,17 @@ namespace TuringMachines {
             TransitionTable[(state, inputSymbol)] = transition;
         }
 
+        /**
+         * <summary>Add a new transition to the transition table. 
+         * <br></br>
+         * Insert the given <c>transition</c> 'transition' into the transition
+         * table at the specified pair of input 'symbol' and current 'state'. This
+         * partially defines the transition function <c>d</c> for <c>d(symbol, 
+         * state)</c></summary>.
+         * <param name="input">The input symbol the transition requires</param>
+         * <param name="state">The state the TM should be in for the transition</param>
+         * <param name="transition">The <c>Transition</c> object to be used</param>
+         */
         public void AddTransition(TM_Symbol input, int state, Transition transition) {
             TransitionTable[(state, input)] = transition;
         }
@@ -171,7 +185,9 @@ namespace TuringMachines {
         /// </summary>
         /// <param name="currentState">The current state the machine is in</param>
         /// <param name="inputSymbol">The symbol the read/write head read in</param>
-        /// <returns>A <see cref="Transition"/> object.</returns>
+        /// <returns>The result of calling the transition function <c>d</c> on
+        /// <c>currentState</c> and <c>inputSymbol</c>, represented as a 
+        /// <see cref="Transition"/> object.</returns>
         public Transition GetTransition(int currentState, TM_Symbol inputSymbol) {
             Transition returnTransition = new Transition(-1, TM_Direction.STAY, inputSymbol);
             (int, TM_Symbol) transitionKey = (currentState, inputSymbol);
