@@ -22,7 +22,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: CameraMonobehavior
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Start
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ZoomCamera
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
@@ -134,7 +134,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: MoveInDirection
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours

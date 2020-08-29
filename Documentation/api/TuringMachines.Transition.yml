@@ -245,14 +245,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ToString
     path: ../Assets/Scripts/TuringMachines/Transition.cs
-    startLine: 40
+    startLine: 44
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  summary: "\nReturns a string representation of a <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
   syntax:
     content: public string ToString()
     return:
       type: System.String
+      description: A human-readable representation of the <xref href="TuringMachines.Transition" data-throw-if-not-resolved="false"></xref>
     content.vb: Public Function ToString As String
   overload: TuringMachines.Transition.ToString*
   modifiers.csharp:
@@ -331,6 +334,12 @@ references:
 - uid: TuringMachines.Transition.WriteSymbol
   commentId: P:TuringMachines.Transition.WriteSymbol
   isExternal: true
+- uid: TuringMachines.Transition
+  commentId: T:TuringMachines.Transition
+  parent: TuringMachines
+  name: Transition
+  nameWithType: Transition
+  fullName: TuringMachines.Transition
 - uid: TuringMachines.Transition.ToString*
   commentId: Overload:TuringMachines.Transition.ToString
   name: ToString

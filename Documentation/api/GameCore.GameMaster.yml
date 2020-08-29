@@ -831,7 +831,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleKeyPresses
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 228
+    startLine: 230
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -870,7 +870,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleMouseWheelScroll
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 253
+    startLine: 255
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -906,7 +906,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 262
+    startLine: 264
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -942,7 +942,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandlePlayPauseButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 288
+    startLine: 290
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -974,7 +974,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleResetButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 306
+    startLine: 308
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -1010,7 +1010,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleChangeSeedButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 314
+    startLine: 316
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -1042,7 +1042,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SetSeed
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 322
+    startLine: 324
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -1078,7 +1078,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleStepButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 330
+    startLine: 332
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -1113,7 +1113,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleSimSpeedIncreaseButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 338
+    startLine: 340
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -1145,7 +1145,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleSimSpeedDecreaseButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 346
+    startLine: 348
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -1177,7 +1177,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RegisterCameraMonobehavior
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 380
+    startLine: 382
   assemblies:
   - Assembly-CSharp
   namespace: GameCore

@@ -214,6 +214,8 @@ namespace GameCore {
         /// </param>
         public void HandleTuringMachineHeadClick(int machineID) {
             print($"Turing machine clicked: {machineID}");
+            GameObject.Instantiate(TuringMachineEditorPanelPrefab, Vector3.zero, Quaternion.identity);
+            _PauseSimulation();
         }
 
         /*****************************
