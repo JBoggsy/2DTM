@@ -1477,14 +1477,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 934108293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444165f8064a67442860acbae3bd7d0c, type: 3}
+  m_Script: {fileID: 11500000, guid: a33b10a6f32b8084e90d3afafb8f4260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 519420031}
   Shader: {fileID: 4800000, guid: 67eb9a27dcab8f441a3fe519abaafe35, type: 3}
-  OnColor: {r: 1, g: 1, b: 0, a: 1}
-  OffColor: {r: 0.3, g: 0.3, b: 0, a: 1}
-  ErrorColor: {r: 1, g: 0, b: 1, a: 1}
+  OnColor: {r: 0.80678195, g: 0.8113208, b: 0, a: 0}
+  OffColor: {r: 0.3207547, g: 0.30014277, b: 0.040850837, a: 0}
+  ErrorColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!212 &934108296
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1693322093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4f90fc613cf904f922f5f69940b7b8, type: 3}
+  m_Script: {fileID: 11500000, guid: cf2d450905f32e244a5b0255e27291b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 519420031}
