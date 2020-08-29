@@ -83,7 +83,15 @@
   
   <h1 id="GameCore_GridData" data-uid="GameCore.GridData" class="text-break">Class GridData
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="GameCore.GridData.html">GridData</a> class maintains the current state of the grid.</p>
+<p>The grid is the two-dimensional equivalent of a Turing machine tape. As
+such, Turing machines operating on the grid can read a symbol off of the
+grid cell they are on, can write a new symbol to the grid cell, and can
+move in one of the four cardinal directions. This class exists to model
+the grid in simulation, and has no connection with actually displaying
+the grid to the user. For that, see 
+<a class="xref" href="MonoBehaviours.TilemapMonobehavior.html">TilemapMonobehavior</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -103,11 +111,13 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GridData__ctor.md&amp;value=---%0Auid%3A%20GameCore.GridData.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L12">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L38">View Source</a>
   </span>
   <a id="GameCore_GridData__ctor_" data-uid="GameCore.GridData.#ctor*"></a>
   <h4 id="GameCore_GridData__ctor" data-uid="GameCore.GridData.#ctor">GridData()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The default constructor. Creates a grid populated with cells
+containing the <a class="xref" href="GameCore.GridData.html#GameCore_GridData_DEFAULT_SYMBOL">DEFAULT_SYMBOL</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -120,7 +130,7 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GridData_CellDictionary.md&amp;value=---%0Auid%3A%20GameCore.GridData.CellDictionary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L10">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L32">View Source</a>
   </span>
   <h4 id="GameCore_GridData_CellDictionary" data-uid="GameCore.GridData.CellDictionary">CellDictionary</h4>
   <div class="markdown level1 summary"></div>
@@ -140,7 +150,10 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">UnityEngine.Vector3Int</span>, <a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a>&gt;</td>
-        <td></td>
+        <td><p>Holds the mapping between pairs of (row, col) grid coordinates and
+symbols. Each (row, col) coordinate has at most one corresponding
+symbol.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -149,7 +162,7 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GridData_DEFAULT_SYMBOL.md&amp;value=---%0Auid%3A%20GameCore.GridData.DEFAULT_SYMBOL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L8">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L25">View Source</a>
   </span>
   <h4 id="GameCore_GridData_DEFAULT_SYMBOL" data-uid="GameCore.GridData.DEFAULT_SYMBOL">DEFAULT_SYMBOL</h4>
   <div class="markdown level1 summary"></div>
@@ -169,7 +182,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a></td>
-        <td></td>
+        <td><p>The default symbol every grid cell is initialized with.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -180,11 +194,12 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GridData_GetCellSymbol_UnityEngine_Vector3Int_.md&amp;value=---%0Auid%3A%20GameCore.GridData.GetCellSymbol(UnityEngine.Vector3Int)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L20">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L59">View Source</a>
   </span>
   <a id="GameCore_GridData_GetCellSymbol_" data-uid="GameCore.GridData.GetCellSymbol*"></a>
   <h4 id="GameCore_GridData_GetCellSymbol_UnityEngine_Vector3Int_" data-uid="GameCore.GridData.GetCellSymbol(UnityEngine.Vector3Int)">GetCellSymbol(Vector3Int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Retrieve the symbol written to a specific cell.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -203,7 +218,8 @@
       <tr>
         <td><span class="xref">UnityEngine.Vector3Int</span></td>
         <td><span class="parametername">loc</span></td>
-        <td></td>
+        <td><p>The (row, col) coordinate of the cell to get the symbol of.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -218,7 +234,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a> written to the cell at <code>loc</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -227,11 +244,13 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GridData_ResetGrid.md&amp;value=---%0Auid%3A%20GameCore.GridData.ResetGrid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L16">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L46">View Source</a>
   </span>
   <a id="GameCore_GridData_ResetGrid_" data-uid="GameCore.GridData.ResetGrid*"></a>
   <h4 id="GameCore_GridData_ResetGrid" data-uid="GameCore.GridData.ResetGrid">ResetGrid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resets the grid by calling the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.clear#System_Collections_Generic_Dictionary_2_Clear">Clear()</a>
+method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -242,11 +261,13 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GridData_SetCellSymbol_UnityEngine_Vector3Int_Constants_TM_Symbol_.md&amp;value=---%0Auid%3A%20GameCore.GridData.SetCellSymbol(UnityEngine.Vector3Int%2CConstants.TM_Symbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L25">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L70">View Source</a>
   </span>
   <a id="GameCore_GridData_SetCellSymbol_" data-uid="GameCore.GridData.SetCellSymbol*"></a>
   <h4 id="GameCore_GridData_SetCellSymbol_UnityEngine_Vector3Int_Constants_TM_Symbol_" data-uid="GameCore.GridData.SetCellSymbol(UnityEngine.Vector3Int,Constants.TM_Symbol)">SetCellSymbol(Vector3Int, TM_Symbol)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the symbol of a cell to the given symbol. Completely overwrites
+the previous symbol.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -265,15 +286,23 @@
       <tr>
         <td><span class="xref">UnityEngine.Vector3Int</span></td>
         <td><span class="parametername">loc</span></td>
-        <td></td>
+        <td><p>The (row, col) coordinate of the cell to write to.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a></td>
         <td><span class="parametername">symbol</span></td>
-        <td></td>
+        <td><p>The new <a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a> the cell should contain.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="MonoBehaviours.TilemapMonobehavior.html">TilemapMonobehavior</a></div>
+      <div><a class="xref" href="TuringMachines.TuringMachine.html">TuringMachine</a></div>
+      <div><a class="xref" href="GameCore.GameMaster.html">GameMaster</a></div>
+  </div>
 </article>
           </div>
           
@@ -285,7 +314,7 @@
                     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=GameCore_GridData.md&amp;value=---%0Auid%3A%20GameCore.GridData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/GameCore/GridData.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

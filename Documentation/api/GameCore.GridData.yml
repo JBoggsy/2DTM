@@ -25,13 +25,22 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GridData
     path: ../Assets/Scripts/GameCore/GridData.cs
-    startLine: 6
+    startLine: 20
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nThe <xref href=\"GameCore.GridData\" data-throw-if-not-resolved=\"false\"></xref> class maintains the current state of the grid.\n\nThe grid is the two-dimensional equivalent of a Turing machine tape. As\nsuch, Turing machines operating on the grid can read a symbol off of the\ngrid cell they are on, can write a new symbol to the grid cell, and can\nmove in one of the four cardinal directions. This class exists to model\nthe grid in simulation, and has no connection with actually displaying\nthe grid to the user. For that, see \n<xref href=\"MonoBehaviours.TilemapMonobehavior\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public class GridData
     content.vb: Public Class GridData
+  seealso:
+  - linkId: MonoBehaviours.TilemapMonobehavior
+    commentId: T:MonoBehaviours.TilemapMonobehavior
+  - linkId: TuringMachines.TuringMachine
+    commentId: T:TuringMachines.TuringMachine
+  - linkId: GameCore.GameMaster
+    commentId: T:GameCore.GameMaster
   inheritance:
   - System.Object
   modifiers.csharp:
@@ -58,14 +67,16 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: DEFAULT_SYMBOL
     path: ../Assets/Scripts/GameCore/GridData.cs
-    startLine: 7
+    startLine: 24
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: protected const TM_Symbol DEFAULT_SYMBOL = TM_Symbol.OFF
     return:
       type: Constants.TM_Symbol
+      description: "\nThe default symbol every grid cell is initialized with.\n"
     content.vb: Protected Const DEFAULT_SYMBOL As TM_Symbol = TM_Symbol.OFF
   modifiers.csharp:
   - protected
@@ -91,14 +102,16 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: CellDictionary
     path: ../Assets/Scripts/GameCore/GridData.cs
-    startLine: 9
+    startLine: 31
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: protected Dictionary<Vector3Int, TM_Symbol> CellDictionary
     return:
       type: System.Collections.Generic.Dictionary{UnityEngine.Vector3Int,Constants.TM_Symbol}
+      description: "\nHolds the mapping between pairs of (row, col) grid coordinates and\nsymbols. Each (row, col) coordinate has at most one corresponding\nsymbol.\n"
     content.vb: Protected CellDictionary As Dictionary(Of Vector3Int, TM_Symbol)
   modifiers.csharp:
   - protected
@@ -122,10 +135,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: .ctor
     path: ../Assets/Scripts/GameCore/GridData.cs
-    startLine: 11
+    startLine: 37
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nThe default constructor. Creates a grid populated with cells\ncontaining the <xref href=\"GameCore.GridData.DEFAULT_SYMBOL\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public GridData()
     content.vb: Public Sub New
@@ -152,10 +167,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ResetGrid
     path: ../Assets/Scripts/GameCore/GridData.cs
-    startLine: 15
+    startLine: 45
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nResets the grid by calling the <xref href=\"System.Collections.Generic.Dictionary%602.Clear\" data-throw-if-not-resolved=\"false\"></xref>\nmethod.\n"
+  example: []
   syntax:
     content: public void ResetGrid()
     content.vb: Public Sub ResetGrid
@@ -182,17 +199,21 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GetCellSymbol
     path: ../Assets/Scripts/GameCore/GridData.cs
-    startLine: 19
+    startLine: 58
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nRetrieve the symbol written to a specific cell.\n"
+  example: []
   syntax:
     content: public TM_Symbol GetCellSymbol(Vector3Int loc)
     parameters:
     - id: loc
       type: UnityEngine.Vector3Int
+      description: "\nThe (row, col) coordinate of the cell to get the symbol of.\n"
     return:
       type: Constants.TM_Symbol
+      description: "\nThe <xref href=\"Constants.TM_Symbol\" data-throw-if-not-resolved=\"false\"></xref> written to the cell at <code>loc</code>.\n"
     content.vb: Public Function GetCellSymbol(loc As Vector3Int) As TM_Symbol
   overload: GameCore.GridData.GetCellSymbol*
   modifiers.csharp:
@@ -217,17 +238,21 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SetCellSymbol
     path: ../Assets/Scripts/GameCore/GridData.cs
-    startLine: 24
+    startLine: 69
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nSets the symbol of a cell to the given symbol. Completely overwrites\nthe previous symbol.\n"
+  example: []
   syntax:
     content: public void SetCellSymbol(Vector3Int loc, TM_Symbol symbol)
     parameters:
     - id: loc
       type: UnityEngine.Vector3Int
+      description: The (row, col) coordinate of the cell to write to.
     - id: symbol
       type: Constants.TM_Symbol
+      description: The new <xref href="Constants.TM_Symbol" data-throw-if-not-resolved="false"></xref> the cell should contain.
     content.vb: Public Sub SetCellSymbol(loc As Vector3Int, symbol As TM_Symbol)
   overload: GameCore.GridData.SetCellSymbol*
   modifiers.csharp:
@@ -235,6 +260,28 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: GameCore.GridData
+  commentId: T:GameCore.GridData
+  parent: GameCore
+  name: GridData
+  nameWithType: GridData
+  fullName: GameCore.GridData
+- uid: MonoBehaviours.TilemapMonobehavior
+  commentId: T:MonoBehaviours.TilemapMonobehavior
+  name: TilemapMonobehavior
+  nameWithType: TilemapMonobehavior
+  fullName: MonoBehaviours.TilemapMonobehavior
+- uid: TuringMachines.TuringMachine
+  commentId: T:TuringMachines.TuringMachine
+  name: TuringMachine
+  nameWithType: TuringMachine
+  fullName: TuringMachines.TuringMachine
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  parent: GameCore
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
 - uid: GameCore
   commentId: N:GameCore
   name: GameCore
@@ -379,11 +426,17 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: GameCore.GridData.DEFAULT_SYMBOL
+  commentId: F:GameCore.GridData.DEFAULT_SYMBOL
+  isExternal: true
 - uid: GameCore.GridData.#ctor*
   commentId: Overload:GameCore.GridData.#ctor
   name: GridData
   nameWithType: GridData.GridData
   fullName: GameCore.GridData.GridData
+- uid: System.Collections.Generic.Dictionary`2.Clear
+  commentId: M:System.Collections.Generic.Dictionary`2.Clear
+  isExternal: true
 - uid: GameCore.GridData.ResetGrid*
   commentId: Overload:GameCore.GridData.ResetGrid
   name: ResetGrid

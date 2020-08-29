@@ -25,10 +25,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: TM_Direction
     path: ../Assets/Scripts/Constants.cs
-    startLine: 16
+    startLine: 23
   assemblies:
   - Assembly-CSharp
   namespace: Constants
+  summary: "\nEnumerates the directions a Turing machine&apos;s head can move.\n"
+  example: []
   syntax:
     content: public enum TM_Direction
     content.vb: Public Enum TM_Direction
@@ -56,7 +58,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: UP
     path: ../Assets/Scripts/Constants.cs
-    startLine: 20
+    startLine: 27
   assemblies:
   - Assembly-CSharp
   namespace: Constants
@@ -90,7 +92,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: DOWN
     path: ../Assets/Scripts/Constants.cs
-    startLine: 24
+    startLine: 31
   assemblies:
   - Assembly-CSharp
   namespace: Constants
@@ -124,7 +126,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: LEFT
     path: ../Assets/Scripts/Constants.cs
-    startLine: 28
+    startLine: 35
   assemblies:
   - Assembly-CSharp
   namespace: Constants
@@ -158,7 +160,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RIGHT
     path: ../Assets/Scripts/Constants.cs
-    startLine: 32
+    startLine: 39
   assemblies:
   - Assembly-CSharp
   namespace: Constants
@@ -192,7 +194,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: STAY
     path: ../Assets/Scripts/Constants.cs
-    startLine: 36
+    startLine: 43
   assemblies:
   - Assembly-CSharp
   namespace: Constants
@@ -226,7 +228,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: NUMBER
     path: ../Assets/Scripts/Constants.cs
-    startLine: 40
+    startLine: 47
   assemblies:
   - Assembly-CSharp
   namespace: Constants

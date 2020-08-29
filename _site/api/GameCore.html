@@ -100,7 +100,15 @@ references to a couple prefabs needed for controlling the Turing
 machine sprites.</p>
 </section>
       <h4><a class="xref" href="GameCore.GridData.html">GridData</a></h4>
-      <section></section>
+      <section><p>The <a class="xref" href="GameCore.GridData.html">GridData</a> class maintains the current state of the grid.</p>
+<p>The grid is the two-dimensional equivalent of a Turing machine tape. As
+such, Turing machines operating on the grid can read a symbol off of the
+grid cell they are on, can write a new symbol to the grid cell, and can
+move in one of the four cardinal directions. This class exists to model
+the grid in simulation, and has no connection with actually displaying
+the grid to the user. For that, see 
+<a class="xref" href="MonoBehaviours.TilemapMonobehavior.html">TilemapMonobehavior</a>.</p>
+</section>
 </article>
           </div>
           

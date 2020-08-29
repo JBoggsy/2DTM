@@ -22,10 +22,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: TM_Symbol
     path: ../Assets/Scripts/Constants.cs
-    startLine: 1
+    startLine: 5
   assemblies:
   - Assembly-CSharp
   namespace: Constants
+  summary: "\nEnumerates the Turing machine &quot;alphabet&quot;: which symbols can be written\nto cells and read by Turing machines.\n"
+  example: []
   syntax:
     content: public enum TM_Symbol
     content.vb: Public Enum TM_Symbol
@@ -53,7 +55,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: OFF
     path: ../Assets/Scripts/Constants.cs
-    startLine: 5
+    startLine: 9
   assemblies:
   - Assembly-CSharp
   namespace: Constants
@@ -87,7 +89,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ON
     path: ../Assets/Scripts/Constants.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Assembly-CSharp
   namespace: Constants
@@ -121,7 +123,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: NUMBER
     path: ../Assets/Scripts/Constants.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - Assembly-CSharp
   namespace: Constants

@@ -38,6 +38,10 @@ namespace TuringMachines {
             WriteSymbol = writeSymbol;
         }
 
+        /// <summary>
+        /// Returns a string representation of a <see cref="Transition"/>
+        /// </summary>
+        /// <returns>A human-readable representation of the <see cref="Transition"/></returns>
         public string ToString() {
             return "(" + NextState.ToString() + ", " + Direction.ToString() + ", " + WriteSymbol.ToString() + ")";
         }

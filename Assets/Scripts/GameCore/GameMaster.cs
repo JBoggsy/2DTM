@@ -144,7 +144,7 @@ namespace GameCore {
             }
 
             TuringMachineHeadPrefab = (GameObject)Resources.Load("Turing Machine Head");
-            TuringMachineEditorPanelPrefab = (GameObject)Resources.Load("TuringMachineEditorOuterPanel");
+            TuringMachineEditorPanelPrefab = (GameObject)Resources.Load("TuringMachineEditorCanvas");
 
             GridData = new GridData();
             TuringMachines = new TuringMachine[NumberOfTuringMachines];
@@ -213,7 +213,7 @@ namespace GameCore {
         /// The ID of the <see cref="TuringMachine"/> whose sprite was clicked.
         /// </param>
         public void HandleTuringMachineHeadClick(int machineID) {
-            print("Turing machine clicked...");
+            print($"Turing machine clicked: {machineID}");
         }
 
         /*****************************

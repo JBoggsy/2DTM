@@ -343,11 +343,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GenerateRandomTransitions
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 110
+    startLine: 113
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "\nFills the <code>TransitionTable</code> with randomly-generated valid transitions.\n<p>\nThis method guarantees a non-halting Turing machine.\n</p>\n"
+  summary: "\nFills the <code>TransitionTable</code> with randomly-generated valid\ntransitions. The algorithm simply iterates through each possible\nstate-input pair and chooses a random next state, symbol to write,\nand direction to move.\n"
+  remarks: "\nThis method guarantees a non-halting Turing machine.\n"
   example: []
   syntax:
     content: public void GenerateRandomTransitions()
@@ -375,7 +376,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 132
+    startLine: 135
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -417,19 +418,24 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 137
+    startLine: 151
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  summary: "Add a new transition to the transition table. \n<br />\nInsert the given <code>transition</code> &apos;transition&apos; into the transition\ntable at the specified pair of input &apos;symbol&apos; and current &apos;state&apos;. This\npartially defines the transition function <code>d</code> for <code>d(symbol, \nstate)</code>"
+  example: []
   syntax:
     content: public void AddTransition(TM_Symbol input, int state, Transition transition)
     parameters:
     - id: input
       type: Constants.TM_Symbol
+      description: The input symbol the transition requires
     - id: state
       type: System.Int32
+      description: The state the TM should be in for the transition
     - id: transition
       type: TuringMachines.Transition
+      description: The <code>Transition</code> object to be used
     content.vb: Public Sub AddTransition(input As TM_Symbol, state As Integer, transition As Transition)
   overload: TuringMachines.TuringMachine.AddTransition*
   modifiers.csharp:
@@ -454,7 +460,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 154
+    startLine: 168
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -502,7 +508,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GetTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 174
+    startLine: 190
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -519,7 +525,7 @@ items:
       description: The symbol the read/write head read in
     return:
       type: TuringMachines.Transition
-      description: A <xref href="TuringMachines.Transition" data-throw-if-not-resolved="false"></xref> object.
+      description: "The result of calling the transition function <code>d</code> on\n<code>currentState</code> and <code>inputSymbol</code>, represented as a \n<xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> object."
     content.vb: Public Function GetTransition(currentState As Integer, inputSymbol As TM_Symbol) As Transition
   overload: TuringMachines.TuringMachine.GetTransition*
   modifiers.csharp:
@@ -544,7 +550,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RemoveTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 183
+    startLine: 199
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -579,7 +585,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ToString
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 196
+    startLine: 212
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
