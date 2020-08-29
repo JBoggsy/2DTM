@@ -24,10 +24,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: LabelMonobehavior
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
+  summary: "\nMonobehaviour for UI labels. Allows programmatic changes to labels.\n"
+  example: []
   syntax:
     content: 'public class LabelMonobehavior : GameObjectMonobehavior'
     content.vb: >-
@@ -68,7 +70,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SetLabel
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -101,7 +103,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SetLabel
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -134,7 +136,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SetLabel
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -167,7 +169,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SetLabel
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -200,7 +202,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GetLabel
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LabelMonobehavior.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI

@@ -5,6 +5,10 @@ using GameCore;
 
 namespace MonoBehaviours {
     namespace UI {
+        /// <summary>
+        /// Monobehaviour for the UI_Canvas Unity hierarchy element. Mainly
+        /// serves as a hub for handling button clicks.
+        /// </summary>
         public class SimulationControlCanvasMonobehavior : MonoBehaviour {
             public Text SpeedLabel;
             public InputField SeedField;

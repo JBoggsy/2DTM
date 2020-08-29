@@ -24,15 +24,20 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: TuringMachineHeadMonobehavior
     path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
-    startLine: 6
+    startLine: 13
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nMonobehaviour for the Turing machine heads being rendered in the Unity\nscene. This controls the actual movement of the sprites in Unity. A\n<xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref> instance manages a\ncorresponding <xref href=\"MonoBehaviours.TuringMachineHeadMonobehavior\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  example: []
   syntax:
     content: 'public class TuringMachineHeadMonobehavior : GameObjectMonobehavior'
     content.vb: >-
       Public Class TuringMachineHeadMonobehavior
           Inherits GameObjectMonobehavior
+  seealso:
+  - linkId: TuringMachines.TuringMachine
+    commentId: T:TuringMachines.TuringMachine
   inheritance:
   - System.Object
   - UnityEngine.Object
@@ -68,14 +73,16 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: id
     path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
-    startLine: 7
+    startLine: 17
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  example: []
   syntax:
     content: public int id
     return:
       type: System.Int32
+      description: "\nA unique identifier for this Truing machine head.\n"
     content.vb: Public id As Integer
   modifiers.csharp:
   - public
@@ -99,15 +106,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: position
     path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
-    startLine: 13
+    startLine: 35
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nIndicates where the Turing machine head is located.\n"
+  example: []
   syntax:
     content: public Vector3 position { get; }
     parameters: []
     return:
       type: UnityEngine.Vector3
+      description: "\nThe position of the Turing machine head in world space (not in grid\ncoordinates).\n"
     content.vb: Public ReadOnly Property position As Vector3
   overload: MonoBehaviours.TuringMachineHeadMonobehavior.position*
   modifiers.csharp:
@@ -134,15 +144,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: MoveHeadInDirection
     path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
-    startLine: 17
+    startLine: 43
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nMoves the Turing machine head 1 unit in the given direction.\n"
+  example: []
   syntax:
     content: public void MoveHeadInDirection(TM_Direction dir)
     parameters:
     - id: dir
       type: Constants.TM_Direction
+      description: The direction in which to move.
     content.vb: Public Sub MoveHeadInDirection(dir As TM_Direction)
   overload: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection*
   modifiers.csharp:
@@ -167,10 +180,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: MoveHeadToCenter
     path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
-    startLine: 40
+    startLine: 69
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nMoves the hard from wherever it is to the center of the grid, (0, 0).\n"
+  example: []
   syntax:
     content: public void MoveHeadToCenter()
     content.vb: Public Sub MoveHeadToCenter
@@ -197,15 +212,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: MoveHeadTo
     path: ../Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs
-    startLine: 44
+    startLine: 79
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nMoves the Turing machine head to an arbitrary grid location.\n"
+  example: []
   syntax:
     content: public void MoveHeadTo(Vector3Int newLocation)
     parameters:
     - id: newLocation
       type: UnityEngine.Vector3Int
+      description: "\nThe (row, col) location the Turing machine head should be moved to.\n"
     content.vb: Public Sub MoveHeadTo(newLocation As Vector3Int)
   overload: MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo*
   modifiers.csharp:
@@ -213,6 +231,17 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: TuringMachines.TuringMachine
+  commentId: T:TuringMachines.TuringMachine
+  name: TuringMachine
+  nameWithType: TuringMachine
+  fullName: TuringMachines.TuringMachine
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior
+  commentId: T:MonoBehaviours.TuringMachineHeadMonobehavior
+  parent: MonoBehaviours
+  name: TuringMachineHeadMonobehavior
+  nameWithType: TuringMachineHeadMonobehavior
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior
 - uid: MonoBehaviours
   commentId: N:MonoBehaviours
   name: MonoBehaviours

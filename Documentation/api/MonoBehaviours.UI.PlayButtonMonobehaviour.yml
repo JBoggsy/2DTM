@@ -23,10 +23,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: PlayButtonMonobehaviour
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
+  summary: "\nSpecial monobehaviour for the play/pause button. Allows the sprite\nto change from the play symbol to the pause symbol.\n"
+  example: []
   syntax:
     content: 'public class PlayButtonMonobehaviour : MonoBehaviour'
     content.vb: >-
@@ -62,7 +64,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: PlayTexture
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -93,7 +95,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: PauseTexture
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -124,7 +126,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Awake
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -154,7 +156,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: UpdateTexture
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/PlayButtonMonobehaviour.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI

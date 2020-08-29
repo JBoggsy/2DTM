@@ -4,6 +4,11 @@ using UnityEngine;
 using GameCore;
 
 namespace MonoBehaviours {
+    /// <summary>
+    /// The monobehvaiour for the GameMaster Unity hierarchy element. Connects
+    /// the <see cref="GameCore.GameMaster"/> singelton instance to the Unity
+    /// simulation.
+    /// </summary>
     class GameMasterMonobehavior : GameObjectMonobehavior {
         void Awake() {
             GameMaster.Instance.Initialize();

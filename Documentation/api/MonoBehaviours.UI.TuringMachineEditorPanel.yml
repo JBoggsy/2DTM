@@ -19,10 +19,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: TuringMachineEditorPanel
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/TuringMachineEditorPanel.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
+  summary: "\nMonobehaviour for the Turing machine editor UI element.\n"
+  example: []
   syntax:
     content: 'public class TuringMachineEditorPanel : MonoBehaviour'
     content.vb: >-

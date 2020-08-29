@@ -8,13 +8,18 @@ using GameCore;
 /// </summary>
 namespace MonoBehaviours {
     public class GameObjectMonobehavior : MonoBehaviour {
-        /// <summary>The singleton <c><see cref="GameMaster"/></c> instance.</summary>
+        /// <value>The <c><see cref="GameMaster"/></c> singleton instance.</value>
         protected static GameMaster GM;
 
         virtual protected void Start() {
             print("Starting a monobehavior...");
         }
 
+        /// <summary>
+        /// Sets the value of <see cref="GM"/> to the <see cref="GameMaster"/>
+        /// singleton instance.
+        /// </summary>
+        /// <param name="newGM">The new <see cref="GameMaster"/> instance.</param>
         public static void SetGameMaster(GameMaster newGM) {
             GM = newGM;
         }

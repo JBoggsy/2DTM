@@ -2,6 +2,10 @@
 
 namespace MonoBehaviours {
     namespace UI {
+        /// <summary>
+        /// The monobehaviour for the Unity renderer responsible for rendering
+        /// the glass-like covering of the cells on the grid.
+        /// </summary>
         public class GlassLayerMonobehaviour : MonoBehaviour {
             private int width = 1920;
             private int height = 1080;

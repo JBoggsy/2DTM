@@ -27,8 +27,6 @@
     name: CameraMonobehavior
   - uid: MonoBehaviours.GameObjectMonobehavior
     name: GameObjectMonobehavior
-  - uid: MonoBehaviours.TilemapMonobehavior
-    name: TilemapMonobehavior
   - uid: MonoBehaviours.TuringMachineHeadMonobehavior
     name: TuringMachineHeadMonobehavior
 - uid: MonoBehaviours.UI

@@ -13,13 +13,18 @@ items:
   - TuringMachines.TuringMachine.CurrentState
   - TuringMachines.TuringMachine.GenerateRandomTransitions
   - TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)
+  - TuringMachines.TuringMachine.GM
+  - TuringMachines.TuringMachine.headMonobehavior
+  - TuringMachines.TuringMachine.headObject
   - TuringMachines.TuringMachine.ID
+  - TuringMachines.TuringMachine.nextTransition
   - TuringMachines.TuringMachine.NumberOfStates
   - TuringMachines.TuringMachine.position
   - TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
   - TuringMachines.TuringMachine.RemoveTransition(System.Int32,Constants.TM_Symbol)
   - TuringMachines.TuringMachine.Reset
   - TuringMachines.TuringMachine.ToString
+  - TuringMachines.TuringMachine.TransitionTable
   langs:
   - csharp
   - vb
@@ -70,15 +75,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ID
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 45
+    startLine: 49
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  example: []
   syntax:
     content: public int ID { get; }
     parameters: []
     return:
       type: System.Int32
+      description: "\nA unique ID assigned to the Turing machine. The corresponding Turing\nmachine head sprite in the Unity view has the same ID.\n"
     content.vb: Public ReadOnly Property ID As Integer
   overload: TuringMachines.TuringMachine.ID*
   modifiers.csharp:
@@ -105,15 +112,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: NumberOfStates
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 46
+    startLine: 53
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  example: []
   syntax:
     content: public int NumberOfStates { get; }
     parameters: []
     return:
       type: System.Int32
+      description: "\nThe number of states in the Turing machine&apos;s FSM.\n"
     content.vb: Public ReadOnly Property NumberOfStates As Integer
   overload: TuringMachines.TuringMachine.NumberOfStates*
   modifiers.csharp:
@@ -140,15 +149,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: CurrentState
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 47
+    startLine: 57
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  example: []
   syntax:
     content: public int CurrentState { get; }
     parameters: []
     return:
       type: System.Int32
+      description: "\nThe FSM state the Turing machine is currently in.\n"
     content.vb: Public ReadOnly Property CurrentState As Integer
   overload: TuringMachines.TuringMachine.CurrentState*
   modifiers.csharp:
@@ -157,6 +168,171 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: TuringMachines.TuringMachine.nextTransition
+  commentId: F:TuringMachines.TuringMachine.nextTransition
+  id: nextTransition
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: nextTransition
+  nameWithType: TuringMachine.nextTransition
+  fullName: TuringMachines.TuringMachine.nextTransition
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: nextTransition
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 63
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  example: []
+  syntax:
+    content: protected Transition nextTransition
+    return:
+      type: TuringMachines.Transition
+      description: "\nThe <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> instance which will be applied at the\nend of the next simulation update.\n"
+    content.vb: Protected nextTransition As Transition
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TuringMachines.TuringMachine.headObject
+  commentId: F:TuringMachines.TuringMachine.headObject
+  id: headObject
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: headObject
+  nameWithType: TuringMachine.headObject
+  fullName: TuringMachines.TuringMachine.headObject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: headObject
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 68
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  example: []
+  syntax:
+    content: protected GameObject headObject
+    return:
+      type: UnityEngine.GameObject
+      description: "\nThe <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref> which corresponds to the Turing machine&apos;s\nsprite in the board visualization.\n"
+    content.vb: Protected headObject As GameObject
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TuringMachines.TuringMachine.headMonobehavior
+  commentId: F:TuringMachines.TuringMachine.headMonobehavior
+  id: headMonobehavior
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: headMonobehavior
+  nameWithType: TuringMachine.headMonobehavior
+  fullName: TuringMachines.TuringMachine.headMonobehavior
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: headMonobehavior
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 73
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  example: []
+  syntax:
+    content: protected TuringMachineHeadMonobehavior headMonobehavior
+    return:
+      type: MonoBehaviours.TuringMachineHeadMonobehavior
+      description: "\nThe monobehaviour of the Turing machine&apos;s sprite in the simulation\nvisualization.\n"
+    content.vb: Protected headMonobehavior As TuringMachineHeadMonobehavior
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TuringMachines.TuringMachine.TransitionTable
+  commentId: F:TuringMachines.TuringMachine.TransitionTable
+  id: TransitionTable
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: TransitionTable
+  nameWithType: TuringMachine.TransitionTable
+  fullName: TuringMachines.TuringMachine.TransitionTable
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TransitionTable
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 79
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  example: []
+  syntax:
+    content: protected Dictionary<(int, TM_Symbol), Transition> TransitionTable
+    return:
+      type: System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,Constants.TM_Symbol},TuringMachines.Transition}
+      description: "\nThe Turing machine&apos;s transition table. Maps (state, input) pairs\nto corresponding <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> instances. Each unique\n(state, input) pair maps to a unique <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+    content.vb: Protected TransitionTable As Dictionary(Of(Integer, TM_Symbol), Transition)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TuringMachines.TuringMachine.GM
+  commentId: F:TuringMachines.TuringMachine.GM
+  id: GM
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: GM
+  nameWithType: TuringMachine.GM
+  fullName: TuringMachines.TuringMachine.GM
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GM
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 83
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  example: []
+  syntax:
+    content: protected GameMaster GM
+    return:
+      type: GameCore.GameMaster
+      description: "\nThe <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> signleton instance.\n"
+    content.vb: Protected GM As GameMaster
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: TuringMachines.TuringMachine.#ctor(System.Int32,System.Int32)
   commentId: M:TuringMachines.TuringMachine.#ctor(System.Int32,System.Int32)
   id: '#ctor(System.Int32,System.Int32)'
@@ -175,18 +351,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: .ctor
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 59
+    startLine: 93
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "\nTODO: DOC\n"
+  summary: "\nCreate a new Turing machine instance with the given ID and number of\nstates.\n\nThis method initializes the <xref href=\"TuringMachines.TuringMachine.TransitionTable\" data-throw-if-not-resolved=\"false\"></xref>, \n<xref href=\"TuringMachines.TuringMachine.headObject\" data-throw-if-not-resolved=\"false\"></xref>, and <xref href=\"TuringMachines.TuringMachine.headMonobehavior\" data-throw-if-not-resolved=\"false\"></xref> attributes.\n"
   example: []
   syntax:
     content: public TuringMachine(int id, int numberOfStates)
     parameters:
     - id: id
       type: System.Int32
-      description: ''
+      description: A unique integer identifying this Turing machine.
     - id: numberOfStates
       type: System.Int32
     content.vb: Public Sub New(id As Integer, numberOfStates As Integer)
@@ -213,15 +389,21 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: PrepareSimulationStep
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 73
+    startLine: 130
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  summary: "\nPerforms the first step of simulating this Turing machine&apos;s next step\nin simulation.\n\nSince there may be multiple Turing machines which share the same \ngrid which they all write to, there is a significant difference\nbetween simulating the machines in parallel and serially. If the\nmachines are simulated in serial, the order in which they are \nsimulated matters a lot. In order to avoid this, we want to simulate\nthem in parallel, and therefor every Turing machine must first \ndetermine what it will do at the next simulation step before any\nTuring can apply those changes. \n\nThis method is the first step of that process, determining what state\nchanges the Turing machine will make based on the current state of\nthe grid. It sets the <xref href=\"TuringMachines.TuringMachine.nextTransition\" data-throw-if-not-resolved=\"false\"></xref> attribute to the\n<xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> instance returned by querying the\n<xref href=\"TuringMachines.TuringMachine.GetTransition(System.Int32%2cConstants.TM_Symbol)\" data-throw-if-not-resolved=\"false\"></xref> method with the current\ninput and state.\n"
+  example: []
   syntax:
     content: public void PrepareSimulationStep(TM_Symbol inputSymbol)
     parameters:
     - id: inputSymbol
       type: Constants.TM_Symbol
+      description: >
+        The current state and current input (the
+
+        symbol in the cell the Turing machine is occupying).
     content.vb: Public Sub PrepareSimulationStep(inputSymbol As TM_Symbol)
   overload: TuringMachines.TuringMachine.PrepareSimulationStep*
   modifiers.csharp:
@@ -246,10 +428,13 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ApplySimulationStep
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 77
+    startLine: 156
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  summary: "\nPerforms the first step of simulating this Turing machine&apos;s next step\nin simulation.\n\nSince there may be multiple Turing machines which share the same \ngrid which they all write to, there is a significant difference\nbetween simulating the machines in parallel and serially. If the\nmachines are simulated in serial, the order in which they are \nsimulated matters a lot. In order to avoid this, we want to simulate\nthem in parallel, and therefor every Turing machine must first \ndetermine what it will do at the next simulation step before any\nTuring can apply those changes\n\nThis method is the second step of that process, applying the predicted\nchanges to the board. It references the current value of the \n<xref href=\"TuringMachines.TuringMachine.nextTransition\" data-throw-if-not-resolved=\"false\"></xref> to write a symbol to the grid, move\nthe Turing Machine&apos;s head, and change the current state.\n"
+  remarks: "\nThis method <strong>DOES NOT</strong> handle conflict resolution in terms of\nmovement collision or simultaneous writing to the same cell.\n"
+  example: []
   syntax:
     content: public void ApplySimulationStep()
     content.vb: Public Sub ApplySimulationStep
@@ -276,11 +461,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: position
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 88
+    startLine: 167
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "\nReturns the coordinates of the read/write head.\n"
+  summary: "\nReturns the coordinates of the read/write head on the grid.\n"
   example: []
   syntax:
     content: public Vector3Int position { get; }
@@ -313,10 +498,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Reset
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 96
+    startLine: 179
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
+  summary: "\nReset the Turing machine by returning it to its initial FSM state\nand moving it to the center of the board.\n"
+  example: []
   syntax:
     content: public void Reset()
     content.vb: Public Sub Reset
@@ -343,11 +530,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GenerateRandomTransitions
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 113
+    startLine: 196
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "\nFills the <code>TransitionTable</code> with randomly-generated valid\ntransitions. The algorithm simply iterates through each possible\nstate-input pair and chooses a random next state, symbol to write,\nand direction to move.\n"
+  summary: "\nFills the <xref href=\"TuringMachines.TuringMachine.TransitionTable\" data-throw-if-not-resolved=\"false\"></xref> with randomly-generated valid\ntransitions. The algorithm simply iterates through each possible\nstate-input pair and chooses a random next state, symbol to write,\nand direction to move.\n"
   remarks: "\nThis method guarantees a non-halting Turing machine.\n"
   example: []
   syntax:
@@ -376,11 +563,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 135
+    startLine: 218
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "Add a new transition to the transition table. \n<br />\nInsert the given <code>transition</code> &apos;transition&apos; into the transition\ntable at the specified pair of input &apos;symbol&apos; and current &apos;state&apos;. This\npartially defines the transition function <code>d</code> for <code>d(symbol, \nstate)</code>"
+  summary: "Add a new transition to the transition table. \n\nInsert the given <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> into the transition\ntable at the specified pair of input symbol and current state. This\npartially defines the transition function <code>d</code> for <code>d(symbol, \nstate)</code>"
   example: []
   syntax:
     content: public void AddTransition(int input, int state, Transition transition)
@@ -418,7 +605,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 151
+    startLine: 234
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -460,7 +647,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: AddTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 168
+    startLine: 251
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -508,7 +695,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GetTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 190
+    startLine: 273
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -550,7 +737,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RemoveTransition
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 199
+    startLine: 293
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
@@ -585,11 +772,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ToString
     path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
-    startLine: 212
+    startLine: 308
   assemblies:
   - Assembly-CSharp
   namespace: TuringMachines
-  summary: "\nGet a human-readable string representation of this Turing machine.\nTODO: DOC\n"
+  summary: "\nGet a human-readable string representation of this Turing machine.\n\nString contains the current state of the Turing machine and its\n<xref href=\"TuringMachines.TuringMachine.TransitionTable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override string ToString()
@@ -645,11 +832,218 @@ references:
   name: CurrentState
   nameWithType: TuringMachine.CurrentState
   fullName: TuringMachines.TuringMachine.CurrentState
+- uid: TuringMachines.Transition
+  commentId: T:TuringMachines.Transition
+  parent: TuringMachines
+  name: Transition
+  nameWithType: Transition
+  fullName: TuringMachines.Transition
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: MonoBehaviours.TuringMachineHeadMonobehavior
+  commentId: T:MonoBehaviours.TuringMachineHeadMonobehavior
+  parent: MonoBehaviours
+  name: TuringMachineHeadMonobehavior
+  nameWithType: TuringMachineHeadMonobehavior
+  fullName: MonoBehaviours.TuringMachineHeadMonobehavior
+- uid: MonoBehaviours
+  commentId: N:MonoBehaviours
+  name: MonoBehaviours
+  nameWithType: MonoBehaviours
+  fullName: MonoBehaviours
+- uid: System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,Constants.TM_Symbol},TuringMachines.Transition}
+  commentId: T:System.Collections.Generic.Dictionary{System.ValueTuple{System.Int32,Constants.TM_Symbol},TuringMachines.Transition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<ValueTuple<Int32, TM_Symbol>, Transition>
+  nameWithType: Dictionary<ValueTuple<Int32, TM_Symbol>, Transition>
+  fullName: System.Collections.Generic.Dictionary<System.ValueTuple<System.Int32, Constants.TM_Symbol>, TuringMachines.Transition>
+  nameWithType.vb: Dictionary(Of ValueTuple(Of Int32, TM_Symbol), Transition)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.ValueTuple(Of System.Int32, Constants.TM_Symbol), TuringMachines.Transition)
+  name.vb: Dictionary(Of ValueTuple(Of Int32, TM_Symbol), Transition)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Constants.TM_Symbol
+    name: TM_Symbol
+    nameWithType: TM_Symbol
+    fullName: Constants.TM_Symbol
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TuringMachines.Transition
+    name: Transition
+    nameWithType: Transition
+    fullName: TuringMachines.Transition
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Constants.TM_Symbol
+    name: TM_Symbol
+    nameWithType: TM_Symbol
+    fullName: Constants.TM_Symbol
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TuringMachines.Transition
+    name: Transition
+    nameWithType: Transition
+    fullName: TuringMachines.Transition
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  parent: GameCore
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
+- uid: GameCore
+  commentId: N:GameCore
+  name: GameCore
+  nameWithType: GameCore
+  fullName: GameCore
+- uid: TuringMachines.TuringMachine.TransitionTable
+  commentId: F:TuringMachines.TuringMachine.TransitionTable
+  isExternal: true
+- uid: TuringMachines.TuringMachine.headObject
+  commentId: F:TuringMachines.TuringMachine.headObject
+  isExternal: true
+- uid: TuringMachines.TuringMachine.headMonobehavior
+  commentId: F:TuringMachines.TuringMachine.headMonobehavior
+  isExternal: true
 - uid: TuringMachines.TuringMachine.#ctor*
   commentId: Overload:TuringMachines.TuringMachine.#ctor
   name: TuringMachine
   nameWithType: TuringMachine.TuringMachine
   fullName: TuringMachines.TuringMachine.TuringMachine
+- uid: TuringMachines.TuringMachine.nextTransition
+  commentId: F:TuringMachines.TuringMachine.nextTransition
+  isExternal: true
+- uid: TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)
+  commentId: M:TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)
+  isExternal: true
 - uid: TuringMachines.TuringMachine.PrepareSimulationStep*
   commentId: Overload:TuringMachines.TuringMachine.PrepareSimulationStep
   name: PrepareSimulationStep
@@ -683,12 +1077,6 @@ references:
   name: Vector3Int
   nameWithType: Vector3Int
   fullName: UnityEngine.Vector3Int
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
 - uid: TuringMachines.TuringMachine.Reset*
   commentId: Overload:TuringMachines.TuringMachine.Reset
   name: Reset
@@ -704,12 +1092,6 @@ references:
   name: AddTransition
   nameWithType: TuringMachine.AddTransition
   fullName: TuringMachines.TuringMachine.AddTransition
-- uid: TuringMachines.Transition
-  commentId: T:TuringMachines.Transition
-  parent: TuringMachines
-  name: Transition
-  nameWithType: Transition
-  fullName: TuringMachines.Transition
 - uid: TuringMachines.TuringMachine.GetTransition*
   commentId: Overload:TuringMachines.TuringMachine.GetTransition
   name: GetTransition

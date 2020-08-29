@@ -2,6 +2,9 @@
 
 namespace MonoBehaviours {
     namespace UI {
+        /// <summary>
+        /// Monobehaviour for UI labels. Allows programmatic changes to labels.
+        /// </summary>
         public class LabelMonobehavior : GameObjectMonobehavior {
             public void SetLabel(string newLabel) {
                 gameObject.GetComponent<Text>().text = newLabel;

@@ -39,7 +39,6 @@ items:
   - UnityEngine.MonoBehaviour
   derivedClasses:
   - MonoBehaviours.CameraMonobehavior
-  - MonoBehaviours.TilemapMonobehavior
   - MonoBehaviours.TuringMachineHeadMonobehavior
   - MonoBehaviours.UI.LabelMonobehavior
   modifiers.csharp:
@@ -70,12 +69,12 @@ items:
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
-  summary: The singleton <code><xref href="GameCore.GameMaster" data-throw-if-not-resolved="false"></xref></code> instance.
   example: []
   syntax:
     content: protected static GameMaster GM
     return:
       type: GameCore.GameMaster
+      description: The <code><xref href="GameCore.GameMaster" data-throw-if-not-resolved="false"></xref></code> singleton instance.
     content.vb: Protected Shared GM As GameMaster
   modifiers.csharp:
   - protected
@@ -133,15 +132,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SetGameMaster
     path: ../Assets/Scripts/Monobehaviors/GameObjectMonobehavior.cs
-    startLine: 17
+    startLine: 22
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nSets the value of <xref href=\"MonoBehaviours.GameObjectMonobehavior.GM\" data-throw-if-not-resolved=\"false\"></xref> to the <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref>\nsingleton instance.\n"
+  example: []
   syntax:
     content: public static void SetGameMaster(GameMaster newGM)
     parameters:
     - id: newGM
       type: GameCore.GameMaster
+      description: The new <xref href="GameCore.GameMaster" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Public Shared Sub SetGameMaster(newGM As GameMaster)
   overload: MonoBehaviours.GameObjectMonobehavior.SetGameMaster*
   modifiers.csharp:
@@ -219,8 +221,20 @@ references:
   name: Start
   nameWithType: GameObjectMonobehavior.Start
   fullName: MonoBehaviours.GameObjectMonobehavior.Start
+- uid: MonoBehaviours.GameObjectMonobehavior.GM
+  commentId: F:MonoBehaviours.GameObjectMonobehavior.GM
+  parent: MonoBehaviours.GameObjectMonobehavior
+  name: GM
+  nameWithType: GameObjectMonobehavior.GM
+  fullName: MonoBehaviours.GameObjectMonobehavior.GM
 - uid: MonoBehaviours.GameObjectMonobehavior.SetGameMaster*
   commentId: Overload:MonoBehaviours.GameObjectMonobehavior.SetGameMaster
   name: SetGameMaster
   nameWithType: GameObjectMonobehavior.SetGameMaster
   fullName: MonoBehaviours.GameObjectMonobehavior.SetGameMaster
+- uid: MonoBehaviours.GameObjectMonobehavior
+  commentId: T:MonoBehaviours.GameObjectMonobehavior
+  parent: MonoBehaviours
+  name: GameObjectMonobehavior
+  nameWithType: GameObjectMonobehavior
+  fullName: MonoBehaviours.GameObjectMonobehavior

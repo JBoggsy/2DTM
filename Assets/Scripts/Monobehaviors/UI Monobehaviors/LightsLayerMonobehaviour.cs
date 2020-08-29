@@ -5,6 +5,10 @@ using Constants;
 
 namespace MonoBehaviours {
     namespace UI {
+        /// <summary>
+        /// The monobehaviour for the Unity renderer responsible for rendering
+        /// the "lights" representing the state of the grid cells.
+        /// </summary>
         public class LightsLayerMonobehaviour : MonoBehaviour {
             private const int ScreenWidth = 1920;
             private const int ScreenHeight = 1080;

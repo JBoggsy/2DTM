@@ -43,20 +43,54 @@ namespace TuringMachines {
     /// </para>
     /// </remarks>
     public class TuringMachine {
+        /// <value>
+        /// A unique ID assigned to the Turing machine. The corresponding Turing
+        /// machine head sprite in the Unity view has the same ID.
+        /// </value>
         public int ID { get; private set; }
+        /// <value>
+        /// The number of states in the Turing machine's FSM.
+        /// </value>
         public int NumberOfStates { get; private set; }
+        /// <value>
+        /// The FSM state the Turing machine is currently in.
+        /// </value>
         public int CurrentState { get; private set; }
 
-        private Transition nextTransition;
-        private GameObject headObject;
-        private TuringMachineHeadMonobehavior headMonobehavior;
-        private Dictionary<(int, TM_Symbol), Transition> TransitionTable;
-        private GameMaster GM;
+        /// <value>
+        /// The <see cref="Transition"/> instance which will be applied at the
+        /// end of the next simulation update.
+        /// </value>
+        protected Transition nextTransition;
+        /// <value>
+        /// The <see cref="GameObject"/> which corresponds to the Turing machine's
+        /// sprite in the board visualization.
+        /// </value>
+        protected GameObject headObject;
+        /// <value>
+        /// The monobehaviour of the Turing machine's sprite in the simulation
+        /// visualization.
+        /// </value>
+        protected TuringMachineHeadMonobehavior headMonobehavior;
+        /// <value>
+        /// The Turing machine's transition table. Maps (state, input) pairs
+        /// to corresponding <see cref="Transition"/> instances. Each unique
+        /// (state, input) pair maps to a unique <see cref="Transition"/>.
+        /// </value>
+        protected Dictionary<(int, TM_Symbol), Transition> TransitionTable;
+        /// <value>
+        /// The <see cref="GameMaster"/> signleton instance.
+        /// </value>
+        protected GameMaster GM;
 
         /// <summary>
-        /// TODO: DOC
+        /// Create a new Turing machine instance with the given ID and number of
+        /// states.
+        /// 
+        /// This method initializes the <see cref="TransitionTable"/>, 
+        /// <see cref="headObject"/>, and <see cref="headMonobehavior"/> attributes.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">A unique integer identifying this Turing machine.</param>
         public TuringMachine(int id, int numberOfStates) {
             GM = GameMaster.Instance;
             ID = id;
@@ -71,10 +105,55 @@ namespace TuringMachines {
         /**********************
          * SIMULATION METHODS *
          **********************/
+        /// <summary>
+        /// Performs the first step of simulating this Turing machine's next step
+        /// in simulation.
+        /// 
+        /// Since there may be multiple Turing machines which share the same 
+        /// grid which they all write to, there is a significant difference
+        /// between simulating the machines in parallel and serially. If the
+        /// machines are simulated in serial, the order in which they are 
+        /// simulated matters a lot. In order to avoid this, we want to simulate
+        /// them in parallel, and therefor every Turing machine must first 
+        /// determine what it will do at the next simulation step before any
+        /// Turing can apply those changes. 
+        /// 
+        /// This method is the first step of that process, determining what state
+        /// changes the Turing machine will make based on the current state of
+        /// the grid. It sets the <see cref="nextTransition"/> attribute to the
+        /// <see cref="Transition"/> instance returned by querying the
+        /// <see cref="GetTransition(int, TM_Symbol)"/> method with the current
+        /// input and state.
+        /// </summary>
+        /// <param name="inputSymbol">The current state and current input (the
+        /// symbol in the cell the Turing machine is occupying).
+        /// </param>
         public void PrepareSimulationStep(TM_Symbol inputSymbol) {
             nextTransition = GetTransition(CurrentState, inputSymbol);
         }
 
+        /// <summary>
+        /// Performs the first step of simulating this Turing machine's next step
+        /// in simulation.
+        /// 
+        /// Since there may be multiple Turing machines which share the same 
+        /// grid which they all write to, there is a significant difference
+        /// between simulating the machines in parallel and serially. If the
+        /// machines are simulated in serial, the order in which they are 
+        /// simulated matters a lot. In order to avoid this, we want to simulate
+        /// them in parallel, and therefor every Turing machine must first 
+        /// determine what it will do at the next simulation step before any
+        /// Turing can apply those changes
+        /// 
+        /// This method is the second step of that process, applying the predicted
+        /// changes to the board. It references the current value of the 
+        /// <see cref="nextTransition"/> to write a symbol to the grid, move
+        /// the Turing Machine's head, and change the current state.
+        /// </summary>
+        /// <remarks>
+        /// This method <b>DOES NOT</b> handle conflict resolution in terms of
+        /// movement collision or simultaneous writing to the same cell.
+        /// </remarks>
         public void ApplySimulationStep() {
             if (nextTransition == null) { return; }
             GM.WriteSymbolToGrid(position, nextTransition.WriteSymbol);
@@ -84,7 +163,7 @@ namespace TuringMachines {
         }
 
         /// <summary>
-        /// Returns the coordinates of the read/write head.
+        /// Returns the coordinates of the read/write head on the grid.
         /// </summary>
         public Vector3Int position {
             get {
@@ -94,6 +173,10 @@ namespace TuringMachines {
             }
         }
 
+        /// <summary>
+        /// Reset the Turing machine by returning it to its initial FSM state
+        /// and moving it to the center of the board.
+        /// </summary>
         public void Reset() {
             CurrentState = 0;
             headMonobehavior.MoveHeadToCenter();
@@ -103,7 +186,7 @@ namespace TuringMachines {
          * TRANSITION TABLE FUNCTIONS *
          ******************************/
         /// <summary>
-        /// Fills the <c>TransitionTable</c> with randomly-generated valid
+        /// Fills the <see cref="TransitionTable"/> with randomly-generated valid
         /// transitions. The algorithm simply iterates through each possible
         /// state-input pair and chooses a random next state, symbol to write,
         /// and direction to move.
@@ -124,9 +207,9 @@ namespace TuringMachines {
 
         /**
          * <summary>Add a new transition to the transition table. 
-         * <br></br>
-         * Insert the given <c>transition</c> 'transition' into the transition
-         * table at the specified pair of input 'symbol' and current 'state'. This
+         * 
+         * Insert the given <see cref="Transition"/> into the transition
+         * table at the specified pair of input symbol and current state. This
          * partially defines the transition function <c>d</c> for <c>d(symbol, 
          * state)</c></summary>.
          * <param name="input">The input symbol the transition requires</param>
@@ -197,6 +280,17 @@ namespace TuringMachines {
             return returnTransition;
         }
 
+        /// <summary>
+        /// Remove the transition given be <c>d(state, input)</c>. The previous
+        /// value for that input is replaced with null, which indicates a halting
+        /// state.
+        /// </summary>
+        /// <param name="currentState">
+        /// An integer 0 < <see cref="NumberOfStates"/>. Part of the (state, inpit pair).
+        /// </param>
+        /// <param name="inputSymbol">
+        /// A valid <see cref="TM_Symbol"/>. Part of the (state, inpit pair).
+        /// </param>
         public void RemoveTransition(int currentState, TM_Symbol inputSymbol) {
             (int, TM_Symbol) transitionKey = (currentState, inputSymbol);
             TransitionTable.Remove(transitionKey);
@@ -208,7 +302,9 @@ namespace TuringMachines {
          *******************/
         /// <summary>
         /// Get a human-readable string representation of this Turing machine.
-        /// TODO: DOC
+        /// 
+        /// String contains the current state of the Turing machine and its
+        /// <see cref="TransitionTable"/>.
         /// </summary>
         override public string ToString() {
             String returnString = String.Format("Current State: {0}\n", CurrentState);

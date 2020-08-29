@@ -83,7 +83,11 @@
   
   <h1 id="MonoBehaviours_TuringMachineHeadMonobehavior" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior" class="text-break">Class TuringMachineHeadMonobehavior
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Monobehaviour for the Turing machine heads being rendered in the Unity
+scene. This controls the actual movement of the sprites in Unity. A
+<a class="xref" href="TuringMachines.TuringMachine.html">TuringMachine</a> instance manages a
+corresponding <a class="xref" href="MonoBehaviours.TuringMachineHeadMonobehavior.html">TuringMachineHeadMonobehavior</a> instance.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -120,7 +124,7 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=MonoBehaviours_TuringMachineHeadMonobehavior_id.md&amp;value=---%0Auid%3A%20MonoBehaviours.TuringMachineHeadMonobehavior.id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L8">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L18">View Source</a>
   </span>
   <h4 id="MonoBehaviours_TuringMachineHeadMonobehavior_id" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.id">id</h4>
   <div class="markdown level1 summary"></div>
@@ -140,7 +144,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
+        <td><p>A unique identifier for this Truing machine head.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -151,11 +156,12 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=MonoBehaviours_TuringMachineHeadMonobehavior_position.md&amp;value=---%0Auid%3A%20MonoBehaviours.TuringMachineHeadMonobehavior.position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L14">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L36">View Source</a>
   </span>
   <a id="MonoBehaviours_TuringMachineHeadMonobehavior_position_" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.position*"></a>
   <h4 id="MonoBehaviours_TuringMachineHeadMonobehavior_position" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.position">position</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates where the Turing machine head is located.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -172,7 +178,9 @@
     <tbody>
       <tr>
         <td><span class="xref">UnityEngine.Vector3</span></td>
-        <td></td>
+        <td><p>The position of the Turing machine head in world space (not in grid
+coordinates).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -183,11 +191,12 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadInDirection_Constants_TM_Direction_.md&amp;value=---%0Auid%3A%20MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection(Constants.TM_Direction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L18">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L44">View Source</a>
   </span>
   <a id="MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadInDirection_" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection*"></a>
   <h4 id="MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadInDirection_Constants_TM_Direction_" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadInDirection(Constants.TM_Direction)">MoveHeadInDirection(TM_Direction)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the Turing machine head 1 unit in the given direction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -206,7 +215,8 @@
       <tr>
         <td><a class="xref" href="Constants.TM_Direction.html">TM_Direction</a></td>
         <td><span class="parametername">dir</span></td>
-        <td></td>
+        <td><p>The direction in which to move.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -215,11 +225,12 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadTo_UnityEngine_Vector3Int_.md&amp;value=---%0Auid%3A%20MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo(UnityEngine.Vector3Int)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L45">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L80">View Source</a>
   </span>
   <a id="MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadTo_" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo*"></a>
   <h4 id="MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadTo_UnityEngine_Vector3Int_" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadTo(UnityEngine.Vector3Int)">MoveHeadTo(Vector3Int)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the Turing machine head to an arbitrary grid location.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -238,7 +249,8 @@
       <tr>
         <td><span class="xref">UnityEngine.Vector3Int</span></td>
         <td><span class="parametername">newLocation</span></td>
-        <td></td>
+        <td><p>The (row, col) location the Turing machine head should be moved to.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -247,15 +259,20 @@
     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadToCenter.md&amp;value=---%0Auid%3A%20MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L41">View Source</a>
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L70">View Source</a>
   </span>
   <a id="MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadToCenter_" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter*"></a>
   <h4 id="MonoBehaviours_TuringMachineHeadMonobehavior_MoveHeadToCenter" data-uid="MonoBehaviours.TuringMachineHeadMonobehavior.MoveHeadToCenter">MoveHeadToCenter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the hard from wherever it is to the center of the grid, (0, 0).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void MoveHeadToCenter()</code></pre>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="TuringMachines.TuringMachine.html">TuringMachine</a></div>
   </div>
 </article>
           </div>
@@ -268,7 +285,7 @@
                     <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=MonoBehaviours_TuringMachineHeadMonobehavior.md&amp;value=---%0Auid%3A%20MonoBehaviours.TuringMachineHeadMonobehavior%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/Monobehaviors/TuringMachineHeadMonobehavior.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -6,6 +6,10 @@ using GameCore;
 
 namespace MonoBehaviours {
     namespace UI {
+        /// <summary>
+        /// Special monobehaviour for the play/pause button. Allows the sprite
+        /// to change from the play symbol to the pause symbol.
+        /// </summary>
         public class PlayButtonMonobehaviour : MonoBehaviour {
             public Texture2D PlayTexture;
             public Texture2D PauseTexture;

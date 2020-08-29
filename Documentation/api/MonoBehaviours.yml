@@ -6,7 +6,6 @@ items:
   children:
   - MonoBehaviours.CameraMonobehavior
   - MonoBehaviours.GameObjectMonobehavior
-  - MonoBehaviours.TilemapMonobehavior
   - MonoBehaviours.TuringMachineHeadMonobehavior
   langs:
   - csharp
@@ -30,13 +29,9 @@ references:
   name: GameObjectMonobehavior
   nameWithType: GameObjectMonobehavior
   fullName: MonoBehaviours.GameObjectMonobehavior
-- uid: MonoBehaviours.TilemapMonobehavior
-  commentId: T:MonoBehaviours.TilemapMonobehavior
-  name: TilemapMonobehavior
-  nameWithType: TilemapMonobehavior
-  fullName: MonoBehaviours.TilemapMonobehavior
 - uid: MonoBehaviours.TuringMachineHeadMonobehavior
   commentId: T:MonoBehaviours.TuringMachineHeadMonobehavior
+  parent: MonoBehaviours
   name: TuringMachineHeadMonobehavior
   nameWithType: TuringMachineHeadMonobehavior
   fullName: MonoBehaviours.TuringMachineHeadMonobehavior

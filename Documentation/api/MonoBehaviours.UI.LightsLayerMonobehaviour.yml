@@ -25,10 +25,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: LightsLayerMonobehaviour
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
+  summary: "\nThe monobehaviour for the Unity renderer responsible for rendering\nthe &quot;lights&quot; representing the state of the grid cells.\n"
+  example: []
   syntax:
     content: 'public class LightsLayerMonobehaviour : MonoBehaviour'
     content.vb: >-
@@ -64,7 +66,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Camera
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -95,7 +97,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Shader
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -126,7 +128,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: OnColor
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -157,7 +159,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: OffColor
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -188,7 +190,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ErrorColor
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -219,7 +221,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Awake
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/LightsLayerMonobehaviour.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI

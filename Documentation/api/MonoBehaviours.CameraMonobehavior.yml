@@ -22,10 +22,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: CameraMonobehavior
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 6
+    startLine: 13
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nMonobehaviour for controlling the cmaera.\n\nThis monobehaviour handles moving or zooming the camera in the Unity\nsimulation. It is managed by the <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref>\nsingleton instance.\n"
+  example: []
   syntax:
     content: 'public class CameraMonobehavior : GameObjectMonobehavior'
     content.vb: >-
@@ -65,10 +67,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Start
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 12
+    startLine: 23
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
+  summary: "\nWhen Unity starts, register this monobehaviour with the\n<xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> set the viewing rectangle.\n"
+  example: []
   syntax:
     content: protected override void Start()
     content.vb: Protected Overrides Sub Start
@@ -98,18 +102,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ZoomCamera
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 26
+    startLine: 55
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
-  summary: "\nZooms the camera in or out by changing its size.\n"
+  summary: "\nZooms the camera in or out by changing its\n<xref href=\"UnityEngine.Camera.orthographicSize\" data-throw-if-not-resolved=\"false\"></xref> property. This seems to be\nequivalent in 2D Unity to moving the camera backwards.\n"
   example: []
   syntax:
     content: public void ZoomCamera(int direction)
     parameters:
     - id: direction
       type: System.Int32
-      description: An integer either -1 or 1.
+      description: "\nAn integer either -1 or 1, where:\n<ul><li>-1Zooms out</li><li>1Zooms in</li></ul>\n"
     content.vb: Public Sub ZoomCamera(direction As Integer)
   overload: MonoBehaviours.CameraMonobehavior.ZoomCamera*
   modifiers.csharp:
@@ -134,18 +138,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: MoveInDirection
     path: ../Assets/Scripts/Monobehaviors/CameraMonobehavior.cs
-    startLine: 41
+    startLine: 86
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours
-  summary: "\nMove the camera in the given direction. The actual view from the camera\nwill only be updated once the <code>Update()</code> method of the \n<xref href=\"MonoBehaviours.TilemapMonobehavior\" data-throw-if-not-resolved=\"false\"></xref> is called.\n"
+  summary: "\nMove the camera in the given direction. The actual view from the camera\nwill only be updated once the <code>Update()</code> method of the \n<see cref=\"!:TilemapMonobehavior\"></see> is called.\n"
   example: []
   syntax:
     content: public void MoveInDirection(TM_Direction dir)
     parameters:
     - id: dir
       type: Constants.TM_Direction
-      description: The direction to move the camera
+      description: "\nThe direction to move the camera. One of:\n<ul><li><xref href=\"Constants.TM_Direction.UP\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"Constants.TM_Direction.DOWN\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"Constants.TM_Direction.LEFT\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"Constants.TM_Direction.RIGHT\" data-throw-if-not-resolved=\"false\"></xref></li></ul>\n"
     content.vb: Public Sub MoveInDirection(dir As TM_Direction)
   overload: MonoBehaviours.CameraMonobehavior.MoveInDirection*
   modifiers.csharp:
@@ -153,6 +157,12 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  parent: GameCore
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
 - uid: MonoBehaviours
   commentId: N:MonoBehaviours
   name: MonoBehaviours
@@ -241,6 +251,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: GameCore
+  commentId: N:GameCore
+  name: GameCore
+  nameWithType: GameCore
+  fullName: GameCore
 - uid: System
   commentId: N:System
   isExternal: true
@@ -286,6 +301,9 @@ references:
   name: Start
   nameWithType: CameraMonobehavior.Start
   fullName: MonoBehaviours.CameraMonobehavior.Start
+- uid: UnityEngine.Camera.orthographicSize
+  commentId: P:UnityEngine.Camera.orthographicSize
+  isExternal: true
 - uid: MonoBehaviours.CameraMonobehavior.ZoomCamera*
   commentId: Overload:MonoBehaviours.CameraMonobehavior.ZoomCamera
   name: ZoomCamera
@@ -298,11 +316,18 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: MonoBehaviours.TilemapMonobehavior
-  commentId: T:MonoBehaviours.TilemapMonobehavior
-  name: TilemapMonobehavior
-  nameWithType: TilemapMonobehavior
-  fullName: MonoBehaviours.TilemapMonobehavior
+- uid: Constants.TM_Direction.UP
+  commentId: F:Constants.TM_Direction.UP
+  isExternal: true
+- uid: Constants.TM_Direction.DOWN
+  commentId: F:Constants.TM_Direction.DOWN
+  isExternal: true
+- uid: Constants.TM_Direction.LEFT
+  commentId: F:Constants.TM_Direction.LEFT
+  isExternal: true
+- uid: Constants.TM_Direction.RIGHT
+  commentId: F:Constants.TM_Direction.RIGHT
+  isExternal: true
 - uid: MonoBehaviours.CameraMonobehavior.MoveInDirection*
   commentId: Overload:MonoBehaviours.CameraMonobehavior.MoveInDirection
   name: MoveInDirection

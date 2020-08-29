@@ -641,63 +641,6 @@ references:
   isSpec: "True"
   fullName: MonoBehaviours.GameObjectMonobehavior.Start
   nameWithType: GameObjectMonobehavior.Start
-- uid: MonoBehaviours.TilemapMonobehavior
-  name: TilemapMonobehavior
-  href: api/MonoBehaviours.TilemapMonobehavior.html
-  commentId: T:MonoBehaviours.TilemapMonobehavior
-  fullName: MonoBehaviours.TilemapMonobehavior
-  nameWithType: TilemapMonobehavior
-- uid: MonoBehaviours.TilemapMonobehavior.OffTile
-  name: OffTile
-  href: api/MonoBehaviours.TilemapMonobehavior.html#MonoBehaviours_TilemapMonobehavior_OffTile
-  commentId: F:MonoBehaviours.TilemapMonobehavior.OffTile
-  fullName: MonoBehaviours.TilemapMonobehavior.OffTile
-  nameWithType: TilemapMonobehavior.OffTile
-- uid: MonoBehaviours.TilemapMonobehavior.OnTile
-  name: OnTile
-  href: api/MonoBehaviours.TilemapMonobehavior.html#MonoBehaviours_TilemapMonobehavior_OnTile
-  commentId: F:MonoBehaviours.TilemapMonobehavior.OnTile
-  fullName: MonoBehaviours.TilemapMonobehavior.OnTile
-  nameWithType: TilemapMonobehavior.OnTile
-- uid: MonoBehaviours.TilemapMonobehavior.ResetBoard
-  name: ResetBoard()
-  href: api/MonoBehaviours.TilemapMonobehavior.html#MonoBehaviours_TilemapMonobehavior_ResetBoard
-  commentId: M:MonoBehaviours.TilemapMonobehavior.ResetBoard
-  fullName: MonoBehaviours.TilemapMonobehavior.ResetBoard()
-  nameWithType: TilemapMonobehavior.ResetBoard()
-- uid: MonoBehaviours.TilemapMonobehavior.ResetBoard*
-  name: ResetBoard
-  href: api/MonoBehaviours.TilemapMonobehavior.html#MonoBehaviours_TilemapMonobehavior_ResetBoard_
-  commentId: Overload:MonoBehaviours.TilemapMonobehavior.ResetBoard
-  isSpec: "True"
-  fullName: MonoBehaviours.TilemapMonobehavior.ResetBoard
-  nameWithType: TilemapMonobehavior.ResetBoard
-- uid: MonoBehaviours.TilemapMonobehavior.ShowGridAtView(UnityEngine.Rect)
-  name: ShowGridAtView(Rect)
-  href: api/MonoBehaviours.TilemapMonobehavior.html#MonoBehaviours_TilemapMonobehavior_ShowGridAtView_UnityEngine_Rect_
-  commentId: M:MonoBehaviours.TilemapMonobehavior.ShowGridAtView(UnityEngine.Rect)
-  fullName: MonoBehaviours.TilemapMonobehavior.ShowGridAtView(UnityEngine.Rect)
-  nameWithType: TilemapMonobehavior.ShowGridAtView(Rect)
-- uid: MonoBehaviours.TilemapMonobehavior.ShowGridAtView*
-  name: ShowGridAtView
-  href: api/MonoBehaviours.TilemapMonobehavior.html#MonoBehaviours_TilemapMonobehavior_ShowGridAtView_
-  commentId: Overload:MonoBehaviours.TilemapMonobehavior.ShowGridAtView
-  isSpec: "True"
-  fullName: MonoBehaviours.TilemapMonobehavior.ShowGridAtView
-  nameWithType: TilemapMonobehavior.ShowGridAtView
-- uid: MonoBehaviours.TilemapMonobehavior.Start
-  name: Start()
-  href: api/MonoBehaviours.TilemapMonobehavior.html#MonoBehaviours_TilemapMonobehavior_Start
-  commentId: M:MonoBehaviours.TilemapMonobehavior.Start
-  fullName: MonoBehaviours.TilemapMonobehavior.Start()
-  nameWithType: TilemapMonobehavior.Start()
-- uid: MonoBehaviours.TilemapMonobehavior.Start*
-  name: Start
-  href: api/MonoBehaviours.TilemapMonobehavior.html#MonoBehaviours_TilemapMonobehavior_Start_
-  commentId: Overload:MonoBehaviours.TilemapMonobehavior.Start
-  isSpec: "True"
-  fullName: MonoBehaviours.TilemapMonobehavior.Start
-  nameWithType: TilemapMonobehavior.Start
 - uid: MonoBehaviours.TuringMachineHeadMonobehavior
   name: TuringMachineHeadMonobehavior
   href: api/MonoBehaviours.TuringMachineHeadMonobehavior.html
@@ -1261,6 +1204,24 @@ references:
   isSpec: "True"
   fullName: TuringMachines.TuringMachine.GetTransition
   nameWithType: TuringMachine.GetTransition
+- uid: TuringMachines.TuringMachine.GM
+  name: GM
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_GM
+  commentId: F:TuringMachines.TuringMachine.GM
+  fullName: TuringMachines.TuringMachine.GM
+  nameWithType: TuringMachine.GM
+- uid: TuringMachines.TuringMachine.headMonobehavior
+  name: headMonobehavior
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_headMonobehavior
+  commentId: F:TuringMachines.TuringMachine.headMonobehavior
+  fullName: TuringMachines.TuringMachine.headMonobehavior
+  nameWithType: TuringMachine.headMonobehavior
+- uid: TuringMachines.TuringMachine.headObject
+  name: headObject
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_headObject
+  commentId: F:TuringMachines.TuringMachine.headObject
+  fullName: TuringMachines.TuringMachine.headObject
+  nameWithType: TuringMachine.headObject
 - uid: TuringMachines.TuringMachine.ID
   name: ID
   href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_ID
@@ -1274,6 +1235,12 @@ references:
   isSpec: "True"
   fullName: TuringMachines.TuringMachine.ID
   nameWithType: TuringMachine.ID
+- uid: TuringMachines.TuringMachine.nextTransition
+  name: nextTransition
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_nextTransition
+  commentId: F:TuringMachines.TuringMachine.nextTransition
+  fullName: TuringMachines.TuringMachine.nextTransition
+  nameWithType: TuringMachine.nextTransition
 - uid: TuringMachines.TuringMachine.NumberOfStates
   name: NumberOfStates
   href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_NumberOfStates
@@ -1352,3 +1319,9 @@ references:
   isSpec: "True"
   fullName: TuringMachines.TuringMachine.ToString
   nameWithType: TuringMachine.ToString
+- uid: TuringMachines.TuringMachine.TransitionTable
+  name: TransitionTable
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_TransitionTable
+  commentId: F:TuringMachines.TuringMachine.TransitionTable
+  fullName: TuringMachines.TuringMachine.TransitionTable
+  nameWithType: TuringMachine.TransitionTable

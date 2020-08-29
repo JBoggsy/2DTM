@@ -22,10 +22,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GlassLayerMonobehaviour
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
+  summary: "\nThe monobehaviour for the Unity renderer responsible for rendering\nthe glass-like covering of the cells on the grid.\n"
+  example: []
   syntax:
     content: 'public class GlassLayerMonobehaviour : MonoBehaviour'
     content.vb: >-
@@ -61,7 +63,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Camera
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -92,7 +94,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Shader
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
@@ -123,7 +125,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Awake
     path: ../Assets/Scripts/Monobehaviors/UI Monobehaviors/GlassLayerMonobehaviour.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - Assembly-CSharp
   namespace: MonoBehaviours.UI
