@@ -88,7 +88,16 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="GameCore.GameMaster.html">GameMaster</a></h4>
-      <section><p>The GameMaster class is the central authority in charge of running the game.</p>
+      <section><p>The <a class="xref" href="GameCore.GameMaster.html">GameMaster</a> class is the central authority in charge
+of running the game.</p>
+<p>The <a class="xref" href="GameCore.GameMaster.html">GameMaster</a> singleton acts as a communication and
+control hub which components of the game communicate to and through.
+It maintains references to most or all core components of the backend
+or simulation side of the game, including the <a class="xref" href="GameCore.GameMaster.html#GameCore_GameMaster_GridData">GridData</a>,
+a list of <a class="xref" href="TuringMachines.TuringMachine.html">TuringMachine</a> instances, and the
+<a class="xref" href="GameCore.GameMaster.html#GameCore_GameMaster_CameraMonobehavior">CameraMonobehavior</a>. Upon instantiation, it also grabs
+references to a couple prefabs needed for controlling the Turing 
+machine sprites.</p>
 </section>
       <h4><a class="xref" href="GameCore.GridData.html">GridData</a></h4>
       <section></section>

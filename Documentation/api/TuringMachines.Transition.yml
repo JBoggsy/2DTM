@@ -1,0 +1,345 @@
+### YamlMime:ManagedReference
+items:
+- uid: TuringMachines.Transition
+  commentId: T:TuringMachines.Transition
+  id: Transition
+  parent: TuringMachines
+  children:
+  - TuringMachines.Transition.#ctor
+  - TuringMachines.Transition.#ctor(System.Int32,Constants.TM_Direction,Constants.TM_Symbol)
+  - TuringMachines.Transition.Direction
+  - TuringMachines.Transition.NextState
+  - TuringMachines.Transition.ToString
+  - TuringMachines.Transition.WriteSymbol
+  langs:
+  - csharp
+  - vb
+  name: Transition
+  nameWithType: Transition
+  fullName: TuringMachines.Transition
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/Transition.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Transition
+    path: ../Assets/Scripts/TuringMachines/Transition.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nThe <code>Transition</code> class holds a triple <code>(int NEXT, TM_Direction DIR,\nTM_Symbol WRITE)</code> which describes the outcome of a particular transition.\n"
+  example: []
+  syntax:
+    content: public class Transition
+    content.vb: Public Class Transition
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TuringMachines.Transition.NextState
+  commentId: P:TuringMachines.Transition.NextState
+  id: NextState
+  parent: TuringMachines.Transition
+  langs:
+  - csharp
+  - vb
+  name: NextState
+  nameWithType: Transition.NextState
+  fullName: TuringMachines.Transition.NextState
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/Transition.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: NextState
+    path: ../Assets/Scripts/TuringMachines/Transition.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  example: []
+  syntax:
+    content: public int NextState { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: <code>NEXT</code> indicates the state ID to transition to
+    content.vb: Public Property NextState As Integer
+  overload: TuringMachines.Transition.NextState*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.Transition.Direction
+  commentId: P:TuringMachines.Transition.Direction
+  id: Direction
+  parent: TuringMachines.Transition
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: Transition.Direction
+  fullName: TuringMachines.Transition.Direction
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/Transition.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Direction
+    path: ../Assets/Scripts/TuringMachines/Transition.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  example: []
+  syntax:
+    content: public TM_Direction Direction { get; set; }
+    parameters: []
+    return:
+      type: Constants.TM_Direction
+      description: <code>DIR</code> indicates the direction for the r/w head to move
+    content.vb: Public Property Direction As TM_Direction
+  overload: TuringMachines.Transition.Direction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.Transition.WriteSymbol
+  commentId: P:TuringMachines.Transition.WriteSymbol
+  id: WriteSymbol
+  parent: TuringMachines.Transition
+  langs:
+  - csharp
+  - vb
+  name: WriteSymbol
+  nameWithType: Transition.WriteSymbol
+  fullName: TuringMachines.Transition.WriteSymbol
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/Transition.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: WriteSymbol
+    path: ../Assets/Scripts/TuringMachines/Transition.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  example: []
+  syntax:
+    content: public TM_Symbol WriteSymbol { get; set; }
+    parameters: []
+    return:
+      type: Constants.TM_Symbol
+      description: <code>WRITE</code> indicates the symbol to write to the grid
+    content.vb: Public Property WriteSymbol As TM_Symbol
+  overload: TuringMachines.Transition.WriteSymbol*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.Transition.#ctor
+  commentId: M:TuringMachines.Transition.#ctor
+  id: '#ctor'
+  parent: TuringMachines.Transition
+  langs:
+  - csharp
+  - vb
+  name: Transition()
+  nameWithType: Transition.Transition()
+  fullName: TuringMachines.Transition.Transition()
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/Transition.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: .ctor
+    path: ../Assets/Scripts/TuringMachines/Transition.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nCreate a new <code>Transition</code> object for use in the transition table.\n"
+  example: []
+  syntax:
+    content: public Transition()
+    content.vb: Public Sub New
+  overload: TuringMachines.Transition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.Transition.#ctor(System.Int32,Constants.TM_Direction,Constants.TM_Symbol)
+  commentId: M:TuringMachines.Transition.#ctor(System.Int32,Constants.TM_Direction,Constants.TM_Symbol)
+  id: '#ctor(System.Int32,Constants.TM_Direction,Constants.TM_Symbol)'
+  parent: TuringMachines.Transition
+  langs:
+  - csharp
+  - vb
+  name: Transition(Int32, TM_Direction, TM_Symbol)
+  nameWithType: Transition.Transition(Int32, TM_Direction, TM_Symbol)
+  fullName: TuringMachines.Transition.Transition(System.Int32, Constants.TM_Direction, Constants.TM_Symbol)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/Transition.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: .ctor
+    path: ../Assets/Scripts/TuringMachines/Transition.cs
+    startLine: 34
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nCreate a Turing machine transition to be placed in the transition table.\n"
+  example: []
+  syntax:
+    content: public Transition(int nextState, TM_Direction direction, TM_Symbol writeSymbol)
+    parameters:
+    - id: nextState
+      type: System.Int32
+      description: The ID of the state to transition to. <xref href="TuringMachines.Transition.NextState" data-throw-if-not-resolved="false"></xref>
+    - id: direction
+      type: Constants.TM_Direction
+      description: The direction code for the head to move. <xref href="TuringMachines.Transition.Direction" data-throw-if-not-resolved="false"></xref>
+    - id: writeSymbol
+      type: Constants.TM_Symbol
+      description: The symbol to write to the grid. <xref href="TuringMachines.Transition.WriteSymbol" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Sub New(nextState As Integer, direction As TM_Direction, writeSymbol As TM_Symbol)
+  overload: TuringMachines.Transition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.Transition.ToString
+  commentId: M:TuringMachines.Transition.ToString
+  id: ToString
+  parent: TuringMachines.Transition
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Transition.ToString()
+  fullName: TuringMachines.Transition.ToString()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/Transition.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ToString
+    path: ../Assets/Scripts/TuringMachines/Transition.cs
+    startLine: 40
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public string ToString()
+    return:
+      type: System.String
+    content.vb: Public Function ToString As String
+  overload: TuringMachines.Transition.ToString*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TuringMachines
+  commentId: N:TuringMachines
+  name: TuringMachines
+  nameWithType: TuringMachines
+  fullName: TuringMachines
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TuringMachines.Transition.NextState*
+  commentId: Overload:TuringMachines.Transition.NextState
+  name: NextState
+  nameWithType: Transition.NextState
+  fullName: TuringMachines.Transition.NextState
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TuringMachines.Transition.Direction*
+  commentId: Overload:TuringMachines.Transition.Direction
+  name: Direction
+  nameWithType: Transition.Direction
+  fullName: TuringMachines.Transition.Direction
+- uid: Constants.TM_Direction
+  commentId: T:Constants.TM_Direction
+  parent: Constants
+  name: TM_Direction
+  nameWithType: TM_Direction
+  fullName: Constants.TM_Direction
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+- uid: TuringMachines.Transition.WriteSymbol*
+  commentId: Overload:TuringMachines.Transition.WriteSymbol
+  name: WriteSymbol
+  nameWithType: Transition.WriteSymbol
+  fullName: TuringMachines.Transition.WriteSymbol
+- uid: Constants.TM_Symbol
+  commentId: T:Constants.TM_Symbol
+  parent: Constants
+  name: TM_Symbol
+  nameWithType: TM_Symbol
+  fullName: Constants.TM_Symbol
+- uid: TuringMachines.Transition.#ctor*
+  commentId: Overload:TuringMachines.Transition.#ctor
+  name: Transition
+  nameWithType: Transition.Transition
+  fullName: TuringMachines.Transition.Transition
+- uid: TuringMachines.Transition.NextState
+  commentId: P:TuringMachines.Transition.NextState
+  isExternal: true
+- uid: TuringMachines.Transition.Direction
+  commentId: P:TuringMachines.Transition.Direction
+  isExternal: true
+- uid: TuringMachines.Transition.WriteSymbol
+  commentId: P:TuringMachines.Transition.WriteSymbol
+  isExternal: true
+- uid: TuringMachines.Transition.ToString*
+  commentId: Overload:TuringMachines.Transition.ToString
+  name: ToString
+  nameWithType: Transition.ToString
+  fullName: TuringMachines.Transition.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

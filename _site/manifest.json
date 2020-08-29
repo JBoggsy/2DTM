@@ -64,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GameCore.GameMaster.html",
-          "hash": "1t89h9vgqj+ooVRy/mm7/g=="
+          "hash": "N/o+wjMjYh75oQ6XaXKmWg=="
         }
       },
       "is_incremental": false,
@@ -76,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GameCore.GridData.html",
-          "hash": "lQBEHbRnnnS+Ag9Kc3cy4w=="
+          "hash": "kmCzehFFj6Q1U9w5LQzfGg=="
         }
       },
       "is_incremental": false,
@@ -88,7 +88,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GameCore.html",
-          "hash": "BE1BXQwvTyxpk+6Hiy/WXw=="
+          "hash": "asvbmoP/tO9xBrc04tCohw=="
         }
       },
       "is_incremental": false,
@@ -172,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoBehaviours.UI.GlassLayerMonobehaviour.html",
-          "hash": "0aP8JhViP8agWcGSpJjKiQ=="
+          "hash": "tvKVs6fRHcGDRNR81WQ/oQ=="
         }
       },
       "is_incremental": false,
@@ -196,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoBehaviours.UI.LightsLayerMonobehaviour.html",
-          "hash": "Nd/0ZDR2P7HYYA02qhR3Eg=="
+          "hash": "vLr+u7LSfQDJ0Ybq34CXgg=="
         }
       },
       "is_incremental": false,
@@ -208,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoBehaviours.UI.PlayButtonMonobehaviour.html",
-          "hash": "477OhfowK6m3Y74YqnCWBg=="
+          "hash": "a+kaQF8MR0XYjvGtDa3BVw=="
         }
       },
       "is_incremental": false,
@@ -220,7 +220,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoBehaviours.UI.SimulationControlCanvasMonobehavior.html",
-          "hash": "MwTXXlFArkG3/A1wj/tCRg=="
+          "hash": "KEkEvOwMOH45gZcPVQ9dHg=="
         }
       },
       "is_incremental": false,
@@ -232,7 +232,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoBehaviours.UI.TuringMachineEditorPanel.html",
-          "hash": "KopS1X69LfgjR44yQ+uALw=="
+          "hash": "QQjG6gMlrObwo1zkZw9gtg=="
         }
       },
       "is_incremental": false,
@@ -263,12 +263,60 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TuringMachines.Transition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TuringMachines.Transition.html",
+          "hash": "Rx8nbEvE73m2dWd0HW7Cgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TuringMachines.TuringMachine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TuringMachines.TuringMachine.html",
+          "hash": "WhWpbSsKmuuFZTy+43flkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TuringMachines.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TuringMachines.html",
+          "hash": "JJnwoyJ1RHykcw9kDt9eLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "FOGDvrm4cS/sL6A8m8jvVA=="
+          "hash": "o/fNxX2CfEayFRSRenHY5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "m4kSoh9/rxF2xG7vcfeLVw=="
         }
       },
       "is_incremental": false,
@@ -338,7 +386,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "9HLlE+Av+IYBf0jVpsFUQg=="
+          "hash": "Qlpv51ZIdUQe5KrvnVIMww=="
         }
       },
       "is_incremental": false,
@@ -357,14 +405,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 2
+          "total_file_count": 3,
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 20,
-          "skipped_file_count": 18
+          "total_file_count": 23,
+          "skipped_file_count": 22
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

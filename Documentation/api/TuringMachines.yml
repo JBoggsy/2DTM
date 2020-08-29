@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: TuringMachines
+  commentId: N:TuringMachines
+  id: TuringMachines
+  children:
+  - TuringMachines.Transition
+  - TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: TuringMachines
+  nameWithType: TuringMachines
+  fullName: TuringMachines
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+references:
+- uid: TuringMachines.Transition
+  commentId: T:TuringMachines.Transition
+  parent: TuringMachines
+  name: Transition
+  nameWithType: Transition
+  fullName: TuringMachines.Transition
+- uid: TuringMachines.TuringMachine
+  commentId: T:TuringMachines.TuringMachine
+  name: TuringMachine
+  nameWithType: TuringMachine
+  fullName: TuringMachines.TuringMachine
+- uid: TuringMachines
+  commentId: N:TuringMachines
+  name: TuringMachines
+  nameWithType: TuringMachines
+  fullName: TuringMachines

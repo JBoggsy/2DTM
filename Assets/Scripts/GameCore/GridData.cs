@@ -5,9 +5,9 @@ using Constants;
 
 namespace GameCore {
     public class GridData {
-        private const TM_Symbol DEFAULT_SYMBOL = TM_Symbol.OFF;
+        protected const TM_Symbol DEFAULT_SYMBOL = TM_Symbol.OFF;
 
-        private Dictionary<Vector3Int, TM_Symbol> CellDictionary;
+        protected Dictionary<Vector3Int, TM_Symbol> CellDictionary;
 
         public GridData() {
             CellDictionary = new Dictionary<Vector3Int, TM_Symbol>();

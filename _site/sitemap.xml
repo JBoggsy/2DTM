@@ -2,133 +2,157 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://2dtm.github.io/Documentation/api/Constants.TM_Direction.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/Constants.TM_Symbol.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/Constants.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/GameCore.GameMaster.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/GameCore.GridData.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/GameCore.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/Global.Singleton-1.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/Global.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.CameraMonobehavior.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.GameObjectMonobehavior.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.TilemapMonobehavior.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.TuringMachineHeadMonobehavior.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.UI.GlassLayerMonobehaviour.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.UI.LabelMonobehavior.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.UI.LightsLayerMonobehaviour.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.UI.PlayButtonMonobehaviour.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.UI.SimulationControlCanvasMonobehavior.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.UI.TuringMachineEditorPanel.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.UI.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/api/MonoBehaviours.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://2dtm.github.io/Documentation/api/TuringMachines.Transition.html</loc>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://2dtm.github.io/Documentation/api/TuringMachines.TuringMachine.html</loc>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://2dtm.github.io/Documentation/api/TuringMachines.html</loc>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://2dtm.github.io/Documentation/index.html</loc>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://2dtm.github.io/Documentation/manual/coniunctis.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://2dtm.github.io/Documentation/manual/etiam.html</loc>
-    <lastmod>2020-08-26T12:41:47-04:00</lastmod>
+    <lastmod>2020-08-27T11:02:56-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

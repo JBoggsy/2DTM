@@ -1,0 +1,692 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TuringMachine
+   | 2D Turing Machine Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TuringMachine
+   | 2D Turing Machine Documentation ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="TuringMachines.TuringMachine">
+  
+  
+  <h1 id="TuringMachines_TuringMachine" data-uid="TuringMachines.TuringMachine" class="text-break">Class TuringMachine
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>TuringMachine</code> class represents the internal mathmatical Turing
+machine model of a Turing machine in the game. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">TuringMachine</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="TuringMachines.html">TuringMachines</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
+  <h5 id="TuringMachines_TuringMachine_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TuringMachine</code></pre>
+  </div>
+  <h5 id="TuringMachines_TuringMachine_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+A <code>TuringMachine</code> instance contains three pieces of internal state data
+as well as accessory data and methods which allow the Turing machine to be
+run. In particular, an instance contains an integer array <code>States</code>, an
+integer <code>CurrentState</code>, and a look-up table <code>TransitionTable</code>
+serving as a function defined as <code>f(symbol, state)-&gt;(state, direction, symbol)</code>.
+</p>
+<p>
+A formal, mathematical Turing machine is defined as a 7-tuple which includes
+<ul><li>A set of States</li><li>An alphabet of symbols</li><li>An initial state</li><li>A set of accepting States</li><li>A transition function</li></ul>
+as well as a couple others. To learn more about mathematical Turing machines,
+see <a href="https://en.wikipedia.org/wiki/Turing_machine">https://en.wikipedia.org/wiki/Turing_machine</a>.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine__ctor_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.%23ctor(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L60">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine__ctor_" data-uid="TuringMachines.TuringMachine.#ctor*"></a>
+  <h4 id="TuringMachines_TuringMachine__ctor_System_Int32_System_Int32_" data-uid="TuringMachines.TuringMachine.#ctor(System.Int32,System.Int32)">TuringMachine(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>TODO: DOC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TuringMachine(int id, int numberOfStates)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">numberOfStates</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_CurrentState.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.CurrentState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L48">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_CurrentState_" data-uid="TuringMachines.TuringMachine.CurrentState*"></a>
+  <h4 id="TuringMachines_TuringMachine_CurrentState" data-uid="TuringMachines.TuringMachine.CurrentState">CurrentState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CurrentState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_ID.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.ID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L46">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_ID_" data-uid="TuringMachines.TuringMachine.ID*"></a>
+  <h4 id="TuringMachines_TuringMachine_ID" data-uid="TuringMachines.TuringMachine.ID">ID</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ID { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_NumberOfStates.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.NumberOfStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L47">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_NumberOfStates_" data-uid="TuringMachines.TuringMachine.NumberOfStates*"></a>
+  <h4 id="TuringMachines_TuringMachine_NumberOfStates" data-uid="TuringMachines.TuringMachine.NumberOfStates">NumberOfStates</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumberOfStates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_position.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L89">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_position_" data-uid="TuringMachines.TuringMachine.position*"></a>
+  <h4 id="TuringMachines_TuringMachine_position" data-uid="TuringMachines.TuringMachine.position">position</h4>
+  <div class="markdown level1 summary"><p>Returns the coordinates of the read/write head.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3Int position { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3Int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_AddTransition_Constants_TM_Symbol_System_Int32_TuringMachines_Transition_.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol%2CSystem.Int32%2CTuringMachines.Transition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L138">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_AddTransition_" data-uid="TuringMachines.TuringMachine.AddTransition*"></a>
+  <h4 id="TuringMachines_TuringMachine_AddTransition_Constants_TM_Symbol_System_Int32_TuringMachines_Transition_" data-uid="TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol,System.Int32,TuringMachines.Transition)">AddTransition(TM_Symbol, Int32, Transition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTransition(TM_Symbol input, int state, Transition transition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="TuringMachines.Transition.html">Transition</a></td>
+        <td><span class="parametername">transition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_AddTransition_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.AddTransition(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L155">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_AddTransition_" data-uid="TuringMachines.TuringMachine.AddTransition*"></a>
+  <h4 id="TuringMachines_TuringMachine_AddTransition_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">AddTransition(Int32, Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Add a new transition to the transition table. 
+<br>
+First creates a <code>Transition</code> based on the last three parameters, then
+inserts the <code>Transition</code> in the table at the specified pair of input 
+&apos;symbol&apos; and current &apos;state&apos;. This partially defines the transition function
+<code>d</code> for <code>d(symbol, state)</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTransition(int symbol, int state, int nextState, int direction, int writeSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The input symbol the transition requires</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state the TM should be in for the transition</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nextState</span></td>
+        <td><p>The ID of the state to transition to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>The direction code for the head to move</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">writeSymbol</span></td>
+        <td><p>The symbol to write to the grid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_AddTransition_System_Int32_System_Int32_TuringMachines_Transition_.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.AddTransition(System.Int32%2CSystem.Int32%2CTuringMachines.Transition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L133">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_AddTransition_" data-uid="TuringMachines.TuringMachine.AddTransition*"></a>
+  <h4 id="TuringMachines_TuringMachine_AddTransition_System_Int32_System_Int32_TuringMachines_Transition_" data-uid="TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,TuringMachines.Transition)">AddTransition(Int32, Int32, Transition)</h4>
+  <div class="markdown level1 summary"><p>Add a new transition to the transition table. 
+<br>
+Insert the given <code>transition</code> &apos;transition&apos; into the transition
+table at the specified pair of input &apos;symbol&apos; and current &apos;state&apos;. This
+partially defines the transition function <code>d</code> for <code>d(symbol, 
+state)</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTransition(int input, int state, Transition transition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The input symbol the transition requires</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state the TM should be in for the transition</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="TuringMachines.Transition.html">Transition</a></td>
+        <td><span class="parametername">transition</span></td>
+        <td><p>The <code>Transition</code> object to be used</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_ApplySimulationStep.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.ApplySimulationStep%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L78">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_ApplySimulationStep_" data-uid="TuringMachines.TuringMachine.ApplySimulationStep*"></a>
+  <h4 id="TuringMachines_TuringMachine_ApplySimulationStep" data-uid="TuringMachines.TuringMachine.ApplySimulationStep">ApplySimulationStep()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplySimulationStep()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_GenerateRandomTransitions.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.GenerateRandomTransitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L111">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_GenerateRandomTransitions_" data-uid="TuringMachines.TuringMachine.GenerateRandomTransitions*"></a>
+  <h4 id="TuringMachines_TuringMachine_GenerateRandomTransitions" data-uid="TuringMachines.TuringMachine.GenerateRandomTransitions">GenerateRandomTransitions()</h4>
+  <div class="markdown level1 summary"><p>Fills the <code>TransitionTable</code> with randomly-generated valid transitions.
+<p>
+This method guarantees a non-halting Turing machine.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GenerateRandomTransitions()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_GetTransition_System_Int32_Constants_TM_Symbol_.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.GetTransition(System.Int32%2CConstants.TM_Symbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L175">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_GetTransition_" data-uid="TuringMachines.TuringMachine.GetTransition*"></a>
+  <h4 id="TuringMachines_TuringMachine_GetTransition_System_Int32_Constants_TM_Symbol_" data-uid="TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)">GetTransition(Int32, TM_Symbol)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="TuringMachines.Transition.html">Transition</a> produced by the transition function.
+<p>
+Given the current state and the symbol read in by the Turing machine 
+head, produce a transition triple (nextState, moveDirection, 
+writeSymbol). If the (currentState, inputSymbol) pair doesn&apos;t have a
+defined transition, it halts the machine.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transition GetTransition(int currentState, TM_Symbol inputSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">currentState</span></td>
+        <td><p>The current state the machine is in</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a></td>
+        <td><span class="parametername">inputSymbol</span></td>
+        <td><p>The symbol the read/write head read in</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="TuringMachines.Transition.html">Transition</a></td>
+        <td><p>A <a class="xref" href="TuringMachines.Transition.html">Transition</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_PrepareSimulationStep_Constants_TM_Symbol_.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L74">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_PrepareSimulationStep_" data-uid="TuringMachines.TuringMachine.PrepareSimulationStep*"></a>
+  <h4 id="TuringMachines_TuringMachine_PrepareSimulationStep_Constants_TM_Symbol_" data-uid="TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)">PrepareSimulationStep(TM_Symbol)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PrepareSimulationStep(TM_Symbol inputSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a></td>
+        <td><span class="parametername">inputSymbol</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_RemoveTransition_System_Int32_Constants_TM_Symbol_.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.RemoveTransition(System.Int32%2CConstants.TM_Symbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L184">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_RemoveTransition_" data-uid="TuringMachines.TuringMachine.RemoveTransition*"></a>
+  <h4 id="TuringMachines_TuringMachine_RemoveTransition_System_Int32_Constants_TM_Symbol_" data-uid="TuringMachines.TuringMachine.RemoveTransition(System.Int32,Constants.TM_Symbol)">RemoveTransition(Int32, TM_Symbol)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveTransition(int currentState, TM_Symbol inputSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">currentState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Constants.TM_Symbol.html">TM_Symbol</a></td>
+        <td><span class="parametername">inputSymbol</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_Reset.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L97">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_Reset_" data-uid="TuringMachines.TuringMachine.Reset*"></a>
+  <h4 id="TuringMachines_TuringMachine_Reset" data-uid="TuringMachines.TuringMachine.Reset">Reset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine_ToString.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L197">View Source</a>
+  </span>
+  <a id="TuringMachines_TuringMachine_ToString_" data-uid="TuringMachines.TuringMachine.ToString*"></a>
+  <h4 id="TuringMachines_TuringMachine_ToString" data-uid="TuringMachines.TuringMachine.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Get a human-readable string representation of this Turing machine.
+TODO: DOC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JBoggsy/2DTM/new/master/apiSpec/new?filename=TuringMachines_TuringMachine.md&amp;value=---%0Auid%3A%20TuringMachines.TuringMachine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JBoggsy/2DTM/blob/master/Assets/Scripts/TuringMachines/TuringMachine.cs/#L45" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            2D Turing Machine Documentation
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

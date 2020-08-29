@@ -5,7 +5,7 @@ namespace TuringMachines {
     /// The <c>Transition</c> class holds a triple <c>(int NEXT, TM_Direction DIR,
     /// TM_Symbol WRITE)</c> which describes the outcome of a particular transition.
     /// </summary>
-    class Transition {
+    public class Transition {
         /// <value><c>NEXT</c> indicates the state ID to transition to</value>
         public int NextState { get; set; }
 

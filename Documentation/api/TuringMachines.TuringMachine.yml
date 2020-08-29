@@ -1,0 +1,759 @@
+### YamlMime:ManagedReference
+items:
+- uid: TuringMachines.TuringMachine
+  commentId: T:TuringMachines.TuringMachine
+  id: TuringMachine
+  parent: TuringMachines
+  children:
+  - TuringMachines.TuringMachine.#ctor(System.Int32,System.Int32)
+  - TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol,System.Int32,TuringMachines.Transition)
+  - TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  - TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,TuringMachines.Transition)
+  - TuringMachines.TuringMachine.ApplySimulationStep
+  - TuringMachines.TuringMachine.CurrentState
+  - TuringMachines.TuringMachine.GenerateRandomTransitions
+  - TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)
+  - TuringMachines.TuringMachine.ID
+  - TuringMachines.TuringMachine.NumberOfStates
+  - TuringMachines.TuringMachine.position
+  - TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  - TuringMachines.TuringMachine.RemoveTransition(System.Int32,Constants.TM_Symbol)
+  - TuringMachines.TuringMachine.Reset
+  - TuringMachines.TuringMachine.ToString
+  langs:
+  - csharp
+  - vb
+  name: TuringMachine
+  nameWithType: TuringMachine
+  fullName: TuringMachines.TuringMachine
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TuringMachine
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 44
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nThe <code>TuringMachine</code> class represents the internal mathmatical Turing\nmachine model of a Turing machine in the game. \n"
+  remarks: "\n<p>\nA <code>TuringMachine</code> instance contains three pieces of internal state data\nas well as accessory data and methods which allow the Turing machine to be\nrun. In particular, an instance contains an integer array <code>States</code>, an\ninteger <code>CurrentState</code>, and a look-up table <code>TransitionTable</code>\nserving as a function defined as <code>f(symbol, state)->(state, direction, symbol)</code>.\n</p>\n<p>\nA formal, mathematical Turing machine is defined as a 7-tuple which includes\n<ul><li>A set of States</li><li>An alphabet of symbols</li><li>An initial state</li><li>A set of accepting States</li><li>A transition function</li></ul>\nas well as a couple others. To learn more about mathematical Turing machines,\nsee https://en.wikipedia.org/wiki/Turing_machine.\n</p>\n"
+  example: []
+  syntax:
+    content: public class TuringMachine
+    content.vb: Public Class TuringMachine
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TuringMachines.TuringMachine.ID
+  commentId: P:TuringMachines.TuringMachine.ID
+  id: ID
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: TuringMachine.ID
+  fullName: TuringMachines.TuringMachine.ID
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ID
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 45
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public int ID { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ID As Integer
+  overload: TuringMachines.TuringMachine.ID*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TuringMachines.TuringMachine.NumberOfStates
+  commentId: P:TuringMachines.TuringMachine.NumberOfStates
+  id: NumberOfStates
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: NumberOfStates
+  nameWithType: TuringMachine.NumberOfStates
+  fullName: TuringMachines.TuringMachine.NumberOfStates
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: NumberOfStates
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public int NumberOfStates { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NumberOfStates As Integer
+  overload: TuringMachines.TuringMachine.NumberOfStates*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TuringMachines.TuringMachine.CurrentState
+  commentId: P:TuringMachines.TuringMachine.CurrentState
+  id: CurrentState
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: CurrentState
+  nameWithType: TuringMachine.CurrentState
+  fullName: TuringMachines.TuringMachine.CurrentState
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: CurrentState
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 47
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public int CurrentState { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CurrentState As Integer
+  overload: TuringMachines.TuringMachine.CurrentState*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TuringMachines.TuringMachine.#ctor(System.Int32,System.Int32)
+  commentId: M:TuringMachines.TuringMachine.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: TuringMachine(Int32, Int32)
+  nameWithType: TuringMachine.TuringMachine(Int32, Int32)
+  fullName: TuringMachines.TuringMachine.TuringMachine(System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: .ctor
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 59
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nTODO: DOC\n"
+  example: []
+  syntax:
+    content: public TuringMachine(int id, int numberOfStates)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    - id: numberOfStates
+      type: System.Int32
+    content.vb: Public Sub New(id As Integer, numberOfStates As Integer)
+  overload: TuringMachines.TuringMachine.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  commentId: M:TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  id: PrepareSimulationStep(Constants.TM_Symbol)
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: PrepareSimulationStep(TM_Symbol)
+  nameWithType: TuringMachine.PrepareSimulationStep(TM_Symbol)
+  fullName: TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: PrepareSimulationStep
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 73
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public void PrepareSimulationStep(TM_Symbol inputSymbol)
+    parameters:
+    - id: inputSymbol
+      type: Constants.TM_Symbol
+    content.vb: Public Sub PrepareSimulationStep(inputSymbol As TM_Symbol)
+  overload: TuringMachines.TuringMachine.PrepareSimulationStep*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.ApplySimulationStep
+  commentId: M:TuringMachines.TuringMachine.ApplySimulationStep
+  id: ApplySimulationStep
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: ApplySimulationStep()
+  nameWithType: TuringMachine.ApplySimulationStep()
+  fullName: TuringMachines.TuringMachine.ApplySimulationStep()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ApplySimulationStep
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 77
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public void ApplySimulationStep()
+    content.vb: Public Sub ApplySimulationStep
+  overload: TuringMachines.TuringMachine.ApplySimulationStep*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.position
+  commentId: P:TuringMachines.TuringMachine.position
+  id: position
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: position
+  nameWithType: TuringMachine.position
+  fullName: TuringMachines.TuringMachine.position
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: position
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 88
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nReturns the coordinates of the read/write head.\n"
+  example: []
+  syntax:
+    content: public Vector3Int position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3Int
+    content.vb: Public ReadOnly Property position As Vector3Int
+  overload: TuringMachines.TuringMachine.position*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TuringMachines.TuringMachine.Reset
+  commentId: M:TuringMachines.TuringMachine.Reset
+  id: Reset
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: TuringMachine.Reset()
+  fullName: TuringMachines.TuringMachine.Reset()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: Reset
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 96
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset
+  overload: TuringMachines.TuringMachine.Reset*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.GenerateRandomTransitions
+  commentId: M:TuringMachines.TuringMachine.GenerateRandomTransitions
+  id: GenerateRandomTransitions
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: GenerateRandomTransitions()
+  nameWithType: TuringMachine.GenerateRandomTransitions()
+  fullName: TuringMachines.TuringMachine.GenerateRandomTransitions()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GenerateRandomTransitions
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 110
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nFills the <code>TransitionTable</code> with randomly-generated valid transitions.\n<p>\nThis method guarantees a non-halting Turing machine.\n</p>\n"
+  example: []
+  syntax:
+    content: public void GenerateRandomTransitions()
+    content.vb: Public Sub GenerateRandomTransitions
+  overload: TuringMachines.TuringMachine.GenerateRandomTransitions*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,TuringMachines.Transition)
+  commentId: M:TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,TuringMachines.Transition)
+  id: AddTransition(System.Int32,System.Int32,TuringMachines.Transition)
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: AddTransition(Int32, Int32, Transition)
+  nameWithType: TuringMachine.AddTransition(Int32, Int32, Transition)
+  fullName: TuringMachines.TuringMachine.AddTransition(System.Int32, System.Int32, TuringMachines.Transition)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: AddTransition
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 132
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "Add a new transition to the transition table. \n<br />\nInsert the given <code>transition</code> &apos;transition&apos; into the transition\ntable at the specified pair of input &apos;symbol&apos; and current &apos;state&apos;. This\npartially defines the transition function <code>d</code> for <code>d(symbol, \nstate)</code>"
+  example: []
+  syntax:
+    content: public void AddTransition(int input, int state, Transition transition)
+    parameters:
+    - id: input
+      type: System.Int32
+      description: The input symbol the transition requires
+    - id: state
+      type: System.Int32
+      description: The state the TM should be in for the transition
+    - id: transition
+      type: TuringMachines.Transition
+      description: The <code>Transition</code> object to be used
+    content.vb: Public Sub AddTransition(input As Integer, state As Integer, transition As Transition)
+  overload: TuringMachines.TuringMachine.AddTransition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol,System.Int32,TuringMachines.Transition)
+  commentId: M:TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol,System.Int32,TuringMachines.Transition)
+  id: AddTransition(Constants.TM_Symbol,System.Int32,TuringMachines.Transition)
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: AddTransition(TM_Symbol, Int32, Transition)
+  nameWithType: TuringMachine.AddTransition(TM_Symbol, Int32, Transition)
+  fullName: TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol, System.Int32, TuringMachines.Transition)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: AddTransition
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 137
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public void AddTransition(TM_Symbol input, int state, Transition transition)
+    parameters:
+    - id: input
+      type: Constants.TM_Symbol
+    - id: state
+      type: System.Int32
+    - id: transition
+      type: TuringMachines.Transition
+    content.vb: Public Sub AddTransition(input As TM_Symbol, state As Integer, transition As Transition)
+  overload: TuringMachines.TuringMachine.AddTransition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: AddTransition(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: AddTransition(Int32, Int32, Int32, Int32, Int32)
+  nameWithType: TuringMachine.AddTransition(Int32, Int32, Int32, Int32, Int32)
+  fullName: TuringMachines.TuringMachine.AddTransition(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: AddTransition
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 154
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "Add a new transition to the transition table. \n<br />\nFirst creates a <code>Transition</code> based on the last three parameters, then\ninserts the <code>Transition</code> in the table at the specified pair of input \n&apos;symbol&apos; and current &apos;state&apos;. This partially defines the transition function\n<code>d</code> for <code>d(symbol, state)</code>"
+  example: []
+  syntax:
+    content: public void AddTransition(int symbol, int state, int nextState, int direction, int writeSymbol)
+    parameters:
+    - id: symbol
+      type: System.Int32
+      description: The input symbol the transition requires
+    - id: state
+      type: System.Int32
+      description: The state the TM should be in for the transition
+    - id: nextState
+      type: System.Int32
+      description: The ID of the state to transition to
+    - id: direction
+      type: System.Int32
+      description: The direction code for the head to move
+    - id: writeSymbol
+      type: System.Int32
+      description: The symbol to write to the grid
+    content.vb: Public Sub AddTransition(symbol As Integer, state As Integer, nextState As Integer, direction As Integer, writeSymbol As Integer)
+  overload: TuringMachines.TuringMachine.AddTransition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)
+  commentId: M:TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)
+  id: GetTransition(System.Int32,Constants.TM_Symbol)
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: GetTransition(Int32, TM_Symbol)
+  nameWithType: TuringMachine.GetTransition(Int32, TM_Symbol)
+  fullName: TuringMachines.TuringMachine.GetTransition(System.Int32, Constants.TM_Symbol)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: GetTransition
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 174
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nGet the <xref href=\"TuringMachines.Transition\" data-throw-if-not-resolved=\"false\"></xref> produced by the transition function.\n<p>\nGiven the current state and the symbol read in by the Turing machine \nhead, produce a transition triple (nextState, moveDirection, \nwriteSymbol). If the (currentState, inputSymbol) pair doesn&apos;t have a\ndefined transition, it halts the machine.\n</p>\n"
+  example: []
+  syntax:
+    content: public Transition GetTransition(int currentState, TM_Symbol inputSymbol)
+    parameters:
+    - id: currentState
+      type: System.Int32
+      description: The current state the machine is in
+    - id: inputSymbol
+      type: Constants.TM_Symbol
+      description: The symbol the read/write head read in
+    return:
+      type: TuringMachines.Transition
+      description: A <xref href="TuringMachines.Transition" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: Public Function GetTransition(currentState As Integer, inputSymbol As TM_Symbol) As Transition
+  overload: TuringMachines.TuringMachine.GetTransition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.RemoveTransition(System.Int32,Constants.TM_Symbol)
+  commentId: M:TuringMachines.TuringMachine.RemoveTransition(System.Int32,Constants.TM_Symbol)
+  id: RemoveTransition(System.Int32,Constants.TM_Symbol)
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: RemoveTransition(Int32, TM_Symbol)
+  nameWithType: TuringMachine.RemoveTransition(Int32, TM_Symbol)
+  fullName: TuringMachines.TuringMachine.RemoveTransition(System.Int32, Constants.TM_Symbol)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: RemoveTransition
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 183
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  syntax:
+    content: public void RemoveTransition(int currentState, TM_Symbol inputSymbol)
+    parameters:
+    - id: currentState
+      type: System.Int32
+    - id: inputSymbol
+      type: Constants.TM_Symbol
+    content.vb: Public Sub RemoveTransition(currentState As Integer, inputSymbol As TM_Symbol)
+  overload: TuringMachines.TuringMachine.RemoveTransition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TuringMachines.TuringMachine.ToString
+  commentId: M:TuringMachines.TuringMachine.ToString
+  id: ToString
+  parent: TuringMachines.TuringMachine
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TuringMachine.ToString()
+  fullName: TuringMachines.TuringMachine.ToString()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/TuringMachines/TuringMachine.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: ToString
+    path: ../Assets/Scripts/TuringMachines/TuringMachine.cs
+    startLine: 196
+  assemblies:
+  - Assembly-CSharp
+  namespace: TuringMachines
+  summary: "\nGet a human-readable string representation of this Turing machine.\nTODO: DOC\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: TuringMachines.TuringMachine.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: TuringMachines
+  commentId: N:TuringMachines
+  name: TuringMachines
+  nameWithType: TuringMachines
+  fullName: TuringMachines
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TuringMachines.TuringMachine.ID*
+  commentId: Overload:TuringMachines.TuringMachine.ID
+  name: ID
+  nameWithType: TuringMachine.ID
+  fullName: TuringMachines.TuringMachine.ID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TuringMachines.TuringMachine.NumberOfStates*
+  commentId: Overload:TuringMachines.TuringMachine.NumberOfStates
+  name: NumberOfStates
+  nameWithType: TuringMachine.NumberOfStates
+  fullName: TuringMachines.TuringMachine.NumberOfStates
+- uid: TuringMachines.TuringMachine.CurrentState*
+  commentId: Overload:TuringMachines.TuringMachine.CurrentState
+  name: CurrentState
+  nameWithType: TuringMachine.CurrentState
+  fullName: TuringMachines.TuringMachine.CurrentState
+- uid: TuringMachines.TuringMachine.#ctor*
+  commentId: Overload:TuringMachines.TuringMachine.#ctor
+  name: TuringMachine
+  nameWithType: TuringMachine.TuringMachine
+  fullName: TuringMachines.TuringMachine.TuringMachine
+- uid: TuringMachines.TuringMachine.PrepareSimulationStep*
+  commentId: Overload:TuringMachines.TuringMachine.PrepareSimulationStep
+  name: PrepareSimulationStep
+  nameWithType: TuringMachine.PrepareSimulationStep
+  fullName: TuringMachines.TuringMachine.PrepareSimulationStep
+- uid: Constants.TM_Symbol
+  commentId: T:Constants.TM_Symbol
+  parent: Constants
+  name: TM_Symbol
+  nameWithType: TM_Symbol
+  fullName: Constants.TM_Symbol
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+- uid: TuringMachines.TuringMachine.ApplySimulationStep*
+  commentId: Overload:TuringMachines.TuringMachine.ApplySimulationStep
+  name: ApplySimulationStep
+  nameWithType: TuringMachine.ApplySimulationStep
+  fullName: TuringMachines.TuringMachine.ApplySimulationStep
+- uid: TuringMachines.TuringMachine.position*
+  commentId: Overload:TuringMachines.TuringMachine.position
+  name: position
+  nameWithType: TuringMachine.position
+  fullName: TuringMachines.TuringMachine.position
+- uid: UnityEngine.Vector3Int
+  commentId: T:UnityEngine.Vector3Int
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3Int
+  nameWithType: Vector3Int
+  fullName: UnityEngine.Vector3Int
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: TuringMachines.TuringMachine.Reset*
+  commentId: Overload:TuringMachines.TuringMachine.Reset
+  name: Reset
+  nameWithType: TuringMachine.Reset
+  fullName: TuringMachines.TuringMachine.Reset
+- uid: TuringMachines.TuringMachine.GenerateRandomTransitions*
+  commentId: Overload:TuringMachines.TuringMachine.GenerateRandomTransitions
+  name: GenerateRandomTransitions
+  nameWithType: TuringMachine.GenerateRandomTransitions
+  fullName: TuringMachines.TuringMachine.GenerateRandomTransitions
+- uid: TuringMachines.TuringMachine.AddTransition*
+  commentId: Overload:TuringMachines.TuringMachine.AddTransition
+  name: AddTransition
+  nameWithType: TuringMachine.AddTransition
+  fullName: TuringMachines.TuringMachine.AddTransition
+- uid: TuringMachines.Transition
+  commentId: T:TuringMachines.Transition
+  parent: TuringMachines
+  name: Transition
+  nameWithType: Transition
+  fullName: TuringMachines.Transition
+- uid: TuringMachines.TuringMachine.GetTransition*
+  commentId: Overload:TuringMachines.TuringMachine.GetTransition
+  name: GetTransition
+  nameWithType: TuringMachine.GetTransition
+  fullName: TuringMachines.TuringMachine.GetTransition
+- uid: TuringMachines.TuringMachine.RemoveTransition*
+  commentId: Overload:TuringMachines.TuringMachine.RemoveTransition
+  name: RemoveTransition
+  nameWithType: TuringMachine.RemoveTransition
+  fullName: TuringMachines.TuringMachine.RemoveTransition
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TuringMachines.TuringMachine.ToString*
+  commentId: Overload:TuringMachines.TuringMachine.ToString
+  name: ToString
+  nameWithType: TuringMachine.ToString
+  fullName: TuringMachines.TuringMachine.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

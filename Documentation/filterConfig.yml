@@ -12,7 +12,7 @@ apiRules:
     uidRegex: ^MonoBehaviours\.UI$
     type: Namespace
 - include:
-    uidRegex: ^TuringMachines$
+    uidRegex: ^TuringMachines
     type: Namespace
 - exclude:
     # inherited Object methods

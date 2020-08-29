@@ -5,6 +5,7 @@ items:
   id: GameMaster
   parent: GameCore
   children:
+  - GameCore.GameMaster.CameraMonobehavior
   - GameCore.GameMaster.CurrentViewRect
   - GameCore.GameMaster.GridData
   - GameCore.GameMaster.HandleButton(System.String)
@@ -26,11 +27,14 @@ items:
   - GameCore.GameMaster.RegisterCameraMonobehavior(MonoBehaviours.CameraMonobehavior)
   - GameCore.GameMaster.ResetGame
   - GameCore.GameMaster.Running
+  - GameCore.GameMaster.RunSimulation
   - GameCore.GameMaster.SetSeed(System.Int32)
   - GameCore.GameMaster.SimulateOneStep
+  - GameCore.GameMaster.SimulationSpeed
   - GameCore.GameMaster.SimulationSpeedSetting
   - GameCore.GameMaster.TuringMachineEditorPanelPrefab
   - GameCore.GameMaster.TuringMachineHeadPrefab
+  - GameCore.GameMaster.TuringMachines
   - GameCore.GameMaster.UseCustomSeed
   - GameCore.GameMaster.WriteSymbolToGrid(UnityEngine.Vector3Int,Constants.TM_Symbol)
   langs:
@@ -47,11 +51,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GameMaster
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 12
+    startLine: 34
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
-  summary: "\nThe GameMaster class is the central authority in charge of running the game.\n"
+  summary: "\nThe <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> class is the central authority in charge\nof running the game.\n\nThe <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> singleton acts as a communication and\ncontrol hub which components of the game communicate to and through.\nIt maintains references to most or all core components of the backend\nor simulation side of the game, including the <xref href=\"GameCore.GameMaster.GridData\" data-throw-if-not-resolved=\"false\"></xref>,\na list of <xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref> instances, and the\n<xref href=\"GameCore.GameMaster.CameraMonobehavior\" data-throw-if-not-resolved=\"false\"></xref>. Upon instantiation, it also grabs\nreferences to a couple prefabs needed for controlling the Turing \nmachine sprites.\n"
+  remarks: "\n<ul><li>\n    There should (and can) only be one GameMaster instance, a singleton\n    which every object should have access to.\n</li><li>\nThe <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> instance must be initialized using the\n<xref href=\"GameCore.GameMaster.Initialize\" data-throw-if-not-resolved=\"false\"></xref> method after contruction.\n</li></ul>\n"
   example: []
   syntax:
     content: 'public class GameMaster : Singleton<GameMaster>'
@@ -91,14 +96,16 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: GridData
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 14
+    startLine: 40
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public GridData GridData
     return:
       type: GameCore.GridData
+      description: "\nMaintains the state of the grid which acts as a shared, two-dimensional\ntape for the Turing machines.\n"
     content.vb: Public GridData As GridData
   modifiers.csharp:
   - public
@@ -122,19 +129,87 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: CurrentViewRect
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 15
+    startLine: 45
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public Rect CurrentViewRect
     return:
       type: UnityEngine.Rect
+      description: "\nA simple <xref href=\"UnityEngine.Rect\" data-throw-if-not-resolved=\"false\"></xref> which indicates which grid cells are\ncurrently in the viewport given the camera&apos;s location.\n"
     content.vb: Public CurrentViewRect As Rect
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: GameCore.GameMaster.TuringMachines
+  commentId: F:GameCore.GameMaster.TuringMachines
+  id: TuringMachines
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: TuringMachines
+  nameWithType: GameMaster.TuringMachines
+  fullName: GameCore.GameMaster.TuringMachines
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: TuringMachines
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 49
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  example: []
+  syntax:
+    content: protected TuringMachine[] TuringMachines
+    return:
+      type: TuringMachines.TuringMachine[]
+      description: "\nMaintans a list of the Turing machines in the game.\n"
+    content.vb: Protected TuringMachines As TuringMachine()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: GameCore.GameMaster.CameraMonobehavior
+  commentId: F:GameCore.GameMaster.CameraMonobehavior
+  id: CameraMonobehavior
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: CameraMonobehavior
+  nameWithType: GameMaster.CameraMonobehavior
+  fullName: GameCore.GameMaster.CameraMonobehavior
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: CameraMonobehavior
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 56
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  example: []
+  syntax:
+    content: protected CameraMonobehavior CameraMonobehavior
+    return:
+      type: MonoBehaviours.CameraMonobehavior
+      description: "\nProvides the <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> instance a reference to the\ncamera&apos;s monobehavior to faciliate camera control.\n"
+    content.vb: Protected CameraMonobehavior As CameraMonobehavior
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: GameCore.GameMaster.TuringMachineEditorPanelPrefab
   commentId: F:GameCore.GameMaster.TuringMachineEditorPanelPrefab
   id: TuringMachineEditorPanelPrefab
@@ -153,14 +228,16 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: TuringMachineEditorPanelPrefab
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 22
+    startLine: 63
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public GameObject TuringMachineEditorPanelPrefab
     return:
       type: UnityEngine.GameObject
+      description: "\nProvides a reference to the Unity prefab for creating a Turing machine\neditor panel.\n"
     content.vb: Public TuringMachineEditorPanelPrefab As GameObject
   modifiers.csharp:
   - public
@@ -184,14 +261,16 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: TuringMachineHeadPrefab
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 23
+    startLine: 67
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public GameObject TuringMachineHeadPrefab
     return:
       type: UnityEngine.GameObject
+      description: "\nProvides access to the Unity prefab for creating TUring machine sprites.\n"
     content.vb: Public TuringMachineHeadPrefab As GameObject
   modifiers.csharp:
   - public
@@ -215,15 +294,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: NumberOfTuringMachines
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 26
+    startLine: 73
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public int NumberOfTuringMachines { get; }
     parameters: []
     return:
       type: System.Int32
+      description: "\nNumber of Turing machines in the simulation.\n"
     content.vb: Public ReadOnly Property NumberOfTuringMachines As Integer
   overload: GameCore.GameMaster.NumberOfTuringMachines*
   modifiers.csharp:
@@ -250,15 +331,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: NumberStatesPerMachine
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 27
+    startLine: 77
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public int NumberStatesPerMachine { get; }
     parameters: []
     return:
       type: System.Int32
+      description: "\nMaximum number of states in any Turing machine.\n"
     content.vb: Public ReadOnly Property NumberStatesPerMachine As Integer
   overload: GameCore.GameMaster.NumberStatesPerMachine*
   modifiers.csharp:
@@ -285,15 +368,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RandomSeed
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 28
+    startLine: 81
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public int RandomSeed { get; }
     parameters: []
     return:
       type: System.Int32
+      description: "\nSeed used for the random generation of transition tables.\n"
     content.vb: Public ReadOnly Property RandomSeed As Integer
   overload: GameCore.GameMaster.RandomSeed*
   modifiers.csharp:
@@ -320,15 +405,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: UseCustomSeed
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 29
+    startLine: 85
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public bool UseCustomSeed { get; }
     parameters: []
     return:
       type: System.Boolean
+      description: "\nWhether the custom seed value be used.\n"
     content.vb: Public ReadOnly Property UseCustomSeed As Boolean
   overload: GameCore.GameMaster.UseCustomSeed*
   modifiers.csharp:
@@ -355,15 +442,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RandomBoardGeneration
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 30
+    startLine: 92
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  remarks: "\n<strong>DEPRECATED</strong>\n"
+  example: []
   syntax:
     content: public bool RandomBoardGeneration { get; }
     parameters: []
     return:
       type: System.Boolean
+      description: "\nWhether the cell states of the board should be randomized.\n"
     content.vb: Public ReadOnly Property RandomBoardGeneration As Boolean
   overload: GameCore.GameMaster.RandomBoardGeneration*
   modifiers.csharp:
@@ -390,15 +480,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RandomStartingTransitions
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 31
+    startLine: 97
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public bool RandomStartingTransitions { get; }
     parameters: []
     return:
       type: System.Boolean
+      description: "\nWhether new Turing machines should have randomly generated\ntransition tables.\n"
     content.vb: Public ReadOnly Property RandomStartingTransitions As Boolean
   overload: GameCore.GameMaster.RandomStartingTransitions*
   modifiers.csharp:
@@ -425,15 +517,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SimulationSpeedSetting
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 32
+    startLine: 101
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public float SimulationSpeedSetting { get; }
     parameters: []
     return:
       type: System.Single
+      description: "\nMultiplier for the simulation speed.\n"
     content.vb: Public ReadOnly Property SimulationSpeedSetting As Single
   overload: GameCore.GameMaster.SimulationSpeedSetting*
   modifiers.csharp:
@@ -442,6 +536,72 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: GameCore.GameMaster.SimulationSpeed
+  commentId: F:GameCore.GameMaster.SimulationSpeed
+  id: SimulationSpeed
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: SimulationSpeed
+  nameWithType: GameMaster.SimulationSpeed
+  fullName: GameCore.GameMaster.SimulationSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: SimulationSpeed
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 107
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  example: []
+  syntax:
+    content: protected float SimulationSpeed
+    return:
+      type: System.Single
+      description: "\nDelay between simulation updates, in seconds.\n"
+    content.vb: Protected SimulationSpeed As Single
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: GameCore.GameMaster.RunSimulation
+  commentId: F:GameCore.GameMaster.RunSimulation
+  id: RunSimulation
+  parent: GameCore.GameMaster
+  langs:
+  - csharp
+  - vb
+  name: RunSimulation
+  nameWithType: GameMaster.RunSimulation
+  fullName: GameCore.GameMaster.RunSimulation
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GameMaster.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: RunSimulation
+    path: ../Assets/Scripts/GameCore/GameMaster.cs
+    startLine: 111
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  example: []
+  syntax:
+    content: protected bool RunSimulation
+    return:
+      type: System.Boolean
+      description: "\nWhether the simulation is running.\n"
+    content.vb: Protected RunSimulation As Boolean
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: GameCore.GameMaster.Running
   commentId: P:GameCore.GameMaster.Running
   id: Running
@@ -460,15 +620,17 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Running
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 45
+    startLine: 123
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  example: []
   syntax:
     content: public bool Running { get; }
     parameters: []
     return:
       type: System.Boolean
+      description: "\nReturn whether the simulation is running.\n"
     content.vb: Public ReadOnly Property Running As Boolean
   overload: GameCore.GameMaster.Running*
   modifiers.csharp:
@@ -495,11 +657,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: Initialize
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 52
+    startLine: 136
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
-  summary: "\nInitializes the <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> singleton. This is called by\nthe <xref href=\"MonoBehaviours.GameMasterMonobehavior\" data-throw-if-not-resolved=\"false\"></xref> in its <code>Awake()</code> method.\n"
+  summary: "\nInitializes the <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> singleton. This is called in\nthe <xref href=\"MonoBehaviours.GameMasterMonobehavior.Awake\" data-throw-if-not-resolved=\"false\"></xref> method so that all\n<xref href=\"MonoBehaviours.GameMasterMonobehavior\" data-throw-if-not-resolved=\"false\"></xref> sub-classes can access the\n<xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref> instance.\n\nGrabs Unity prefab resources for UI and sprites, instantiates the\nrandom seed, the grid, and the Turing machines, and then begins\nthe simulation update co-routine.\n"
   example: []
   syntax:
     content: public void Initialize()
@@ -527,11 +689,11 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SimulateOneStep
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 85
+    startLine: 173
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
-  summary: "\nSimulate a single step of the &quot;game&quot; by iterating through each Turing machine.\n"
+  summary: "\nSimulate a single step of the &quot;game&quot; by iterating through each\n<xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref> twice over. First it calls the \n<xref href=\"TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)\" data-throw-if-not-resolved=\"false\"></xref> \nmethod of each <xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref>, then it calls the\n<xref href=\"TuringMachines.TuringMachine.ApplySimulationStep\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
   example: []
   syntax:
     content: public void SimulateOneStep()
@@ -559,16 +721,19 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: ResetGame
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 98
+    startLine: 187
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
-  summary: "\nInitialize a simulation/game of 2DTMs by clearing the whole board and creating\nnew Turing machines. \n"
+  summary: "\nReset the simulation/game of 2DTMs by clearing the whole board and\nreseting the existing Turing machines. \n"
   example: []
   syntax:
     content: public void ResetGame()
     content.vb: Public Sub ResetGame
   overload: GameCore.GameMaster.ResetGame*
+  seealso:
+  - linkId: GameCore.GameMaster.HandleResetButton
+    commentId: M:GameCore.GameMaster.HandleResetButton
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -591,7 +756,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: WriteSymbolToGrid
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 109
+    startLine: 200
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -602,8 +767,10 @@ items:
     parameters:
     - id: loc
       type: UnityEngine.Vector3Int
+      description: Grid location to write the symbol to.
     - id: symbol
       type: Constants.TM_Symbol
+      description: The symbol to write to the grid.
     content.vb: Public Sub WriteSymbolToGrid(loc As Vector3Int, symbol As TM_Symbol)
   overload: GameCore.GameMaster.WriteSymbolToGrid*
   modifiers.csharp:
@@ -628,15 +795,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleTuringMachineHeadClick
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 117
+    startLine: 214
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nTriggered when a <xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref>&apos;s sprite it clicked.\n"
+  example: []
   syntax:
     content: public void HandleTuringMachineHeadClick(int machineID)
     parameters:
     - id: machineID
       type: System.Int32
+      description: "\nThe ID of the <xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref> whose sprite was clicked.\n"
     content.vb: Public Sub HandleTuringMachineHeadClick(machineID As Integer)
   overload: GameCore.GameMaster.HandleTuringMachineHeadClick*
   modifiers.csharp:
@@ -661,15 +831,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleKeyPresses
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 124
+    startLine: 228
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nTriggered when a keyboard key is pressed. Allows the <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref>\ninstance to handle user input from the keyboard.\n"
+  example: []
   syntax:
     content: public void HandleKeyPresses(List<KeyCode> keysPressed)
     parameters:
     - id: keysPressed
       type: System.Collections.Generic.List{UnityEngine.KeyCode}
+      description: "\nA list of keys which were pressed since the last update.\n"
     content.vb: Public Sub HandleKeyPresses(keysPressed As List(Of KeyCode))
   overload: GameCore.GameMaster.HandleKeyPresses*
   nameWithType.vb: GameMaster.HandleKeyPresses(List(Of KeyCode))
@@ -697,7 +870,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleMouseWheelScroll
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 149
+    startLine: 253
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -733,15 +906,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 153
+    startLine: 262
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nTriggered by UI buttons which are pressed. Allows the <xref href=\"GameCore.GameMaster\" data-throw-if-not-resolved=\"false\"></xref>\ninstance to do the processing required for whatever button was pressed.\n"
+  example: []
   syntax:
     content: public void HandleButton(string buttonName)
     parameters:
     - id: buttonName
       type: System.String
+      description: The name of the button which was pressed.
     content.vb: Public Sub HandleButton(buttonName As String)
   overload: GameCore.GameMaster.HandleButton*
   modifiers.csharp:
@@ -766,10 +942,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandlePlayPauseButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 176
+    startLine: 288
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nPlay or pause the simulation.\n"
+  example: []
   syntax:
     content: public void HandlePlayPauseButton()
     content.vb: Public Sub HandlePlayPauseButton
@@ -796,14 +974,20 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleResetButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 180
+    startLine: 306
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nReset the simulation.\n\nThis clears the whole board, reseting each cell to the <xref href=\"Constants.TM_Symbol.OFF\" data-throw-if-not-resolved=\"false\"></xref>\nstate. Then it resets all the <xref href=\"TuringMachines.TuringMachine\" data-throw-if-not-resolved=\"false\"></xref> instances,\nsetting their <xref href=\"TuringMachines.TuringMachine.CurrentState\" data-throw-if-not-resolved=\"false\"></xref> values to the \ninitial state and moving them to the (0, 0) cell. Finally, it pauses\nthe simulation.\n"
+  remarks: "\nUnder the hood, this just calls <xref href=\"GameCore.GameMaster.ResetGame\" data-throw-if-not-resolved=\"false\"></xref>\nand then pauses the simulation.\n"
+  example: []
   syntax:
     content: public void HandleResetButton()
     content.vb: Public Sub HandleResetButton
   overload: GameCore.GameMaster.HandleResetButton*
+  seealso:
+  - linkId: GameCore.GameMaster.ResetGame
+    commentId: M:GameCore.GameMaster.ResetGame
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -826,10 +1010,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleChangeSeedButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 185
+    startLine: 314
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nChange the random seed used for Turing machine generation.\n"
+  example: []
   syntax:
     content: public void HandleChangeSeedButton()
     content.vb: Public Sub HandleChangeSeedButton
@@ -856,15 +1042,18 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: SetSeed
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 189
+    startLine: 322
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nSets the seed used for random generation of Turing machines.\n"
+  example: []
   syntax:
     content: public void SetSeed(int value)
     parameters:
     - id: value
       type: System.Int32
+      description: The new value of the random seed.
     content.vb: Public Sub SetSeed(value As Integer)
   overload: GameCore.GameMaster.SetSeed*
   modifiers.csharp:
@@ -889,14 +1078,19 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleStepButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 193
+    startLine: 330
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nPerform a single step and then pause the simulation\n"
+  example: []
   syntax:
     content: public void HandleStepButton()
     content.vb: Public Sub HandleStepButton
   overload: GameCore.GameMaster.HandleStepButton*
+  seealso:
+  - linkId: GameCore.GameMaster.SimulateOneStep
+    commentId: M:GameCore.GameMaster.SimulateOneStep
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -919,10 +1113,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleSimSpeedIncreaseButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 198
+    startLine: 338
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nIncrease the speed of the simulation in terms of wall time.\n"
+  example: []
   syntax:
     content: public void HandleSimSpeedIncreaseButton()
     content.vb: Public Sub HandleSimSpeedIncreaseButton
@@ -949,10 +1145,12 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: HandleSimSpeedDecreaseButton
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 203
+    startLine: 346
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
+  summary: "\nDecrease the speed of the simulation in terms of wall time.\n"
+  example: []
   syntax:
     content: public void HandleSimSpeedDecreaseButton()
     content.vb: Public Sub HandleSimSpeedDecreaseButton
@@ -979,7 +1177,7 @@ items:
       repo: https://github.com/JBoggsy/2DTM.git
     id: RegisterCameraMonobehavior
     path: ../Assets/Scripts/GameCore/GameMaster.cs
-    startLine: 234
+    startLine: 380
   assemblies:
   - Assembly-CSharp
   namespace: GameCore
@@ -990,6 +1188,10 @@ items:
     parameters:
     - id: newCamera
       type: MonoBehaviours.CameraMonobehavior
+      description: >
+        The <xref href="GameCore.GameMaster.CameraMonobehavior" data-throw-if-not-resolved="false"></xref> the
+
+        <xref href="GameCore.GameMaster" data-throw-if-not-resolved="false"></xref> will control.
     content.vb: Public Sub RegisterCameraMonobehavior(newCamera As CameraMonobehavior)
   overload: GameCore.GameMaster.RegisterCameraMonobehavior*
   modifiers.csharp:
@@ -997,6 +1199,26 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: GameCore.GameMaster
+  commentId: T:GameCore.GameMaster
+  parent: GameCore
+  name: GameMaster
+  nameWithType: GameMaster
+  fullName: GameCore.GameMaster
+- uid: GameCore.GameMaster.GridData
+  commentId: F:GameCore.GameMaster.GridData
+  isExternal: true
+- uid: TuringMachines.TuringMachine
+  commentId: T:TuringMachines.TuringMachine
+  name: TuringMachine
+  nameWithType: TuringMachine
+  fullName: TuringMachines.TuringMachine
+- uid: GameCore.GameMaster.CameraMonobehavior
+  commentId: F:GameCore.GameMaster.CameraMonobehavior
+  isExternal: true
+- uid: GameCore.GameMaster.Initialize
+  commentId: M:GameCore.GameMaster.Initialize
+  isExternal: true
 - uid: GameCore
   commentId: N:GameCore
   name: GameCore
@@ -1153,6 +1375,41 @@ references:
   name: Rect
   nameWithType: Rect
   fullName: UnityEngine.Rect
+- uid: TuringMachines.TuringMachine[]
+  isExternal: true
+  name: TuringMachine[]
+  nameWithType: TuringMachine[]
+  fullName: TuringMachines.TuringMachine[]
+  nameWithType.vb: TuringMachine()
+  fullName.vb: TuringMachines.TuringMachine()
+  name.vb: TuringMachine()
+  spec.csharp:
+  - uid: TuringMachines.TuringMachine
+    name: TuringMachine
+    nameWithType: TuringMachine
+    fullName: TuringMachines.TuringMachine
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: TuringMachines.TuringMachine
+    name: TuringMachine
+    nameWithType: TuringMachine
+    fullName: TuringMachines.TuringMachine
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: MonoBehaviours.CameraMonobehavior
+  commentId: T:MonoBehaviours.CameraMonobehavior
+  parent: MonoBehaviours
+  name: CameraMonobehavior
+  nameWithType: CameraMonobehavior
+  fullName: MonoBehaviours.CameraMonobehavior
+- uid: MonoBehaviours
+  commentId: N:MonoBehaviours
+  name: MonoBehaviours
+  nameWithType: MonoBehaviours
+  fullName: MonoBehaviours
 - uid: UnityEngine.GameObject
   commentId: T:UnityEngine.GameObject
   parent: UnityEngine
@@ -1221,12 +1478,9 @@ references:
   name: Running
   nameWithType: GameMaster.Running
   fullName: GameCore.GameMaster.Running
-- uid: GameCore.GameMaster
-  commentId: T:GameCore.GameMaster
-  parent: GameCore
-  name: GameMaster
-  nameWithType: GameMaster
-  fullName: GameCore.GameMaster
+- uid: MonoBehaviours.GameMasterMonobehavior.Awake
+  commentId: M:MonoBehaviours.GameMasterMonobehavior.Awake
+  isExternal: true
 - uid: MonoBehaviours.GameMasterMonobehavior
   commentId: T:MonoBehaviours.GameMasterMonobehavior
   isExternal: true
@@ -1235,11 +1489,20 @@ references:
   name: Initialize
   nameWithType: GameMaster.Initialize
   fullName: GameCore.GameMaster.Initialize
+- uid: TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  commentId: M:TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  isExternal: true
+- uid: TuringMachines.TuringMachine.ApplySimulationStep
+  commentId: M:TuringMachines.TuringMachine.ApplySimulationStep
+  isExternal: true
 - uid: GameCore.GameMaster.SimulateOneStep*
   commentId: Overload:GameCore.GameMaster.SimulateOneStep
   name: SimulateOneStep
   nameWithType: GameMaster.SimulateOneStep
   fullName: GameCore.GameMaster.SimulateOneStep
+- uid: GameCore.GameMaster.HandleResetButton
+  commentId: M:GameCore.GameMaster.HandleResetButton
+  isExternal: true
 - uid: GameCore.GameMaster.ResetGame*
   commentId: Overload:GameCore.GameMaster.ResetGame
   name: ResetGame
@@ -1389,6 +1652,15 @@ references:
   name: HandlePlayPauseButton
   nameWithType: GameMaster.HandlePlayPauseButton
   fullName: GameCore.GameMaster.HandlePlayPauseButton
+- uid: Constants.TM_Symbol.OFF
+  commentId: F:Constants.TM_Symbol.OFF
+  isExternal: true
+- uid: TuringMachines.TuringMachine.CurrentState
+  commentId: P:TuringMachines.TuringMachine.CurrentState
+  isExternal: true
+- uid: GameCore.GameMaster.ResetGame
+  commentId: M:GameCore.GameMaster.ResetGame
+  isExternal: true
 - uid: GameCore.GameMaster.HandleResetButton*
   commentId: Overload:GameCore.GameMaster.HandleResetButton
   name: HandleResetButton
@@ -1404,6 +1676,9 @@ references:
   name: SetSeed
   nameWithType: GameMaster.SetSeed
   fullName: GameCore.GameMaster.SetSeed
+- uid: GameCore.GameMaster.SimulateOneStep
+  commentId: M:GameCore.GameMaster.SimulateOneStep
+  isExternal: true
 - uid: GameCore.GameMaster.HandleStepButton*
   commentId: Overload:GameCore.GameMaster.HandleStepButton
   name: HandleStepButton
@@ -1419,22 +1694,8 @@ references:
   name: HandleSimSpeedDecreaseButton
   nameWithType: GameMaster.HandleSimSpeedDecreaseButton
   fullName: GameCore.GameMaster.HandleSimSpeedDecreaseButton
-- uid: GameCore.GameMaster.CameraMonobehavior
-  commentId: F:GameCore.GameMaster.CameraMonobehavior
-  isExternal: true
 - uid: GameCore.GameMaster.RegisterCameraMonobehavior*
   commentId: Overload:GameCore.GameMaster.RegisterCameraMonobehavior
   name: RegisterCameraMonobehavior
   nameWithType: GameMaster.RegisterCameraMonobehavior
   fullName: GameCore.GameMaster.RegisterCameraMonobehavior
-- uid: MonoBehaviours.CameraMonobehavior
-  commentId: T:MonoBehaviours.CameraMonobehavior
-  parent: MonoBehaviours
-  name: CameraMonobehavior
-  nameWithType: CameraMonobehavior
-  fullName: MonoBehaviours.CameraMonobehavior
-- uid: MonoBehaviours
-  commentId: N:MonoBehaviours
-  name: MonoBehaviours
-  nameWithType: MonoBehaviours
-  fullName: MonoBehaviours

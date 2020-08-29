@@ -85,6 +85,12 @@ references:
   commentId: T:GameCore.GameMaster
   fullName: GameCore.GameMaster
   nameWithType: GameMaster
+- uid: GameCore.GameMaster.CameraMonobehavior
+  name: CameraMonobehavior
+  href: api/GameCore.GameMaster.html#GameCore_GameMaster_CameraMonobehavior
+  commentId: F:GameCore.GameMaster.CameraMonobehavior
+  fullName: GameCore.GameMaster.CameraMonobehavior
+  nameWithType: GameMaster.CameraMonobehavior
 - uid: GameCore.GameMaster.CurrentViewRect
   name: CurrentViewRect
   href: api/GameCore.GameMaster.html#GameCore_GameMaster_CurrentViewRect
@@ -347,6 +353,12 @@ references:
   isSpec: "True"
   fullName: GameCore.GameMaster.Running
   nameWithType: GameMaster.Running
+- uid: GameCore.GameMaster.RunSimulation
+  name: RunSimulation
+  href: api/GameCore.GameMaster.html#GameCore_GameMaster_RunSimulation
+  commentId: F:GameCore.GameMaster.RunSimulation
+  fullName: GameCore.GameMaster.RunSimulation
+  nameWithType: GameMaster.RunSimulation
 - uid: GameCore.GameMaster.SetSeed(System.Int32)
   name: SetSeed(Int32)
   href: api/GameCore.GameMaster.html#GameCore_GameMaster_SetSeed_System_Int32_
@@ -373,6 +385,12 @@ references:
   isSpec: "True"
   fullName: GameCore.GameMaster.SimulateOneStep
   nameWithType: GameMaster.SimulateOneStep
+- uid: GameCore.GameMaster.SimulationSpeed
+  name: SimulationSpeed
+  href: api/GameCore.GameMaster.html#GameCore_GameMaster_SimulationSpeed
+  commentId: F:GameCore.GameMaster.SimulationSpeed
+  fullName: GameCore.GameMaster.SimulationSpeed
+  nameWithType: GameMaster.SimulationSpeed
 - uid: GameCore.GameMaster.SimulationSpeedSetting
   name: SimulationSpeedSetting
   href: api/GameCore.GameMaster.html#GameCore_GameMaster_SimulationSpeedSetting
@@ -398,6 +416,12 @@ references:
   commentId: F:GameCore.GameMaster.TuringMachineHeadPrefab
   fullName: GameCore.GameMaster.TuringMachineHeadPrefab
   nameWithType: GameMaster.TuringMachineHeadPrefab
+- uid: GameCore.GameMaster.TuringMachines
+  name: TuringMachines
+  href: api/GameCore.GameMaster.html#GameCore_GameMaster_TuringMachines
+  commentId: F:GameCore.GameMaster.TuringMachines
+  fullName: GameCore.GameMaster.TuringMachines
+  nameWithType: GameMaster.TuringMachines
 - uid: GameCore.GameMaster.UseCustomSeed
   name: UseCustomSeed
   href: api/GameCore.GameMaster.html#GameCore_GameMaster_UseCustomSeed
@@ -443,6 +467,18 @@ references:
   isSpec: "True"
   fullName: GameCore.GridData.GridData
   nameWithType: GridData.GridData
+- uid: GameCore.GridData.CellDictionary
+  name: CellDictionary
+  href: api/GameCore.GridData.html#GameCore_GridData_CellDictionary
+  commentId: F:GameCore.GridData.CellDictionary
+  fullName: GameCore.GridData.CellDictionary
+  nameWithType: GridData.CellDictionary
+- uid: GameCore.GridData.DEFAULT_SYMBOL
+  name: DEFAULT_SYMBOL
+  href: api/GameCore.GridData.html#GameCore_GridData_DEFAULT_SYMBOL
+  commentId: F:GameCore.GridData.DEFAULT_SYMBOL
+  fullName: GameCore.GridData.DEFAULT_SYMBOL
+  nameWithType: GridData.DEFAULT_SYMBOL
 - uid: GameCore.GridData.GetCellSymbol(UnityEngine.Vector3Int)
   name: GetCellSymbol(Vector3Int)
   href: api/GameCore.GridData.html#GameCore_GridData_GetCellSymbol_UnityEngine_Vector3Int_
@@ -1046,3 +1082,273 @@ references:
   commentId: T:MonoBehaviours.UI.TuringMachineEditorPanel
   fullName: MonoBehaviours.UI.TuringMachineEditorPanel
   nameWithType: TuringMachineEditorPanel
+- uid: TuringMachines
+  name: TuringMachines
+  href: api/TuringMachines.html
+  commentId: N:TuringMachines
+  fullName: TuringMachines
+  nameWithType: TuringMachines
+- uid: TuringMachines.Transition
+  name: Transition
+  href: api/TuringMachines.Transition.html
+  commentId: T:TuringMachines.Transition
+  fullName: TuringMachines.Transition
+  nameWithType: Transition
+- uid: TuringMachines.Transition.#ctor
+  name: Transition()
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition__ctor
+  commentId: M:TuringMachines.Transition.#ctor
+  fullName: TuringMachines.Transition.Transition()
+  nameWithType: Transition.Transition()
+- uid: TuringMachines.Transition.#ctor(System.Int32,Constants.TM_Direction,Constants.TM_Symbol)
+  name: Transition(Int32, TM_Direction, TM_Symbol)
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition__ctor_System_Int32_Constants_TM_Direction_Constants_TM_Symbol_
+  commentId: M:TuringMachines.Transition.#ctor(System.Int32,Constants.TM_Direction,Constants.TM_Symbol)
+  fullName: TuringMachines.Transition.Transition(System.Int32, Constants.TM_Direction, Constants.TM_Symbol)
+  nameWithType: Transition.Transition(Int32, TM_Direction, TM_Symbol)
+- uid: TuringMachines.Transition.#ctor*
+  name: Transition
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition__ctor_
+  commentId: Overload:TuringMachines.Transition.#ctor
+  isSpec: "True"
+  fullName: TuringMachines.Transition.Transition
+  nameWithType: Transition.Transition
+- uid: TuringMachines.Transition.Direction
+  name: Direction
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition_Direction
+  commentId: P:TuringMachines.Transition.Direction
+  fullName: TuringMachines.Transition.Direction
+  nameWithType: Transition.Direction
+- uid: TuringMachines.Transition.Direction*
+  name: Direction
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition_Direction_
+  commentId: Overload:TuringMachines.Transition.Direction
+  isSpec: "True"
+  fullName: TuringMachines.Transition.Direction
+  nameWithType: Transition.Direction
+- uid: TuringMachines.Transition.NextState
+  name: NextState
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition_NextState
+  commentId: P:TuringMachines.Transition.NextState
+  fullName: TuringMachines.Transition.NextState
+  nameWithType: Transition.NextState
+- uid: TuringMachines.Transition.NextState*
+  name: NextState
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition_NextState_
+  commentId: Overload:TuringMachines.Transition.NextState
+  isSpec: "True"
+  fullName: TuringMachines.Transition.NextState
+  nameWithType: Transition.NextState
+- uid: TuringMachines.Transition.ToString
+  name: ToString()
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition_ToString
+  commentId: M:TuringMachines.Transition.ToString
+  fullName: TuringMachines.Transition.ToString()
+  nameWithType: Transition.ToString()
+- uid: TuringMachines.Transition.ToString*
+  name: ToString
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition_ToString_
+  commentId: Overload:TuringMachines.Transition.ToString
+  isSpec: "True"
+  fullName: TuringMachines.Transition.ToString
+  nameWithType: Transition.ToString
+- uid: TuringMachines.Transition.WriteSymbol
+  name: WriteSymbol
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition_WriteSymbol
+  commentId: P:TuringMachines.Transition.WriteSymbol
+  fullName: TuringMachines.Transition.WriteSymbol
+  nameWithType: Transition.WriteSymbol
+- uid: TuringMachines.Transition.WriteSymbol*
+  name: WriteSymbol
+  href: api/TuringMachines.Transition.html#TuringMachines_Transition_WriteSymbol_
+  commentId: Overload:TuringMachines.Transition.WriteSymbol
+  isSpec: "True"
+  fullName: TuringMachines.Transition.WriteSymbol
+  nameWithType: Transition.WriteSymbol
+- uid: TuringMachines.TuringMachine
+  name: TuringMachine
+  href: api/TuringMachines.TuringMachine.html
+  commentId: T:TuringMachines.TuringMachine
+  fullName: TuringMachines.TuringMachine
+  nameWithType: TuringMachine
+- uid: TuringMachines.TuringMachine.#ctor(System.Int32,System.Int32)
+  name: TuringMachine(Int32, Int32)
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine__ctor_System_Int32_System_Int32_
+  commentId: M:TuringMachines.TuringMachine.#ctor(System.Int32,System.Int32)
+  fullName: TuringMachines.TuringMachine.TuringMachine(System.Int32, System.Int32)
+  nameWithType: TuringMachine.TuringMachine(Int32, Int32)
+- uid: TuringMachines.TuringMachine.#ctor*
+  name: TuringMachine
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine__ctor_
+  commentId: Overload:TuringMachines.TuringMachine.#ctor
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.TuringMachine
+  nameWithType: TuringMachine.TuringMachine
+- uid: TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol,System.Int32,TuringMachines.Transition)
+  name: AddTransition(TM_Symbol, Int32, Transition)
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_AddTransition_Constants_TM_Symbol_System_Int32_TuringMachines_Transition_
+  commentId: M:TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol,System.Int32,TuringMachines.Transition)
+  fullName: TuringMachines.TuringMachine.AddTransition(Constants.TM_Symbol, System.Int32, TuringMachines.Transition)
+  nameWithType: TuringMachine.AddTransition(TM_Symbol, Int32, Transition)
+- uid: TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: AddTransition(Int32, Int32, Int32, Int32, Int32)
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_AddTransition_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: TuringMachines.TuringMachine.AddTransition(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: TuringMachine.AddTransition(Int32, Int32, Int32, Int32, Int32)
+- uid: TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,TuringMachines.Transition)
+  name: AddTransition(Int32, Int32, Transition)
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_AddTransition_System_Int32_System_Int32_TuringMachines_Transition_
+  commentId: M:TuringMachines.TuringMachine.AddTransition(System.Int32,System.Int32,TuringMachines.Transition)
+  fullName: TuringMachines.TuringMachine.AddTransition(System.Int32, System.Int32, TuringMachines.Transition)
+  nameWithType: TuringMachine.AddTransition(Int32, Int32, Transition)
+- uid: TuringMachines.TuringMachine.AddTransition*
+  name: AddTransition
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_AddTransition_
+  commentId: Overload:TuringMachines.TuringMachine.AddTransition
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.AddTransition
+  nameWithType: TuringMachine.AddTransition
+- uid: TuringMachines.TuringMachine.ApplySimulationStep
+  name: ApplySimulationStep()
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_ApplySimulationStep
+  commentId: M:TuringMachines.TuringMachine.ApplySimulationStep
+  fullName: TuringMachines.TuringMachine.ApplySimulationStep()
+  nameWithType: TuringMachine.ApplySimulationStep()
+- uid: TuringMachines.TuringMachine.ApplySimulationStep*
+  name: ApplySimulationStep
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_ApplySimulationStep_
+  commentId: Overload:TuringMachines.TuringMachine.ApplySimulationStep
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.ApplySimulationStep
+  nameWithType: TuringMachine.ApplySimulationStep
+- uid: TuringMachines.TuringMachine.CurrentState
+  name: CurrentState
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_CurrentState
+  commentId: P:TuringMachines.TuringMachine.CurrentState
+  fullName: TuringMachines.TuringMachine.CurrentState
+  nameWithType: TuringMachine.CurrentState
+- uid: TuringMachines.TuringMachine.CurrentState*
+  name: CurrentState
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_CurrentState_
+  commentId: Overload:TuringMachines.TuringMachine.CurrentState
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.CurrentState
+  nameWithType: TuringMachine.CurrentState
+- uid: TuringMachines.TuringMachine.GenerateRandomTransitions
+  name: GenerateRandomTransitions()
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_GenerateRandomTransitions
+  commentId: M:TuringMachines.TuringMachine.GenerateRandomTransitions
+  fullName: TuringMachines.TuringMachine.GenerateRandomTransitions()
+  nameWithType: TuringMachine.GenerateRandomTransitions()
+- uid: TuringMachines.TuringMachine.GenerateRandomTransitions*
+  name: GenerateRandomTransitions
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_GenerateRandomTransitions_
+  commentId: Overload:TuringMachines.TuringMachine.GenerateRandomTransitions
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.GenerateRandomTransitions
+  nameWithType: TuringMachine.GenerateRandomTransitions
+- uid: TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)
+  name: GetTransition(Int32, TM_Symbol)
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_GetTransition_System_Int32_Constants_TM_Symbol_
+  commentId: M:TuringMachines.TuringMachine.GetTransition(System.Int32,Constants.TM_Symbol)
+  fullName: TuringMachines.TuringMachine.GetTransition(System.Int32, Constants.TM_Symbol)
+  nameWithType: TuringMachine.GetTransition(Int32, TM_Symbol)
+- uid: TuringMachines.TuringMachine.GetTransition*
+  name: GetTransition
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_GetTransition_
+  commentId: Overload:TuringMachines.TuringMachine.GetTransition
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.GetTransition
+  nameWithType: TuringMachine.GetTransition
+- uid: TuringMachines.TuringMachine.ID
+  name: ID
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_ID
+  commentId: P:TuringMachines.TuringMachine.ID
+  fullName: TuringMachines.TuringMachine.ID
+  nameWithType: TuringMachine.ID
+- uid: TuringMachines.TuringMachine.ID*
+  name: ID
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_ID_
+  commentId: Overload:TuringMachines.TuringMachine.ID
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.ID
+  nameWithType: TuringMachine.ID
+- uid: TuringMachines.TuringMachine.NumberOfStates
+  name: NumberOfStates
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_NumberOfStates
+  commentId: P:TuringMachines.TuringMachine.NumberOfStates
+  fullName: TuringMachines.TuringMachine.NumberOfStates
+  nameWithType: TuringMachine.NumberOfStates
+- uid: TuringMachines.TuringMachine.NumberOfStates*
+  name: NumberOfStates
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_NumberOfStates_
+  commentId: Overload:TuringMachines.TuringMachine.NumberOfStates
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.NumberOfStates
+  nameWithType: TuringMachine.NumberOfStates
+- uid: TuringMachines.TuringMachine.position
+  name: position
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_position
+  commentId: P:TuringMachines.TuringMachine.position
+  fullName: TuringMachines.TuringMachine.position
+  nameWithType: TuringMachine.position
+- uid: TuringMachines.TuringMachine.position*
+  name: position
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_position_
+  commentId: Overload:TuringMachines.TuringMachine.position
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.position
+  nameWithType: TuringMachine.position
+- uid: TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  name: PrepareSimulationStep(TM_Symbol)
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_PrepareSimulationStep_Constants_TM_Symbol_
+  commentId: M:TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  fullName: TuringMachines.TuringMachine.PrepareSimulationStep(Constants.TM_Symbol)
+  nameWithType: TuringMachine.PrepareSimulationStep(TM_Symbol)
+- uid: TuringMachines.TuringMachine.PrepareSimulationStep*
+  name: PrepareSimulationStep
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_PrepareSimulationStep_
+  commentId: Overload:TuringMachines.TuringMachine.PrepareSimulationStep
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.PrepareSimulationStep
+  nameWithType: TuringMachine.PrepareSimulationStep
+- uid: TuringMachines.TuringMachine.RemoveTransition(System.Int32,Constants.TM_Symbol)
+  name: RemoveTransition(Int32, TM_Symbol)
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_RemoveTransition_System_Int32_Constants_TM_Symbol_
+  commentId: M:TuringMachines.TuringMachine.RemoveTransition(System.Int32,Constants.TM_Symbol)
+  fullName: TuringMachines.TuringMachine.RemoveTransition(System.Int32, Constants.TM_Symbol)
+  nameWithType: TuringMachine.RemoveTransition(Int32, TM_Symbol)
+- uid: TuringMachines.TuringMachine.RemoveTransition*
+  name: RemoveTransition
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_RemoveTransition_
+  commentId: Overload:TuringMachines.TuringMachine.RemoveTransition
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.RemoveTransition
+  nameWithType: TuringMachine.RemoveTransition
+- uid: TuringMachines.TuringMachine.Reset
+  name: Reset()
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_Reset
+  commentId: M:TuringMachines.TuringMachine.Reset
+  fullName: TuringMachines.TuringMachine.Reset()
+  nameWithType: TuringMachine.Reset()
+- uid: TuringMachines.TuringMachine.Reset*
+  name: Reset
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_Reset_
+  commentId: Overload:TuringMachines.TuringMachine.Reset
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.Reset
+  nameWithType: TuringMachine.Reset
+- uid: TuringMachines.TuringMachine.ToString
+  name: ToString()
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_ToString
+  commentId: M:TuringMachines.TuringMachine.ToString
+  fullName: TuringMachines.TuringMachine.ToString()
+  nameWithType: TuringMachine.ToString()
+- uid: TuringMachines.TuringMachine.ToString*
+  name: ToString
+  href: api/TuringMachines.TuringMachine.html#TuringMachines_TuringMachine_ToString_
+  commentId: Overload:TuringMachines.TuringMachine.ToString
+  isSpec: "True"
+  fullName: TuringMachines.TuringMachine.ToString
+  nameWithType: TuringMachine.ToString

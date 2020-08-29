@@ -42,7 +42,7 @@ namespace TuringMachines {
     /// see https://en.wikipedia.org/wiki/Turing_machine.
     /// </para>
     /// </remarks>
-    class TuringMachine {
+    public class TuringMachine {
         public int ID { get; private set; }
         public int NumberOfStates { get; private set; }
         public int CurrentState { get; private set; }

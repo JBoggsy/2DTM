@@ -6,6 +6,8 @@ items:
   parent: GameCore
   children:
   - GameCore.GridData.#ctor
+  - GameCore.GridData.CellDictionary
+  - GameCore.GridData.DEFAULT_SYMBOL
   - GameCore.GridData.GetCellSymbol(UnityEngine.Vector3Int)
   - GameCore.GridData.ResetGrid
   - GameCore.GridData.SetCellSymbol(UnityEngine.Vector3Int,Constants.TM_Symbol)
@@ -38,6 +40,70 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: GameCore.GridData.DEFAULT_SYMBOL
+  commentId: F:GameCore.GridData.DEFAULT_SYMBOL
+  id: DEFAULT_SYMBOL
+  parent: GameCore.GridData
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SYMBOL
+  nameWithType: GridData.DEFAULT_SYMBOL
+  fullName: GameCore.GridData.DEFAULT_SYMBOL
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GridData.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: DEFAULT_SYMBOL
+    path: ../Assets/Scripts/GameCore/GridData.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: protected const TM_Symbol DEFAULT_SYMBOL = TM_Symbol.OFF
+    return:
+      type: Constants.TM_Symbol
+    content.vb: Protected Const DEFAULT_SYMBOL As TM_Symbol = TM_Symbol.OFF
+  modifiers.csharp:
+  - protected
+  - const
+  modifiers.vb:
+  - Protected
+  - Const
+- uid: GameCore.GridData.CellDictionary
+  commentId: F:GameCore.GridData.CellDictionary
+  id: CellDictionary
+  parent: GameCore.GridData
+  langs:
+  - csharp
+  - vb
+  name: CellDictionary
+  nameWithType: GridData.CellDictionary
+  fullName: GameCore.GridData.CellDictionary
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/GameCore/GridData.cs
+      branch: master
+      repo: https://github.com/JBoggsy/2DTM.git
+    id: CellDictionary
+    path: ../Assets/Scripts/GameCore/GridData.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: GameCore
+  syntax:
+    content: protected Dictionary<Vector3Int, TM_Symbol> CellDictionary
+    return:
+      type: System.Collections.Generic.Dictionary{UnityEngine.Vector3Int,Constants.TM_Symbol}
+    content.vb: Protected CellDictionary As Dictionary(Of Vector3Int, TM_Symbol)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: GameCore.GridData.#ctor
   commentId: M:GameCore.GridData.#ctor
   id: '#ctor'
@@ -187,6 +253,132 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Constants.TM_Symbol
+  commentId: T:Constants.TM_Symbol
+  parent: Constants
+  name: TM_Symbol
+  nameWithType: TM_Symbol
+  fullName: Constants.TM_Symbol
+- uid: Constants
+  commentId: N:Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Constants
+- uid: System.Collections.Generic.Dictionary{UnityEngine.Vector3Int,Constants.TM_Symbol}
+  commentId: T:System.Collections.Generic.Dictionary{UnityEngine.Vector3Int,Constants.TM_Symbol}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Vector3Int, TM_Symbol>
+  nameWithType: Dictionary<Vector3Int, TM_Symbol>
+  fullName: System.Collections.Generic.Dictionary<UnityEngine.Vector3Int, Constants.TM_Symbol>
+  nameWithType.vb: Dictionary(Of Vector3Int, TM_Symbol)
+  fullName.vb: System.Collections.Generic.Dictionary(Of UnityEngine.Vector3Int, Constants.TM_Symbol)
+  name.vb: Dictionary(Of Vector3Int, TM_Symbol)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: UnityEngine.Vector3Int
+    name: Vector3Int
+    nameWithType: Vector3Int
+    fullName: UnityEngine.Vector3Int
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Constants.TM_Symbol
+    name: TM_Symbol
+    nameWithType: TM_Symbol
+    fullName: Constants.TM_Symbol
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: UnityEngine.Vector3Int
+    name: Vector3Int
+    nameWithType: Vector3Int
+    fullName: UnityEngine.Vector3Int
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Constants.TM_Symbol
+    name: TM_Symbol
+    nameWithType: TM_Symbol
+    fullName: Constants.TM_Symbol
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: GameCore.GridData.#ctor*
   commentId: Overload:GameCore.GridData.#ctor
   name: GridData
@@ -209,23 +401,12 @@ references:
   name: Vector3Int
   nameWithType: Vector3Int
   fullName: UnityEngine.Vector3Int
-- uid: Constants.TM_Symbol
-  commentId: T:Constants.TM_Symbol
-  parent: Constants
-  name: TM_Symbol
-  nameWithType: TM_Symbol
-  fullName: Constants.TM_Symbol
 - uid: UnityEngine
   commentId: N:UnityEngine
   isExternal: true
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
-- uid: Constants
-  commentId: N:Constants
-  name: Constants
-  nameWithType: Constants
-  fullName: Constants
 - uid: GameCore.GridData.SetCellSymbol*
   commentId: Overload:GameCore.GridData.SetCellSymbol
   name: SetCellSymbol

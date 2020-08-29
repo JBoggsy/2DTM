@@ -46,3 +46,10 @@
     name: SimulationControlCanvasMonobehavior
   - uid: MonoBehaviours.UI.TuringMachineEditorPanel
     name: TuringMachineEditorPanel
+- uid: TuringMachines
+  name: TuringMachines
+  items:
+  - uid: TuringMachines.Transition
+    name: Transition
+  - uid: TuringMachines.TuringMachine
+    name: TuringMachine
