@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
 using Constants;
+using System;
 
 namespace MonoBehaviours {
     public class CameraMonobehavior : GameObjectMonobehavior {
         private const float ZOOM_INCREMENT = 1.2f;
         private const float CAMERA_SPEED = 3;
+        private const float MAX_ZOOM = 15.0f;
+        private const float MIN_ZOOM = 0.5f;
 
         override protected void Start() {
             base.Start();
@@ -27,6 +30,7 @@ namespace MonoBehaviours {
             } else if (direction < 0) {
                 gameObject.GetComponent<Camera>().orthographicSize *= ZOOM_INCREMENT;
             }
+            gameObject.GetComponent<Camera>().orthographicSize = Mathf.Clamp(gameObject.GetComponent<Camera>().orthographicSize, MIN_ZOOM, MAX_ZOOM);
         }
 
         /// <summary>
