@@ -2287,6 +2287,7 @@ GameObject:
   - component: {fileID: 1650083653}
   - component: {fileID: 1650083652}
   - component: {fileID: 1650083651}
+  - component: {fileID: 1650083656}
   m_Layer: 5
   m_Name: TuringMachineEditorCanvas
   m_TagString: Untagged
@@ -2410,6 +2411,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1650083656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650083649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9a624f3b9d7bc44b9c571c300a6c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1693322093
 GameObject:
   m_ObjectHideFlags: 0

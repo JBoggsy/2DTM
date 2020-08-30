@@ -1,4 +1,6 @@
-﻿using TuringMachines;
+﻿using Constants;
+using TuringMachines;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace MonoBehaviours {
@@ -41,7 +43,12 @@ namespace MonoBehaviours {
             /// <see cref="targetMachine"/>.
             /// </summary>
             private void _RefreshView() {
-
+                for (int state = 0; state < targetMachine.NumberOfStates; state++) {
+                    // TODO: Add each state as a node.
+                }
+                foreach ((int, TM_Symbol) key in targetMachine.GetNonNullTransitions()) {
+                    // TODO: Add each edge, color-coded by symbol.
+                }
             }
         }
     }

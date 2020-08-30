@@ -262,6 +262,24 @@ namespace TuringMachines {
         }
 
         /// <summary>
+        /// Get a list of all of the non-null (i.e., non-halting) transition keys
+        /// in the <see cref="TransitionTable"/>.
+        /// </summary>
+        /// <returns>
+        /// (<see cref="int"/>, <see cref="TM_Symbol"/>) pairs which generate
+        /// non-null <see cref="Transition"/> instances in the table.
+        /// </returns>
+        public List<(int, TM_Symbol)> GetNonNullTransitions() {
+            List<(int, TM_Symbol)> returnList = new List<(int, TM_Symbol)>();
+            foreach ((int, TM_Symbol) key in TransitionTable.Keys) {
+                if (GetTransition(key.Item1, key.Item2) != null) {
+                    returnList.Add(key);
+                }
+            }
+            return returnList;
+        }
+
+        /// <summary>
         /// Get the <see cref="Transition"/> produced by the transition function.
         /// <para>
         /// Given the current state and the symbol read in by the Turing machine 
