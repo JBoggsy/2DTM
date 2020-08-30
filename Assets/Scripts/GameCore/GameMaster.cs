@@ -216,7 +216,7 @@ namespace GameCore {
         public void HandleTuringMachineHeadClick(int machineID) {
             print($"Turing machine clicked: {machineID}");
             _PauseSimulation();
-            TuringMachineEditor
+            TuringMachineEditor.SetMachine(TuringMachines[machineID]);
         }
 
         /*****************************

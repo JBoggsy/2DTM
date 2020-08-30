@@ -30,10 +30,16 @@ namespace MonoBehaviours {
             /// Set the <see cref="TuringMachine"/> instance which is being edited.
             /// </summary>
             /// <param name="tm">The <see cref="TuringMachine"/> instance to be edited.</param>
-            void SetMachine(TuringMachine tm) {
+            public void SetMachine(TuringMachine tm) {
                 targetMachine = tm;
+                _RefreshView();
             }
 
+            /// <summary>
+            /// Refresh the editor view by destroying all extant elements and
+            /// creating new elements based on the current value of
+            /// <see cref="targetMachine"/>.
+            /// </summary>
             private void _RefreshView() {
 
             }
