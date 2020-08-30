@@ -5,6 +5,7 @@ using UnityEngine;
 using MonoBehaviours;
 using TuringMachines;
 using Constants;
+using MonoBehaviours.UI;
 
 namespace GameCore {
     /// <summary>
@@ -61,7 +62,7 @@ namespace GameCore {
         /// Provides a reference to the Unity prefab for creating a Turing machine
         /// editor panel.
         /// </value>
-        public GameObject TuringMachineEditorPanelPrefab;
+        public TuringMachineEditorMonobehaviour TuringMachineEditor;
         /// <value>
         /// Provides access to the Unity prefab for creating TUring machine sprites.
         /// </value>
@@ -144,7 +145,7 @@ namespace GameCore {
             }
 
             TuringMachineHeadPrefab = (GameObject)Resources.Load("Turing Machine Head");
-            TuringMachineEditorPanelPrefab = (GameObject)Resources.Load("TuringMachineEditorCanvas");
+            TuringMachineEditor = GameObject.Find("TuringMachineEditorCanvas").GetComponent<TuringMachineEditorMonobehaviour>();
 
             GridData = new GridData();
             TuringMachines = new TuringMachine[NumberOfTuringMachines];
@@ -214,8 +215,8 @@ namespace GameCore {
         /// </param>
         public void HandleTuringMachineHeadClick(int machineID) {
             print($"Turing machine clicked: {machineID}");
-            GameObject.Instantiate(TuringMachineEditorPanelPrefab, Vector3.zero, Quaternion.identity);
             _PauseSimulation();
+            TuringMachineEditor
         }
 
         /*****************************
